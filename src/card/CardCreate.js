@@ -24,7 +24,6 @@ export default class CardCreate extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log({user: this.state})
     fetchCreateCard({ card: this.state })
       .then(card => console.log(card))
   }
