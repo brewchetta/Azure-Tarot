@@ -13,9 +13,14 @@ class App extends Component {
       <Router>
       <>
         <h1>Tarot App</h1>
+        <p>Navbar goes here?</p>
+
         <Route path='/' exact component={UserSignUp} />
+
         <Route path='/card-create' exact component={CardCreate} />
-        <Route path='/profile' exact component={UserProfile} />
+
+        <Route path='/profile/:user_id' exact component={UserProfile} />
+
       </>
       </Router>
     );
