@@ -14,34 +14,41 @@ export default class UserSignUp extends React.Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  handleSubmit = (event) => {
+  handleSubmitSignUp = (event) => {
     event.preventDefault()
 
-    if (event.target.name === 'signup') {
+    fetchCreateUser(this.state)
+    .then(response => {
+      if (response.errors) {
+        console.log('Error: ', response.errors)
+      } else if (response.user) {
+        this.props.loginUser(response.user)
+      }
+    })
+  }
 
-      fetchCreateUser(this.state)
-      .then(user => console.log(user))
-      .then(() => this.setState({ username: '', password: '' }))
+  handleSubmitLogin = (event) => {
+    event.preventDefault()
 
-    } else if (event.target.name === 'login') {
-
-      fetchGetUserByName(this.state.login_username)
-      .then(response => {
-        if (response.errors) {
-          console.log('Error: ', response)
-        } else if (response.user) {
-          console.log('Fetched user: ', response)
-        }
-      })
-
-    }
+    fetchGetUserByName(this.state.login_username)
+    .then(response => {
+      if (response.errors) {
+        console.log('Error: ', response.errors)
+      } else if (response.user) {
+        this.props.loginUser(response.user)
+      }
+    })
   }
 
   render() {
-    return(
-      <div>
+    const localUser = this.props.appState.localUser
+    if (!localUser.id) {
+      return(
+        <div>
         <p>Sign Up!</p>
-        <form name='signup' onSubmit={this.handleSubmit}>
+        <form name='signup'
+        onSubmit={this.handleSubmitSignUp}>
+
           <label name='username'>Name</label>
           <input type='text' name='username' value={this.state.username} onChange={this.handleChange}/>
 
@@ -53,23 +60,31 @@ export default class UserSignUp extends React.Component {
           <br/>
 
           <input type='submit' />
+
         </form>
+
+        {/* ----------------- */}
 
         <p>Log In!</p>
-        <form name='login' onSubmit={this.handleSubmit}>
-          <label name='login_username'>Name</label>
-          <input type='text' name='login_username' value={this.state.login_username} onChange={this.handleChange}/>
+        <form name='login' onSubmit={this.handleSubmitLogin}>
+        <label name='login_username'>Name</label>
+        <input type='text' name='login_username' value={this.state.login_username} onChange={this.handleChange}/>
 
-          <br/>
+        <br/>
 
-          <label name='login_password'>Password</label>
-          <input type='text' name='login_password' value={this.state.login_password} onChange={this.handleChange}/>
+        <label name='login_password'>Password</label>
+        <input type='text' name='login_password' value={this.state.login_password} onChange={this.handleChange}/>
 
-          <br/>
+        <br/>
 
-          <input type='submit' />
+        <input type='submit' />
         </form>
-      </div>
-    )
+
+        </div>
+      )
+    } else {
+      this.props.history.push(`/profile/${localUser.id}`)
+      return (<p>Redirecting</p>)
+    }
   }
 }
