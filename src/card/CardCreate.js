@@ -1,6 +1,7 @@
 // This page is a hidden component that should get removed once cards have been created
 
 import React from 'react'
+import { fetchCreateCard } from './FetchCard'
 
 export default class CardCreate extends React.Component {
 
@@ -24,8 +25,8 @@ export default class CardCreate extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     console.log({user: this.state})
-    // fetchCreateCard({ card: this.state })
-      // .then(card => console.log(card))
+    fetchCreateCard({ card: this.state })
+      .then(card => console.log(card))
   }
 
   handleKeywordSubmit = (event) => {
