@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchCreateUser } from './FetchUser'
+import { fetchCreateUser, fetchGetUserByName } from './FetchUser'
 
 export default class UserSignUp extends React.Component {
 
@@ -16,11 +16,18 @@ export default class UserSignUp extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+
     if (event.target.name === 'signup') {
+
       fetchCreateUser(this.state)
       .then(user => console.log(user))
+      .then(() => this.setState({ username: '', password: '' }))
+
     } else if (event.target.name === 'login') {
-      console.log('logging in')
+
+      fetchGetUserByName(this.state.login_username)
+      .then(user => console.log(user))
+
     }
   }
 

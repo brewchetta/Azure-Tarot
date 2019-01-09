@@ -5,6 +5,11 @@ export function fetchGetUser(userId) {
   .then(r=>r.json())
 }
 
+export function fetchGetUserByName(userName) {
+  return fetch(API + `usernames/${parseInt(userName)}`)
+  .then(r=>r.json())
+}
+
 export function fetchCreateUser(userParams) {
   const body = { user: {
       username: userParams.username,
