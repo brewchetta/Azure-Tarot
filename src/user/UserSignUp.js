@@ -26,7 +26,13 @@ export default class UserSignUp extends React.Component {
     } else if (event.target.name === 'login') {
 
       fetchGetUserByName(this.state.login_username)
-      .then(user => console.log(user))
+      .then(response => {
+        if (response.errors) {
+          console.log('Error: ', response)
+        } else if (response.user) {
+          console.log('Fetched user: ', response)
+        }
+      })
 
     }
   }

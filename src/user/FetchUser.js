@@ -6,7 +6,7 @@ export function fetchGetUser(userId) {
 }
 
 export function fetchGetUserByName(userName) {
-  return fetch(API + `usernames/${parseInt(userName)}`)
+  return fetch(API + `usernames/${userName}`)
   .then(r=>r.json())
 }
 
