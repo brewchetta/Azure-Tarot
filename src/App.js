@@ -5,6 +5,7 @@ import './App.css';
 // Components
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
+import CardCreate from './card/CardCreate'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <>
         <h1>Tarot App</h1>
         <Route path='/' exact component={UserSignUp} />
+        <Route path='/card-create' exact component={CardCreate} />
         <Route path='/profile' exact component={UserProfile} />
       </>
       </Router>
