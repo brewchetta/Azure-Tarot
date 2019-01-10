@@ -13,7 +13,7 @@ export function fetchGetUserByName(userName) {
 export function fetchCreateUser(userParams) {
   const body = { user: {
       username: userParams.username,
-      password_digest: userParams.password
+      password: userParams.password
     }}
   return fetch(API + 'users', {
     method: 'POST',

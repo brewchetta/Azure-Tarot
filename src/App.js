@@ -9,31 +9,26 @@ import CardCreate from './card/CardCreate'
 
 class App extends Component {
 
-  state = {
-    localUser: {}
+  // Removes session information
+  handleLogout = () => {
+    window.localStorage.removeItem('currentUser')
+    window.localStorage.removeItem('jwt')
   }
 
-  logoutUser = () => {
-    this.setState({ localUser: {} })
-  }
-
-  loginUser = (user) => {
-    this.setState({ localUser: user })
-  }
-
+  // Main Render
   render() {
     return (
       <Router>
       <>
         <h1>Tarot App</h1>
         <p>Navbar goes here?</p>
-        <button onClick={this.logoutUser}>Log Out</button>
+
+        {window.localStorage.currentUser ? <button onClick={this.handleLogout}>Log Out</button> : null}
 
         <Route path='/' exact
         render={
           props => <UserSignUp {...props}
-          appState={this.state}
-          loginUser={this.loginUser} />
+          appState={this.state} />
         } />
 
         <Route path='/card-create' exact component={CardCreate} />
