@@ -6,6 +6,7 @@ import './App.css';
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
 import CardCreate from './card/CardCreate'
+import CardIndex from './card/CardIndex'
 
 class App extends Component {
 
@@ -34,9 +35,10 @@ class App extends Component {
         <Route path='/card-create' exact component={CardCreate} />
 
         <Route path='/profile/:user_id' exact render={
-          props => <UserProfile {...props}
-          appState={this.state} />
+          props => <UserProfile {...props} />
         } />
+
+        <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />
 
       </>
       </Router>

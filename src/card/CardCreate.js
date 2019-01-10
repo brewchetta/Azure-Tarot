@@ -8,6 +8,7 @@ export default class CardCreate extends React.Component {
   state = {
     card_name: '',
     card_suit: '',
+    card_rank: 0,
     description: '',
     rev_description: '',
     keywords: [],
@@ -25,7 +26,7 @@ export default class CardCreate extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     fetchCreateCard({ card: this.state })
-      .then(card => console.log(card))
+      .then(response => console.log(response))
   }
 
   handleKeywordSubmit = (event) => {
@@ -66,17 +67,22 @@ export default class CardCreate extends React.Component {
           <br/>
 
           <label>Description</label>
-          <input name='description'
-          type='text'
+          <textarea name='description'
           onChange={this.handleChange}
           value={this.state.description} />
           <br/>
 
           <label>Reversal Description</label>
-          <input name='rev_description'
-          type='text'
+          <textarea name='rev_description'
           onChange={this.handleChange}
           value={this.state.rev_description} />
+          <br/>
+
+          <label>Number In Suit</label>
+          <input name='card_rank'
+          type='number'
+          onChange={this.handleChange}
+          value={this.state.card_rank} />
           <br/>
 
           {this.state.major_arcana ? <p>All cards are MAJOR arcana</p> : <p>All cards are MINOR arcana</p> }
