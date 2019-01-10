@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchCreateUser, fetchGetUserByName } from './FetchUser'
+import { fetchCreateUser, fetchUserLogin } from './FetchUser'
 
 export default class UserSignUp extends React.Component {
 
@@ -22,27 +22,26 @@ export default class UserSignUp extends React.Component {
       if (response.errors) {
         console.log('Error: ', response.errors)
       } else if (response.user) {
-        console.log('Response was: ', response)
-        window.localStorage.setItem('jwt', response.jwt)
-        window.localStorage.setItem('currentUser', response.user)
-        console.log('localStorage jwt: ', window.localStorage.getItem('jwt'))
-        console.log('localStorage currentUser: ', window.localStorage.getItem('currentUser'))
+        console.log('Created user: ', response.user)
+        this.setLocalStorage(response)
       }
     })
   }
 
   handleSubmitLogin = (event) => {
     event.preventDefault()
-    //
-    // fetchGetUserByName(this.state.login_username)
-    // .then(response => {
-    //   if (response.errors) {
-    //     console.log('Error: ', response.errors)
-    //   } else if (response.user) {
-    //     console.log('Response was: ', response)
-    //     this.props.loginUser(response.user)
-    //   }
-    // })
+
+    fetchUserLogin(this.state)
+    .then(response => {
+      console.log(response)
+      this.setLocalStorage(response)
+      console.log(window.localStorage.getItem('jwt'))
+    })
+  }
+
+  setLocalStorage = (response) => {
+    window.localStorage.setItem('jwt', response.jwt)
+    window.localStorage.setItem('currentUser', response.user)
   }
 
   render() {

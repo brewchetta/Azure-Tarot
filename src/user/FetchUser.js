@@ -10,6 +10,19 @@ export function fetchGetUserByName(userName) {
   .then(r=>r.json())
 }
 
+export function fetchUserLogin(userParams) {
+  const body = { user: {
+    username: userParams.login_username,
+    password: userParams.login_password
+  }}
+  return fetch(API + 'login', {
+    method: 'POST',
+    headers: { 'Accept':'application/json', 'Content-Type':'application/json' },
+    body: JSON.stringify(body)
+  })
+  .then(r=>r.json())
+}
+
 export function fetchCreateUser(userParams) {
   const body = { user: {
       username: userParams.username,
