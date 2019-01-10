@@ -23,10 +23,28 @@ export default class CardCreate extends React.Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  resetState = () => {
+    this.setState({
+      card_name: '',
+      card_suit: '',
+      card_rank: 0,
+      description: '',
+      rev_description: '',
+      keywords: [],
+      rev_keywords: [],
+      major_arcana: true,
+      // These last two are only for the forms to add keywords
+      keyword: '',
+      rev_keyword: ''
+    })
+  }
+
   handleSubmit = (event) => {
     event.preventDefault()
+
     fetchCreateCard({ card: this.state })
       .then(response => console.log(response))
+      .then(this.resetState)
   }
 
   handleKeywordSubmit = (event) => {
