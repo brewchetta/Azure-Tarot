@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 // Stylesheet
 import './App.css';
 // Components
+import Navbar from './general/Navbar'
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
 import CardCreate from './card/CardCreate'
@@ -10,10 +11,18 @@ import CardIndex from './card/CardIndex'
 
 class App extends Component {
 
+  state = {
+    currentUser: null
+  }
+
+  setCurrentUser = (currentUser) => {
+    this.setState({ currentUser })
+  }
+
   // Removes session information
   handleLogout = () => {
-    window.localStorage.removeItem('currentUser')
-    window.localStorage.removeItem('jwt')
+    this.setCurrentUser(null)
+    localStorage.removeItem('jwt')
   }
 
   // Main Render
@@ -22,14 +31,13 @@ class App extends Component {
       <Router>
       <>
         <h1>Tarot App</h1>
-        <p>Navbar goes here?</p>
+        <Navbar currentUser={this.state.currentUser} />
 
-        {window.localStorage.currentUser ? <button onClick={this.handleLogout}>Log Out</button> : null}
+        {localStorage.jwt ? <button onClick={this.handleLogout}>Log Out</button> : null}
 
         <Route path='/' exact
         render={
-          props => <UserSignUp {...props}
-          appState={this.state} />
+          props => <UserSignUp {...props} setCurrentUser={this.setCurrentUser} />
         } />
 
         <Route path='/card-create' exact component={CardCreate} />
