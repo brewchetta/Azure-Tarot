@@ -5,8 +5,7 @@ const CardComponent = props => {
   const card = props.card
 
   return(
-    <div>
-      <p>---------------</p>
+    <div className='card-component'>
       <p>{card.card_rank}. The {card.card_name}</p>
       <p>Suit: {card.card_suit}</p>
       <p>Description: {card.description}</p>

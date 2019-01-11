@@ -23,7 +23,7 @@ export default class CardIndex extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='card-index'>
         <h2>Card Index</h2>
         {this.renderAllCards()}
       </div>

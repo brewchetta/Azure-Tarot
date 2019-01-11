@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body div {
+  border: dotted red 1px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -24,6 +28,8 @@ code {
 /* Card Component */
 
 .card-component {
+  margin: 5px;
+  display: inline-block;
   width: 300px;
   height: 500px;
   background: yellow;
@@ -31,7 +37,7 @@ code {
 }
 
 .card-component-name {
-  
+
 }
 
 /* --- */
