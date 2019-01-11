@@ -12,3 +12,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Card Index */
+
+.card-index {
+  text-align: center;
+}
+
+/* --- */
+
+/* Card Component */
+
+.card-component {
+  width: 300px;
+  height: 500px;
+  background: yellow;
+  overflow: auto;
+}
+
+.card-component-name {
+  
+}
+
+/* --- */
