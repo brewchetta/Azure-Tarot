@@ -7,7 +7,7 @@ export default class CardCreate extends React.Component {
 
   state = {
     card_name: '',
-    card_suit: '',
+    card_suit: 'Major Arcana',
     card_rank: 0,
     description: '',
     rev_description: '',
@@ -26,7 +26,7 @@ export default class CardCreate extends React.Component {
   resetState = () => {
     this.setState({
       card_name: '',
-      card_suit: '',
+      card_suit: 'Major Arcana',
       card_rank: 0,
       description: '',
       rev_description: '',
@@ -84,23 +84,28 @@ export default class CardCreate extends React.Component {
           value={this.state.card_suit} />
           <br/>
 
-          <label>Description</label>
-          <textarea name='description'
-          onChange={this.handleChange}
-          value={this.state.description} />
-          <br/>
-
-          <label>Reversal Description</label>
-          <textarea name='rev_description'
-          onChange={this.handleChange}
-          value={this.state.rev_description} />
-          <br/>
-
-          <label>Number In Suit</label>
+          <label>Rank</label>
           <input name='card_rank'
           type='number'
           onChange={this.handleChange}
           value={this.state.card_rank} />
+          <br/>
+          <br/>
+
+          <label>Description</label>
+          <br/>
+          <textarea name='description'
+          onChange={this.handleChange}
+          value={this.state.description} />
+          <br/>
+          <br/>
+
+          <label>Reversal Description</label>
+          <br/>
+          <textarea name='rev_description'
+          onChange={this.handleChange}
+          value={this.state.rev_description} />
+          <br/>
           <br/>
 
           {this.state.major_arcana ? <p>All cards are MAJOR arcana</p> : <p>All cards are MINOR arcana</p> }
