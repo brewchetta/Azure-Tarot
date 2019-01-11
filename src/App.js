@@ -27,6 +27,7 @@ class App extends Component {
 
   // Main Render
   render() {
+    const currentUser = this.state.currentUser
     return (
       <Router>
       <>
@@ -37,13 +38,15 @@ class App extends Component {
 
         <Route path='/' exact
         render={
-          props => <UserSignUp {...props} setCurrentUser={this.setCurrentUser} />
+          props => <UserSignUp {...props}
+          setCurrentUser={this.setCurrentUser}
+          currentUser={currentUser} />
         } />
 
         <Route path='/card-create' exact component={CardCreate} />
 
         <Route path='/profile/:user_id' exact render={
-          props => <UserProfile {...props} />
+          props => <UserProfile {...props} currentUser={currentUser} />
         } />
 
         <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />

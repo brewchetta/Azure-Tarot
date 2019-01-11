@@ -1,5 +1,6 @@
 import React from 'react'
 import { fetchCreateUser, fetchUserLogin } from './FetchUser'
+import { Redirect } from 'react-router-dom'
 
 export default class UserSignUp extends React.Component {
 
@@ -46,6 +47,10 @@ export default class UserSignUp extends React.Component {
   }
 
   render() {
+    if (this.props.currentUser) {
+      return (<Redirect to={`/profile/${this.props.currentUser.id}`} />)
+    }
+
     return(
       <div>
       <p>Sign Up!</p>

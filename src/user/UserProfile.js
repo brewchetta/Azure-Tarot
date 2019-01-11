@@ -1,12 +1,12 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 
 export default function UserProfile(props) {
-  if (props.appState.localUser.id) {
+  if (props.currentUser) {
     return(
       <p>I AM PROFILE</p>
     )
   } else {
-    props.history.push('/')
-    return (<p>Redirecting to user sign in</p>)
+    return (<Redirect to='/' />)
   }
 }
