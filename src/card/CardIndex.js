@@ -5,7 +5,9 @@ import CardComponent from './CardComponent'
 export default class CardIndex extends React.Component {
 
   state = {
-    cards: []
+    cards: [],
+    cardToInspect: null,
+    animating: false
   }
 
   componentDidMount() {
@@ -17,7 +19,7 @@ export default class CardIndex extends React.Component {
 
   renderAllCards = () => {
     return this.state.cards.map((card,i) => (
-      <CardComponent key={i} card={card} />
+      <CardComponent key={i} card={card} indexState={this.state} />
     ))
   }
 

@@ -6,33 +6,49 @@ import CardDescriptionReversal from './CardDescriptionReversal'
 class CardComponent extends React.Component {
 
   state = {
-    inspecting: true,
+    inspect: false,
     mode: 'illustration'
   }
-  // Inspecting determines whether that card has been zoomed in
+  // Inspect determines whether that card has been zoomed in
   // Modes are illustration, description, reversal
 
-  card = this.props.card
+  handleClickInspect = (event) => {
+    // const card = this.props.card
+    const animating = this.props.indexState.animating
+    const cardToInspect = this.props.indexState.cardToInspect
+
+    if (!animating && !cardToInspect) {
+      this.setState({ inspect: true })
+    }
+  }
+  /* TODO: Build animation for card */
+
 
   render() {
-    const inspecting = this.state.inspecting
+    const inspect = this.state.inspect
+    const card = this.props.card
 
-    if (!inspecting) {
+    if (!inspect) {
       return(
-        <div className='card-component'>
-        <CardIllustration card={this.card} />
-        <p>{this.card.card_rank}. The {this.card.card_name}</p>
-        <CardDescription card={this.card} />
-        <CardDescriptionReversal card={this.card} />
+        <div className='card-component' onClick={this.handleClickInspect}>
+          <CardIllustration card={card} />
+          <p>{card.card_rank}. The {card.card_name}</p>
         </div>
       )
-    } else if (inspecting) {
+    } else if (inspect) {
       return (
         <div className='card-component-inspect'>
-        <CardIllustration card={this.card} />
-        <p>{this.card.card_rank}. The {this.card.card_name}</p>
-        <CardDescription card={this.card} />
-        <CardDescriptionReversal card={this.card} />
+          <div className='card-component-inspect-inner'>
+            <CardIllustration card={card} />
+            <p>{card.card_rank}. The {card.card_name}</p>
+            <CardDescription card={card} />
+            <CardDescriptionReversal card={card} />
+          </div>
+          <div className='card-tab-index'>
+            <p className='card-tab'>X</p>
+            <p className='card-tab'>Info</p>
+            <p className='card-tab'>Reversal</p>
+          </div>
         </div>
       )
     }

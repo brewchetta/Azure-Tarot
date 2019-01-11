@@ -30,27 +30,31 @@ code {
 .card-component {
   margin: 5px;
   display: inline-block;
+  position: relative;
   width: 200px;
   height: 300px;
   background: yellow;
-  overflow: auto;
+  overflow: hidden;
   animation: card-zoom 5s infinite alternate;
 }
 
 .card-component-inspect {
   position: fixed;
-  width: 80vw;
-  max-width: 640px;
+  width: 85vw;
+  max-width: 680px;
   height: 100vw;
   max-height: 800px;
-  left: 10vw;
+  left: 15vw;
   top: 5%;
-  background: yellow;
-  overflow: auto;
+  z-index: 1;
 }
 
-.card-component-name {
-
+.card-component-inspect-inner {
+  background: yellow;
+  width: 90%;
+  height: 100%;
+  float: left;
+  overflow: auto;
 }
 
 .card-description {
@@ -66,6 +70,31 @@ code {
   margin: 5%;
   width: 90%;
   height: 80%;
+  overflow: hidden;
+}
+
+.card-name {
+
+}
+
+.card-tab-index {
+  float: left;
+  width: 9%;
+  height: 100%;
+  text-align: center;
+}
+
+.card-tab {
+  background: blue;
+  width: 100%;
+}
+
+.card-tab-exit {
+
+}
+
+.card-tab-reversal {
+
 }
 
 /* --- */
