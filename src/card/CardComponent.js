@@ -1,20 +1,28 @@
 import React from 'react'
+import CardIllustration from './CardIllustration'
 
-const CardComponent = props => {
+class CardComponent extends React.Component {
 
-  const card = props.card
+  state = {
 
-  return(
-    <div className='card-component'>
-      <p>{card.card_rank}. The {card.card_name}</p>
-      <p>Suit: {card.card_suit}</p>
-      <p>Description: {card.description}</p>
-      <p>Keywords: {card.keywords.join(", ")}</p>
-      <p>Reversal Description: {card.rev_description}</p>
-      <p>Reversal Keywords: {card.rev_keywords.join(", ")}</p>
-      <p>{card.major_arcana ? 'Part of the Major Arcana' : 'Not Major Arcana'}</p>
-    </div>
-  )
+  }
+
+  card = this.props.card
+
+  render() {
+    return(
+      <div className='card-component'>
+        <CardIllustration card={this.card} />
+        <p>{this.card.card_rank}. The {this.card.card_name}</p>
+        <p>Suit: {this.card.card_suit}</p>
+        <p>Description: {this.card.description}</p>
+        <p>Keywords: {this.card.keywords.join(", ")}</p>
+        <p>Reversal Description: {this.card.rev_description}</p>
+        <p>Reversal Keywords: {this.card.rev_keywords.join(", ")}</p>
+        <p>{this.card.major_arcana ? 'Part of the Major Arcana' : 'Not Major Arcana'}</p>
+      </div>
+    )
+  }
 }
 
 export default CardComponent
