@@ -13,7 +13,7 @@ export default class CardIndex extends React.Component {
   componentDidMount() {
     fetchGetAllCards()
     .then(response => {
-      this.setState({ cards: response.cards }, ()=>console.log(this.state) )
+      this.setState({ cards: response.cards })
     })
   }
 

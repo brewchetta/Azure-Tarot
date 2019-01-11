@@ -10,6 +10,7 @@ import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
 import CardCreate from './card/CardCreate'
 import CardIndex from './card/CardIndex'
+import SpreadTable from './spread/SpreadTable'
 
 class App extends Component {
 
@@ -60,6 +61,8 @@ class App extends Component {
         } />
 
         <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />
+
+        <Route path='/reading' exact render={ props=> <SpreadTable {...props} />} />
 
       </>
       </Router>
