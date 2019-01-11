@@ -5,7 +5,7 @@ const CardDescription = props => {
   const card = props.card
 
   return (
-    <div>
+    <div className='card-description'>
       <p>Suit: {card.card_suit}</p>
       <p>Description: {card.description}</p>
       <p>Keywords: {card.keywords.join(", ")}</p>

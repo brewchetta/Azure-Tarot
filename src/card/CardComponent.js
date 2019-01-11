@@ -23,6 +23,24 @@ class CardComponent extends React.Component {
   }
   /* TODO: Build animation for card */
 
+  handleClickTab = (event) => {
+    const id = event.target.dataset.id
+    console.log(id)
+
+    return id === 'exit' ? this.setState({ inspect: false })
+    : this.setState({ mode: id })
+  }
+
+  renderCardInspect = () => {
+    const mode = this.state.mode
+    const card = this.props.card
+
+    return mode === 'illustration' ? (<> <CardIllustration card={card} /> <p>{card.card_rank}. The {card.card_name}</p> </>)
+      : mode === 'description' ? (<CardDescription card={card} />)
+      : mode === 'reversal' ? (<CardDescriptionReversal card={card} />)
+      : null
+  }
+
 
   render() {
     const inspect = this.state.inspect
@@ -39,15 +57,13 @@ class CardComponent extends React.Component {
       return (
         <div className='card-component-inspect'>
           <div className='card-component-inspect-inner'>
-            <CardIllustration card={card} />
-            <p>{card.card_rank}. The {card.card_name}</p>
-            <CardDescription card={card} />
-            <CardDescriptionReversal card={card} />
+            {this.renderCardInspect()}
           </div>
           <div className='card-tab-index'>
-            <p className='card-tab'>X</p>
-            <p className='card-tab'>Info</p>
-            <p className='card-tab'>Reversal</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='exit'>X</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='illustration'>Pic</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='description'>Info</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='reversal'>Reversal</p>
           </div>
         </div>
       )

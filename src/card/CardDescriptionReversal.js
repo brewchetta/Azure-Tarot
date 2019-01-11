@@ -3,7 +3,7 @@ import React from 'react'
 const CardDescriptionReversal = props => {
 
   return (
-    <div>I am card description reversal</div>
+    <div className='card-description-reversal'>I am card description reversal</div>
   )
 
 }
