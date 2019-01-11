@@ -6,7 +6,7 @@ import CardDescriptionReversal from './CardDescriptionReversal'
 class CardComponent extends React.Component {
 
   state = {
-    inspecting: false,
+    inspecting: true,
     mode: 'illustration'
   }
   // Inspecting determines whether that card has been zoomed in
@@ -15,14 +15,28 @@ class CardComponent extends React.Component {
   card = this.props.card
 
   render() {
-    return(
-      <div className='card-component'>
+    const inspecting = this.state.inspecting
+
+    if (!inspecting) {
+      return(
+        <div className='card-component'>
         <CardIllustration card={this.card} />
         <p>{this.card.card_rank}. The {this.card.card_name}</p>
         <CardDescription card={this.card} />
         <CardDescriptionReversal card={this.card} />
-      </div>
-    )
+        </div>
+      )
+    } else if (inspecting) {
+      return (
+        <div className='card-component-inspect'>
+        <CardIllustration card={this.card} />
+        <p>{this.card.card_rank}. The {this.card.card_name}</p>
+        <CardDescription card={this.card} />
+        <CardDescriptionReversal card={this.card} />
+        </div>
+      )
+    }
+
   }
 }
 
