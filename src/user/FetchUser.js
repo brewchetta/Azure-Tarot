@@ -5,8 +5,10 @@ export function fetchGetUser(userId) {
   .then(r=>r.json())
 }
 
-export function fetchGetUserByName(userName) {
-  return fetch(API + `usernames/${userName}`)
+export function fetchLoginUser(userName) {
+  return fetch(API + `profile`, {
+    headers: {Authorization: `Bearer ${localStorage.jwt}`}
+  })
   .then(r=>r.json())
 }
 

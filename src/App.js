@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 // Stylesheet
 import './App.css';
+// Fetch Functions
+import { fetchLoginUser } from './user/FetchUser'
 // Components
 import Navbar from './general/Navbar'
 import UserSignUp from './user/UserSignUp'
@@ -15,6 +17,14 @@ class App extends Component {
     currentUser: null
   }
 
+  // Checks if the JWT token has an associated user
+  componentDidMount() {
+    const jwt = localStorage.jwt
+    console.log(jwt)
+    fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }))
+  }
+
+  // Sets the current user when logging in or signing up
   setCurrentUser = (currentUser) => {
     this.setState({ currentUser })
   }
