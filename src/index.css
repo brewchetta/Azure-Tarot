@@ -34,6 +34,19 @@ code {
   height: 300px;
   background: yellow;
   overflow: auto;
+  animation: card-zoom 5s infinite alternate;
+}
+
+.card-component-inspect {
+  position: fixed;
+  width: 80vw;
+  max-width: 640px;
+  height: 100vw;
+  max-height: 800px;
+  left: 10vw;
+  top: 5%;
+  background: yellow;
+  overflow: auto;
 }
 
 .card-component-name {
@@ -46,5 +59,14 @@ code {
   width: 90%;
   height: 80%;
 }
+
+/* --- */
+
+/* Card Component Animations */
+
+  @keyframes card-appear {
+    0% {top: 0}
+    100% {top: 100px}
+  }
 
 /* --- */

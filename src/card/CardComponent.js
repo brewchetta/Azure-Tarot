@@ -1,11 +1,16 @@
 import React from 'react'
 import CardIllustration from './CardIllustration'
+import CardDescription from './CardDescription'
+import CardDescriptionReversal from './CardDescriptionReversal'
 
 class CardComponent extends React.Component {
 
   state = {
-
+    inspecting: false,
+    mode: 'illustration'
   }
+  // Inspecting determines whether that card has been zoomed in
+  // Modes are illustration, description, reversal
 
   card = this.props.card
 
@@ -14,12 +19,8 @@ class CardComponent extends React.Component {
       <div className='card-component'>
         <CardIllustration card={this.card} />
         <p>{this.card.card_rank}. The {this.card.card_name}</p>
-        <p>Suit: {this.card.card_suit}</p>
-        <p>Description: {this.card.description}</p>
-        <p>Keywords: {this.card.keywords.join(", ")}</p>
-        <p>Reversal Description: {this.card.rev_description}</p>
-        <p>Reversal Keywords: {this.card.rev_keywords.join(", ")}</p>
-        <p>{this.card.major_arcana ? 'Part of the Major Arcana' : 'Not Major Arcana'}</p>
+        <CardDescription card={this.card} />
+        <CardDescriptionReversal card={this.card} />
       </div>
     )
   }
