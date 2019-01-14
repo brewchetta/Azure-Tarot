@@ -1,11 +1,14 @@
 import React from 'react'
+import CardComponent from '../card/CardComponent'
 
 const SpreadPosition = (props) => {
 
 
   return (
     <div>
-      <p></p>
+      <p>{props.position}</p>
+
+      <CardComponent card={props.card} />
 
     </div>
   )
