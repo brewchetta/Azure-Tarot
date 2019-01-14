@@ -77,6 +77,8 @@ code {
 
 }
 
+/* Card Tabs */
+
 .card-tab-index {
   float: left;
   width: 9%;
@@ -93,15 +95,16 @@ code {
 
 }
 
-.card-tab-reversal {
+.card-tab-description {
 
 }
 
-/* --- */
+.card-tab-illustration {
 
-@keyframes card-appear {
-  0% {top: 0}
-  100% {top: 100px}
+}
+
+.card-tab-reversal {
+
 }
 
 .card-animation {
@@ -124,6 +127,8 @@ code {
   width: 100%;
   position: relative;
 }
+
+/* ----------- */
 
 /* General Animations */
 

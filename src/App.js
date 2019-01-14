@@ -21,7 +21,6 @@ class App extends Component {
   // Checks if the JWT token has an associated user
   componentDidMount() {
     const jwt = localStorage.jwt
-    console.log(jwt)
     fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }))
   }
 
@@ -39,32 +38,36 @@ class App extends Component {
   // Main Render
   render() {
     const currentUser = this.state.currentUser
-    return (
-      <Router>
-      <>
-        <h1>Tarot App</h1>
-        <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} />
+    if (localStorage.jwt && !currentUser) {
+      return (<p>Loading spinner goes here</p>)
+    } else {
+      return (
+        <Router>
+        <>
+          <h1>Tarot App</h1>
+          <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} />
 
-        <Route path='/' exact
-        render={
-          props => <UserSignUp {...props}
-          setCurrentUser={this.setCurrentUser}
-          currentUser={currentUser} />
-        } />
+          <Route path='/' exact
+          render={
+            props => <UserSignUp {...props}
+            setCurrentUser={this.setCurrentUser}
+            currentUser={currentUser} />
+          } />
 
-        <Route path='/card-create' exact component={CardCreate} />
+          <Route path='/card-create' exact component={CardCreate} />
 
-        <Route path='/profile/:user_id' exact render={
-          props => <UserProfile {...props} currentUser={currentUser} />
-        } />
+          <Route path='/profile/:user_id' exact render={
+            props => <UserProfile {...props} currentUser={currentUser} />
+          } />
 
-        <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />
+          <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />
 
-        <Route path='/reading' exact render={ props=> <SpreadTable {...props} />} />
+          <Route path='/reading' exact render={ props=> <SpreadTable {...props} />} />
 
-      </>
-      </Router>
-    );
+        </>
+        </Router>
+      );
+    }
   }
 }
 

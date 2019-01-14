@@ -17,6 +17,7 @@ export function fetchUserLogin(userParams) {
     username: userParams.login_username,
     password: userParams.login_password
   }}
+  console.log(body)
   return fetch(API + 'login', {
     method: 'POST',
     headers: { 'Accept':'application/json', 'Content-Type':'application/json' },
