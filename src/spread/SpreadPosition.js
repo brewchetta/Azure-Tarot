@@ -8,7 +8,7 @@ const SpreadPosition = (props) => {
     <div>
       <p>{props.position}</p>
 
-      <CardComponent card={props.card} />
+      <CardComponent card={props.card} indexState={props.indexState} />
 
     </div>
   )

@@ -25,8 +25,6 @@ class CardComponent extends React.Component {
 
   handleClickTab = (event) => {
     const id = event.target.dataset.id
-    console.log(id)
-
     return id === 'exit' ? this.setState({ inspect: false })
     : this.setState({ mode: id })
   }

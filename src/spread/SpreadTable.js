@@ -7,7 +7,9 @@ export default class SpreadTable extends React.Component {
 
   state = {
     cards: [],
-    selectedCards: []
+    selectedCards: [],
+    animating: false,
+    cardToInspect: null
   }
 
   componentDidMount() {
@@ -25,13 +27,16 @@ export default class SpreadTable extends React.Component {
     const selectedCard = cards[Math.floor(Math.random() * cards.length)]
     this.setState({
       cards: cards.filter(card => card.id !== selectedCard.id),
-      selectedCards: [...selectedCards, selectedCard] })
+      selectedCards: [...selectedCards, selectedCard]
+    })
   }
 
   // Shows the cards and determines their position
   renderCardPositions = () => {
     const positions = ['past', 'present', 'future']
-    return this.state.selectedCards.map((card, i) => <SpreadPosition key={i} card={card} position={positions[i]} /> )
+    return this.state.selectedCards.map((card, i) => (
+      <SpreadPosition key={i} card={card} position={positions[i]} indexState={this.state} />
+    ))
   }
 
   render() {
