@@ -13,7 +13,11 @@ export default class CardIndex extends React.Component {
   componentDidMount() {
     fetchGetAllCards()
     .then(response => {
-      this.setState({ cards: response.cards })
+      const sortedCards = response.cards.sort((a,b) => {
+        return a.card_rank - b.card_rank
+      })
+      console.log(sortedCards)
+      this.setState({ cards: sortedCards })
     })
   }
 
