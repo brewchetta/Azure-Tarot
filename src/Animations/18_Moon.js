@@ -6,7 +6,7 @@ import moon from '../Assets/18_Moon_Fullmoon.png'
 import firefly from '../Assets/18_Moon_Firefly.png'
 import grass from '../Assets/18_Moon_Grass.png'
 
-class Moon extends React.Component {
+export class Moon extends React.Component {
 
   componentDidMount() {
     const fireflies = Array.from(document.getElementsByClassName('firefly'))
@@ -86,5 +86,3 @@ class Moon extends React.Component {
     )
   }
 }
-
-export default Moon

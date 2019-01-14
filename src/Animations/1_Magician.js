@@ -3,7 +3,7 @@ import React from 'react'
 import hand from '../Assets/1_Magician_Hand.png'
 import fingers from '../Assets/1_Magician_Fingers.png'
 
-const Magician = props => {
+export const Magician = props => {
   return (
     <div className='card-animation'>
       <img alt='' src={hand}
@@ -13,5 +13,3 @@ const Magician = props => {
     </div>
   )
 }
-
-export default Magician

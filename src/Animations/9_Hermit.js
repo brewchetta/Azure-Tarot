@@ -2,7 +2,7 @@ import React from 'react'
 import background from '../Assets/9_Hermit_Snail_Background.png'
 import foreground from '../Assets/9_Hermit_Snail_Foreground.png'
 
-const Hermit = props => {
+export const Hermit = props => {
   return (
     <div className='card-animation'>
 
@@ -17,5 +17,3 @@ const Hermit = props => {
     </div>
   )
 }
-
-export default Hermit

@@ -2,7 +2,7 @@ import React from 'react'
 import cat from '../Assets/13_Death_Cat.png'
 import tree from '../Assets/13_Death_Tree.png'
 
-const Death = props => {
+export const Death = props => {
   return (
     <div className='card-animation'>
 
@@ -16,5 +16,3 @@ const Death = props => {
     </div>
   )
 }
-
-export default Death

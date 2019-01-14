@@ -2,7 +2,7 @@ import React from 'react'
 import mothOne from '../Assets/6_Lovers_Moth_One.png'
 import mothTwo from '../Assets/6_Lovers_Moth_Two.png'
 
-const Lovers = props => {
+export const Lovers = props => {
   return (
     <div className='card-animation'>
       <img alt='' src={mothOne}
@@ -13,5 +13,3 @@ const Lovers = props => {
     </div>
   )
 }
-
-export default Lovers

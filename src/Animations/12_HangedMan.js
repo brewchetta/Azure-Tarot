@@ -4,7 +4,7 @@ import React from 'react'
 import chrysalis from '../Assets/12_HangedMan_Chrysalis.png'
 import fern from '../Assets/12_HangedMan_Fern.png'
 
-const HangedMan = props => {
+export const HangedMan = props => {
   return (
     <div className='card-animation'>
 
@@ -20,5 +20,3 @@ const HangedMan = props => {
     </div>
   )
 }
-
-export default HangedMan

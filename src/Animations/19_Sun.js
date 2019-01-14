@@ -1,12 +1,10 @@
 import React from 'react'
-import asset from '../Assets/3_Empress.png'
+// import asset from '../Assets/3_Sun.png'
 
-const Empress = props => {
+export const Sun = props => {
   return (
     <div className='card-animation'>
 
     </div>
   )
 }
-
-export default Empress

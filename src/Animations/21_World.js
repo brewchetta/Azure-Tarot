@@ -4,7 +4,7 @@ import mountains from '../Assets/21_World_Mountains.png'
 import town from '../Assets/21_World_Town.png'
 import clouds from '../Assets/21_World_Clouds.png'
 
-const World = props => {
+export const World = props => {
   return (
     <div className='card-animation' style={{ backgroundImage: 'linear-gradient(#0088cc, #99ddff)' }}>
 
@@ -31,5 +31,3 @@ const World = props => {
     </div>
   )
 }
-
-export default World

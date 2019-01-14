@@ -1,7 +1,7 @@
 import React from 'react'
 import watch from '../Assets/4_Emperor_Watch.png'
 
-const Emperor = props => {
+export const Emperor = props => {
   return (
     <div className='card-animation'>
       <img alt='' src={watch}
@@ -10,5 +10,3 @@ const Emperor = props => {
     </div>
   )
 }
-
-export default Emperor

@@ -5,7 +5,7 @@ import background from '../Assets/15_Devil_Eye_Background.png'
 import foreground from '../Assets/15_Devil_Eye_Foreground.png'
 import pupil from '../Assets/15_Devil_Pupil.png'
 
-const Devil = props => {
+export const Devil = props => {
   return (
     <div className='card-animation'>
 
@@ -26,5 +26,3 @@ const Devil = props => {
     </div>
   )
 }
-
-export default Devil

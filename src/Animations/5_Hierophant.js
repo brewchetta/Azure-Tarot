@@ -4,7 +4,7 @@ import ravenhead from '../Assets/5_Hierophant_Raven_Head.png'
 import feather from '../Assets/5_Hierophant_Feather.png'
 import books from '../Assets/5_Hierophant_Books.png'
 
-class Hierophant extends React.Component {
+export class Hierophant extends React.Component {
 
   componentDidMount() {
     const feathers = Array.from(document.getElementsByClassName('feather'))
@@ -53,5 +53,3 @@ class Hierophant extends React.Component {
     )
   }
 }
-
-export default Hierophant

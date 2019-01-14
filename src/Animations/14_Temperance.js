@@ -5,7 +5,7 @@
 import React from 'react'
 import river from '../Assets/14_Temperance_River.png'
 
-const Temperance = props => {
+export const Temperance = props => {
   return (
     <div className='card-animation'>
 
@@ -19,5 +19,3 @@ const Temperance = props => {
     </div>
   )
 }
-
-export default Temperance

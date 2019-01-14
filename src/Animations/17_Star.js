@@ -5,7 +5,7 @@ import React from 'react'
 import lighthouse from '../Assets/17_Star_Lighthouse.png'
 import stars from '../Assets/17_Star_Northstars.png'
 
-const StarAnimation = props => {
+export const Star = props => {
 
 
   return (
@@ -24,5 +24,3 @@ const StarAnimation = props => {
     </div>
   )
 }
-
-export default StarAnimation

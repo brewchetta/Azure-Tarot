@@ -4,7 +4,7 @@ import React from 'react'
 import kitty from '../Assets/2_High_Priestess_Cat.png'
 import inkblot from '../Assets/2_High_Priestess_Inkblot.png'
 
-const HighPriestess = props => {
+export const HighPriestess = props => {
   return (
     <div className='card-animation' style={{ background: 'white' }}>
 
@@ -63,5 +63,3 @@ const HighPriestess = props => {
     </div>
   )
 }
-
-export default HighPriestess

@@ -2,7 +2,7 @@ import React from 'react'
 import baobab from '../Assets/16_Tower_Baobab.png'
 import cloud from '../Assets/16_Tower_Cloud.png'
 
-class Tower extends React.Component {
+export class Tower extends React.Component {
 
   componentDidMount() {
     const clouds = Array.from(document.getElementsByClassName('thunder'))
@@ -50,5 +50,3 @@ class Tower extends React.Component {
     )
   }
 }
-
-export default Tower
