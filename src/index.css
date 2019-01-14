@@ -32,7 +32,7 @@ code {
   display: inline-block;
   position: relative;
   width: 200px;
-  height: 300px;
+  height: 250px;
   background: yellow;
   overflow: hidden;
   animation: card-zoom 5s infinite alternate;
@@ -40,13 +40,13 @@ code {
 
 .card-component-inspect {
   position: fixed;
-  width: 85vw;
+  width: 100vw;
   max-width: 680px;
-  height: 100vw;
-  max-height: 800px;
+  height: 125vw;
+  max-height: 850px;
   left: 15vw;
   top: 5%;
-  z-index: 1;
+  z-index: 100;
 }
 
 .card-component-inspect-inner {
@@ -68,7 +68,7 @@ code {
 .card-illustration {
   box-sizing: border-box;
   margin: 5%;
-  width: 90%;
+  width: 80%;
   height: 80%;
   overflow: hidden;
 }
@@ -99,11 +99,160 @@ code {
 
 /* --- */
 
-/* Card Component Animations */
+@keyframes card-appear {
+  0% {top: 0}
+  100% {top: 100px}
+}
 
-  @keyframes card-appear {
-    0% {top: 0}
-    100% {top: 100px}
-  }
+.card-animation {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+}
 
-/* --- */
+.card-fit-height {
+  height: 100%;
+  position: relative;
+}
+
+.card-fit-width {
+  width: 100%;
+  position: relative;
+}
+
+/* General Animations */
+
+@keyframes death-pulse {
+  0% { background: black }
+  20% { background: black }
+  100% { background: #1a1a00 }
+}
+
+.death-pulse {
+  animation: death-pulse 4s infinite alternate;
+}
+
+/* Raven Feather Animations */
+
+@keyframes featherfall-one {
+  0% { top: 30%; right: 20%; }
+  100% { top: 90%; right: 120%; }
+}
+
+@keyframes featherfall-two {
+  0% { top: 35%; right: 10%; }
+  100% { top: 70%; right: 120%; }
+}
+
+@keyframes featherfall-three {
+  0% { top: 40%; right: 15%; }
+  100% { top: 50%; right: 120%; }
+}
+
+@keyframes featherfall-four {
+  0% { top: 40%; right: 0%; }
+  100% { top: 30%; right: 120%; }
+}
+
+@keyframes featherfall-five {
+  0% { top: 40%; right: 0%; }
+  100% { top: 110%; right: 120%; }
+}
+
+/* ---------- */
+
+@keyframes firefly {
+  0% { opacity: 0 }
+  25% { opacity: 1 }
+  75% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.animation-firefly {
+  animation: firefly 12s infinite;
+}
+
+@keyframes inkblot {
+  0% { filter: blur(0) opacity(0) }
+  80% { filter: blur(0) opacity(0) }
+  95% { filter: blur(0) opacity(0.9) }
+  100% { filter: blur(1px) opacity(1) }
+}
+
+.inkblot {
+  animation: inkblot 16s linear;
+  filter: blur(1px)
+}
+
+@keyframes rainbow-shift {
+  from { filter: hue-rotate(0deg) }
+  to { filter: hue-rotate(360deg) }
+}
+
+.rainbow-shift {
+  animation: rainbow-shift 10s infinite linear;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg)}
+  to { transform: rotate(360deg)}
+}
+
+.animation-rotate-medium {
+  animation: rotate 20s infinite linear;
+}
+
+.animation-rotate-slow {
+  animation: rotate 30s infinite linear;
+}
+
+.animation-rotate-slower {
+  animation: rotate 40s infinite linear;
+}
+
+.animation-rotate-slowest {
+  animation: rotate 60s infinite linear;
+}
+
+@keyframes thunder {
+  0% { filter: brightness(1); }
+  0.5% { filter: brightness(5); }
+  1% { filter: brightness(3); }
+  1.5% { filter: brightness(5); }
+  3% { filter: brightness(1); }
+  100% { filter: brightness(1); }
+}
+
+.thunder {
+  animation: thunder 15s infinite linear;
+}
+
+/* ---------- */
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: 2em;
+  display: inline-block;
+}
+
+.navbar-left {
+  display: inline-block;
+  float: left;
+  width: 50%
+}
+
+.navbar-right {
+  text-align: right;
+  display: inline-block;
+  float: left;
+  width: 49%
+}
+
+/* ---------- */

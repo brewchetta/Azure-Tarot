@@ -43,9 +43,7 @@ class App extends Component {
       <Router>
       <>
         <h1>Tarot App</h1>
-        <Navbar currentUser={this.state.currentUser} />
-
-        {localStorage.jwt ? <button onClick={this.handleLogout}>Log Out</button> : null}
+        <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} />
 
         <Route path='/' exact
         render={
