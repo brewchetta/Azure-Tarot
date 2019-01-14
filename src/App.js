@@ -62,7 +62,7 @@ class App extends Component {
 
           <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />
 
-          <Route path='/reading' exact render={ props=> <SpreadTable {...props} />} />
+          <Route path='/reading' exact render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
 
         </>
         </Router>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { fetchGetAllCards } from '../card/FetchCard'
+import { fetchCreateSpread } from './FetchSpreads'
 import SpreadCardSelect from './SpreadCardSelect'
 import SpreadPosition from './SpreadPosition'
 
@@ -28,12 +29,25 @@ export default class SpreadTable extends React.Component {
     this.setState({
       cards: cards.filter(card => card.id !== selectedCard.id),
       selectedCards: [...selectedCards, selectedCard]
-    })
+    }, this.saveSpread)
   }
 
   // Saves spread if final card is selected
   saveSpread = () => {
-    
+    if (this.state.selectedCards.length >= 3) {
+      const body = {
+        spread: {
+          spread_type: "threecard",
+          user_id: this.props.currentUser.id,
+          card_ids: this.state.selectedCards.map(card => card.id)
+        }
+      }
+
+      console.log(body)
+
+      fetchCreateSpread(body).then(console.log)
+    }
+
   }
 
   // Shows the cards and determines their position
