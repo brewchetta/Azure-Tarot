@@ -5,7 +5,7 @@ const SpreadPosition = (props) => {
 
 
   return (
-    <div>
+    <div className='position-container-threecard'>
       <p>{props.position}</p>
 
       <CardComponent card={props.card} indexState={props.indexState} />

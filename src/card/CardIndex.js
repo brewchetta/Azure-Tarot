@@ -13,10 +13,11 @@ export default class CardIndex extends React.Component {
   componentDidMount() {
     fetchGetAllCards()
     .then(response => {
+      // This is to prevent cards from arriving out of order
+      // TODO: refine this when adding more suits
       const sortedCards = response.cards.sort((a,b) => {
         return a.card_rank - b.card_rank
       })
-      console.log(sortedCards)
       this.setState({ cards: sortedCards })
     })
   }

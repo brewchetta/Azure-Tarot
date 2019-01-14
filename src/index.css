@@ -261,3 +261,18 @@ code {
 }
 
 /* ---------- */
+
+/* Spread Components */
+
+.table-card-container {
+  text-align: center;
+  width: 100%;
+}
+
+.position-container-threecard {
+  text-align: center;
+  width: 25%;
+  display: inline-block;
+}
+
+/* ---------- */

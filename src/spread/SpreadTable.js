@@ -31,6 +31,11 @@ export default class SpreadTable extends React.Component {
     })
   }
 
+  // Saves spread if final card is selected
+  saveSpread = () => {
+    
+  }
+
   // Shows the cards and determines their position
   renderCardPositions = () => {
     const positions = ['past', 'present', 'future']
@@ -40,17 +45,21 @@ export default class SpreadTable extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <p>I am Spread Table</p>
-        <p>I have {this.state.cards.length} cards in my state</p>
-        <p>I have {this.state.selectedCards.length} selected cards.</p>
-        {this.state.selectedCards.length < 3 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+    if (this.state.cards.length) {
+      return (
         <div>
-        {this.renderCardPositions()}
+          <p>I am Spread Table</p>
+          <p>I have {this.state.cards.length} cards in my state</p>
+          <p>I have {this.state.selectedCards.length} selected cards.</p>
+          {this.state.selectedCards.length < 3 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+          <div className='table-card-container'>
+            {this.renderCardPositions()}
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return (<p>Loading spinner goes heeya</p>)
+    }
   }
 
 }
