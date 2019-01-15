@@ -5,6 +5,8 @@ import CardDescriptionReversal from './CardDescriptionReversal'
 
 class CardComponent extends React.Component {
 
+// To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ? }
+
   state = {
     inspect: false,
     mode: 'illustration'

@@ -27,7 +27,7 @@ class UserSpreadsIndex extends React.Component {
 
   renderSpreads = () => {
     return this.state.spreads.map(spread =>(
-      <UserSpread key={spread.id} spread={spread} />
+      <UserSpread key={spread.id} indexState={this.state} spread={spread} />
     ))
   }
 

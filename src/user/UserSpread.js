@@ -1,10 +1,12 @@
 import React from 'react'
+import CardComponent from '../card/CardComponent'
 
 const UserSpread = (props) => {
 
   const renderSpread = () => {
     return props.spread.card_ids.map(card_id => {
-      return (<p key={card_id}>{card_id}</p>)
+      const card = props.indexState.cards.find(card => card.id === card_id)
+      return (<CardComponent indexState={props.indexState} card={card} />)
     })
   }
 
