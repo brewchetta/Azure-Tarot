@@ -21,7 +21,7 @@ class App extends Component {
   // Checks if the JWT token has an associated user
   componentDidMount() {
     const jwt = localStorage.jwt
-    fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }))
+    fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }, ()=>console.log(this.state.currentUser)))
   }
 
   // Sets the current user when logging in or signing up
@@ -60,7 +60,7 @@ class App extends Component {
             props => <UserProfile {...props} currentUser={currentUser} />
           } />
 
-          <Route path='/card-index' exact render={ props=> <CardIndex {...props} />} />
+          <Route path='/card-index' exact render={ props=> <CardIndex {...props} currentUser={currentUser} />} />
 
           <Route path='/reading' exact render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
 

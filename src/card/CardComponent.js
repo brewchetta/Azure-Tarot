@@ -5,14 +5,28 @@ import CardDescriptionReversal from './CardDescriptionReversal'
 
 class CardComponent extends React.Component {
 
-// To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ? }
+// To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}, currentUser
 
   state = {
     inspect: false,
-    mode: 'illustration'
+    mode: 'illustration',
+    unlocked: false
   }
   // Inspect determines whether that card has been zoomed in
   // Modes are illustration, description, reversal
+
+  componentDidMount() {
+    if (this.props.currentUser) {
+      this.lockCards()
+    }
+  }
+
+  lockCards = () => {
+    const currentUser = this.props.currentUser
+    const thisCard = this.props.card
+    const cardIds = currentUser.cards.map(card => card.id)
+    if (cardIds.includes(thisCard.id)) {console.log(thisCard)}
+  }
 
   handleClickInspect = (event) => {
     // const card = this.props.card

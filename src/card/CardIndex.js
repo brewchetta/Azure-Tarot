@@ -11,6 +11,7 @@ export default class CardIndex extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props.currentUser)
     fetchGetAllCards()
     .then(response => {
       // This is to prevent cards from arriving out of order
@@ -24,7 +25,7 @@ export default class CardIndex extends React.Component {
 
   renderAllCards = () => {
     return this.state.cards.map((card,i) => (
-      <CardComponent key={i} card={card} indexState={this.state} />
+      <CardComponent key={i} card={card} indexState={this.state} currentUser={this.props.currentUser} />
     ))
   }
 
