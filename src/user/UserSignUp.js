@@ -38,7 +38,6 @@ export default class UserSignUp extends React.Component {
       console.log(response)
       this.setLocalStorage(response)
       this.props.setCurrentUser(response.user)
-      console.log(localStorage.getItem('jwt'))
     })
   }
 

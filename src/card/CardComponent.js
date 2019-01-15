@@ -53,7 +53,7 @@ class CardComponent extends React.Component {
   handleClickTab = (event) => {
     const id = event.target.dataset.id
 
-    if (!this.state.unlocked) {
+    if (!this.state.unlocked && this.props.currentUser) {
       this.setState({ unlocked: true })
       fetchUnlockCard(this.props.card, this.props.currentUser)
       .then(console.log)
