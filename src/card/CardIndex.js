@@ -1,5 +1,9 @@
+// React
 import React from  'react'
+import { Redirect } from 'react-router-dom'
+// Fetches
 import { fetchGetAllCards } from './FetchCard'
+// Components
 import CardComponent from './CardComponent'
 
 export default class CardIndex extends React.Component {
@@ -33,6 +37,7 @@ export default class CardIndex extends React.Component {
       <div className='card-index'>
         <h2>Card Index</h2>
         {this.renderAllCards()}
+        {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
       </div>
     )
   }

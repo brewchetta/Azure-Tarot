@@ -1,6 +1,10 @@
+// React
 import React from 'react'
+import { Redirect } from 'react-router-dom'
+// Fetches
 import { fetchGetAllCards } from '../card/FetchCard'
 import { fetchCreateSpread } from './FetchSpreads'
+// Components
 import SpreadCardSelect from './SpreadCardSelect'
 import SpreadPosition from './SpreadPosition'
 
@@ -80,6 +84,7 @@ export default class SpreadTable extends React.Component {
     if (this.state.cards.length) {
       return (
         <div>
+          {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
           <p>I am Spread Table</p>
           <p>I have {this.state.cards.length} cards in my state</p>
           <p>I have {unlockedCards.length} unlocked cards in my state</p>
