@@ -10,9 +10,12 @@ const UserSpread = (props) => {
     })
   }
 
+  const date = props.spread.created_at.split('T')[0]
+  const time = props.spread.created_at.split('T')[1].split('.')[0]
 
   return (
     <div>
+      <p>{date} {time}</p>
       {renderSpread()}
     </div>
   )

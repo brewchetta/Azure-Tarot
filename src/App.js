@@ -15,7 +15,8 @@ import SpreadTable from './spread/SpreadTable'
 class App extends Component {
 
   state = {
-    currentUser: null
+    currentUser: null,
+    animating: false
   }
 
   // Checks if the JWT token has an associated user
