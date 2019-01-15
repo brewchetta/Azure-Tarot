@@ -18,9 +18,31 @@ export function fetchCreateCard(card) {
       headers: {
         Authorization: `Bearer ${jwt}`,
         'Accept': 'application/json',
-        'Content-Type':'application/json' },
+        'Content-Type':'application/json'
+      },
       body: JSON.stringify(card)
     })
     .then(r=>r.json())
   }
+}
+
+// Card unlock fetch
+export function fetchUnlockCard(card, currentUser) {
+  const jwt = window.localStorage.getItem('jwt')
+  const body = { card_unlock: { card_id: card.id, user_id: currentUser.id } }
+  console.log(body)
+
+  if (jwt) {
+    return fetch(API + 'card_unlocks', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+        'Accept': 'application/json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+    .then(r=>r.json())
+  }
+
 }

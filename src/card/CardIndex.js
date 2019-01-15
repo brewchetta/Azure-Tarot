@@ -11,7 +11,6 @@ export default class CardIndex extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.currentUser)
     fetchGetAllCards()
     .then(response => {
       // This is to prevent cards from arriving out of order

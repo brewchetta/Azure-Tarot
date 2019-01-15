@@ -1,11 +1,12 @@
 import React from 'react'
+import { fetchUnlockCard } from './FetchCard'
 import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
 import CardDescriptionReversal from './CardDescriptionReversal'
 
-class CardComponent extends React.Component {
-
 // To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}, currentUser
+
+class CardComponent extends React.Component {
 
   state = {
     inspect: false,
@@ -21,15 +22,23 @@ class CardComponent extends React.Component {
     }
   }
 
+  // Checks whether a card has been unlocked by the user
   lockCards = () => {
     const currentUser = this.props.currentUser
     const thisCard = this.props.card
     const cardIds = currentUser.cards.map(card => card.id)
-    if (cardIds.includes(thisCard.id)) {console.log(thisCard)}
+
+    if (cardIds.includes(thisCard.id)) {
+      this.setState({ unlocked: true })
+      // console.log(`! ${thisCard.card_name} is unlocked`)
+    } else {
+      this.setState({ unlocked: false })
+      // console.log(`# ${thisCard.card_name} is locked`)
+    }
   }
 
+  // Switches to the inspect view
   handleClickInspect = (event) => {
-    // const card = this.props.card
     const animating = this.props.indexState.animating
     const cardToInspect = this.props.indexState.cardToInspect
 
@@ -39,8 +48,17 @@ class CardComponent extends React.Component {
   }
   /* TODO: Build animation for card */
 
+  /* TODO: REMOVE UNLOCK CARD ON CLICK */
+  // This will automatically unlock the card if the character clicks anything on it
   handleClickTab = (event) => {
     const id = event.target.dataset.id
+
+    if (!this.state.unlocked) {
+      this.setState({ unlocked: true })
+      fetchUnlockCard(this.props.card, this.props.currentUser)
+      .then(console.log)
+    }
+
     return id === 'exit' ? this.setState({ inspect: false })
     : this.setState({ mode: id })
   }
@@ -62,23 +80,31 @@ class CardComponent extends React.Component {
 
     if (!inspect) {
       return(
-        <div className='card-component' onClick={this.handleClickInspect}>
+        <div className='card-component'
+        onClick={this.handleClickInspect}
+        style={!this.state.unlocked ? { background: 'grey' } : null} >
+
           <CardIllustration card={card} />
           <p>{card.card_rank}. The {card.card_name}</p>
+
         </div>
       )
     } else if (inspect) {
       return (
-        <div className='card-component-inspect'>
+        <div className='card-component-inspect'
+        style={!this.state.unlocked ? { background: 'grey' } : null}>
+
           <div className='card-component-inspect-inner'>
             {this.renderCardInspect()}
           </div>
+
           <div className='card-tab-index'>
             <p className='card-tab' onClick={this.handleClickTab} data-id='exit'>X</p>
             <p className='card-tab' onClick={this.handleClickTab} data-id='illustration'>Pic</p>
             <p className='card-tab' onClick={this.handleClickTab} data-id='description'>Info</p>
             <p className='card-tab' onClick={this.handleClickTab} data-id='reversal'>Reversal</p>
           </div>
+
         </div>
       )
     }
