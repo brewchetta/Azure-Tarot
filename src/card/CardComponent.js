@@ -18,12 +18,12 @@ class CardComponent extends React.Component {
 
   componentDidMount() {
     if (this.props.currentUser) {
-      this.lockCards()
+      this.lockCard()
     }
   }
 
   // Checks whether a card has been unlocked by the user
-  lockCards = () => {
+  lockCard = () => {
     const currentUser = this.props.currentUser
     const thisCard = this.props.card
     const cardIds = currentUser.cards.map(card => card.id)
