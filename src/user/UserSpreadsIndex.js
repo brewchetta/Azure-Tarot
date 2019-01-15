@@ -10,7 +10,6 @@ class UserSpreadsIndex extends React.Component {
   state = {
     cards: [],
     spreads: [],
-    animating: false,
     cardToInspect: null
   }
 
@@ -28,7 +27,7 @@ class UserSpreadsIndex extends React.Component {
   renderSpreads = () => {
     if (this.state.spreads) {
       return this.state.spreads.map(spread =>(
-        <UserSpread key={spread.id} indexState={this.state} spread={spread} />
+        <UserSpread key={spread.id} indexState={this.state} spread={spread} currentUser={this.props.currentUser} />
       ))
     }
   }

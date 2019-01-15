@@ -30,7 +30,6 @@ export function fetchCreateCard(card) {
 export function fetchUnlockCard(card, currentUser) {
   const jwt = window.localStorage.getItem('jwt')
   const body = { card_unlock: { card_id: card.id, user_id: currentUser.id } }
-  console.log(body)
 
   if (jwt) {
     return fetch(API + 'card_unlocks', {

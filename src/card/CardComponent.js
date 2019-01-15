@@ -67,7 +67,8 @@ class CardComponent extends React.Component {
     const mode = this.state.mode
     const card = this.props.card
 
-    return mode === 'illustration' ? (<> <CardIllustration card={card} /> <p>{card.card_rank}. The {card.card_name}</p> </>)
+    return mode === 'illustration' ? (<> <CardIllustration card={card} />
+      <p className='card-name-inspect'>{card.card_rank}. The {card.card_name}</p> </>)
       : mode === 'description' ? (<CardDescription card={card} />)
       : mode === 'reversal' ? (<CardDescriptionReversal card={card} />)
       : null
@@ -85,7 +86,7 @@ class CardComponent extends React.Component {
         style={!this.state.unlocked ? { background: 'grey' } : null} >
 
           <CardIllustration card={card} />
-          <p>{card.card_rank}. The {card.card_name}</p>
+          <p className='card-name'>{card.card_rank}. The {card.card_name}</p>
 
         </div>
       )

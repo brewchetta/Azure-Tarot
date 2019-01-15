@@ -7,7 +7,7 @@ export default function UserProfile(props) {
     return(
       <div>
 
-        <UserSpreadsIndex />
+        <UserSpreadsIndex currentUser={props.currentUser} />
 
         <p>I AM PROFILE</p>
 

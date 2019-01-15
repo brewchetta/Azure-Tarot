@@ -1,3 +1,6 @@
+/* Fonts Reference */
+/* font-family: 'Satisfy', cursive; */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,10 +9,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(#990073, #66004d);
+  min-height: 100vh;
 }
 
-body div {
-  border: dotted red 1px;
+body a {
+  text-decoration: none;
 }
 
 code {
@@ -28,14 +33,17 @@ code {
 /* Card Component */
 
 .card-component {
+  cursor: pointer;
   margin: 5px;
   display: inline-block;
   position: relative;
   width: 200px;
-  height: 250px;
-  background: yellow;
+  height: 300px;
+  background: #0086b3;
   overflow: hidden;
-  animation: card-zoom 5s infinite alternate;
+  border-radius: 3%;
+  border: solid #4d1a00 2px;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
 }
 
 .card-component-inspect {
@@ -45,20 +53,22 @@ code {
   height: 125vw;
   max-height: 850px;
   left: 15vw;
-  top: 5%;
+  top: 3%;
   z-index: 100;
 }
 
 .card-component-inspect-inner {
-  background: yellow;
+  background: #0086b3;
   width: 90%;
   height: 100%;
   float: left;
   overflow: auto;
+  border-radius: 3%;
 }
 
 .card-description {
 
+  width: 90%;
 }
 
 .card-description-reversal {
@@ -66,20 +76,33 @@ code {
 }
 
 .card-illustration {
-  box-sizing: border-box;
-  margin: 5%;
-  width: 80%;
-  height: 80%;
+  /* box-sizing: border-box; */
+  margin: auto;
+  margin-top: 5%;
+  width: 90%;
+  height: 75%;
   overflow: hidden;
+  border: solid #4d1a00 2px;
 }
 
 .card-name {
+  font-family: 'Satisfy', cursive;
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 86%;
+}
 
+.card-name-inspect {
+  font-family: 'Satisfy', cursive;
+  font-size: 2em;
+  color: white;
 }
 
 /* Card Tabs */
 
 .card-tab-index {
+  z-index: -1;
   float: left;
   width: 9%;
   height: 100%;
@@ -87,8 +110,15 @@ code {
 }
 
 .card-tab {
+  font-size: 1.2em;
+  font-family: 'Satisfy', cursive;
+  position: relative;
+  top: 5%;
   background: green;
-  width: 100%;
+  width: 120%;
+  cursor: pointer;
+  border: 2px #4d1a00 solid;
+  border-left: none;
 }
 
 .card-tab-exit {
@@ -112,8 +142,8 @@ code {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  height: 105%;
+  width: 105%;
   overflow: hidden;
   background: black;
 }
@@ -130,12 +160,12 @@ code {
 
 /* ----------- */
 
-/* General Animations */
+/* Illustration Animations */
 
 @keyframes death-pulse {
-  0% { background: black }
-  20% { background: black }
-  100% { background: #1a1a00 }
+  0% { background: #003300 }
+  20% { background: #003300 }
+  100% { background: #006600 }
 }
 
 .death-pulse {
@@ -245,12 +275,19 @@ code {
   width: 100%;
   height: 2em;
   display: inline-block;
+  border: solid black 2px;
 }
 
 .navbar-left {
+  text-align: left;
   display: inline-block;
   float: left;
   width: 50%
+}
+
+.navbar-left a {
+  color: white;
+  margin-right: 1em;
 }
 
 .navbar-right {
