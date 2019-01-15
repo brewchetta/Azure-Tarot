@@ -1,13 +1,13 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import UserSpreads from './UserSpreads'
+import UserSpreadsIndex from './UserSpreadsIndex'
 
 export default function UserProfile(props) {
   if (props.currentUser) {
     return(
       <div>
 
-        <UserSpreads />
+        <UserSpreadsIndex />
 
         <p>I AM PROFILE</p>
 
