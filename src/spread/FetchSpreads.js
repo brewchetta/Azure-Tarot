@@ -15,3 +15,11 @@ export function fetchGetSpread(spreadId) {
   })
   .then(r=>r.json())
 }
+
+// Fetches spreads based on currently logged in user
+export function fetchGetSpreadsByUser() {
+  return fetch( API + 'spreads/get-by-user', {
+    headers: {Authorization: `Bearer ${localStorage.jwt}` }
+  })
+  .then(r => r.json())
+}
