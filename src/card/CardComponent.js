@@ -58,8 +58,12 @@ class CardComponent extends React.Component {
       .then(console.log)
     }
 
-    return id === 'exit' ? this.setState({ inspect: false })
-    : this.setState({ mode: id })
+    if (id === 'exit') {
+      this.setState({ inspect: false })
+      this.props.setIndexState({ cardToInspect: null })
+    } else {
+      this.setState({ mode: id })
+    }
   }
 
   renderCardInspect = () => {
