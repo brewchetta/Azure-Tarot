@@ -41,10 +41,18 @@ class CardComponent extends React.Component {
   handleClickInspect = (event) => {
     const animating = this.props.indexState.animating
     const cardToInspect = this.props.indexState.cardToInspect
+    const cardLesson = this.props.indexState.cardLesson
 
-    if (!animating && !cardToInspect && this.state.unlocked) {
+    // Sends to card inspect if no other inspects or lesson
+    if (!animating && !cardToInspect && !cardLesson && this.state.unlocked) {
       this.setState({ inspect: true })
       this.props.setIndexState({ cardToInspect: this.props.card })
+    }
+
+    // Sends to card lesson if card is locked
+    else if (!animating && !cardToInspect && !cardLesson) {
+      console.log('Prepare the lessons')
+      this.props.setIndexState({ cardLesson: this.props.card })
     }
   }
 

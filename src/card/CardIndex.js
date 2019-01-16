@@ -47,6 +47,9 @@ export default class CardIndex extends React.Component {
 
         {this.renderAllCards()}
 
+        {/* Shows lesson if one has been selected */}
+        {this.state.cardLesson ? <LessonComponent card={this.state.cardLesson} /> : null }
+
         {/* Redirects back to profile if not logged in */}
         {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
 
@@ -54,5 +57,3 @@ export default class CardIndex extends React.Component {
     )
   }
 }
-
-// <LessonComponent />

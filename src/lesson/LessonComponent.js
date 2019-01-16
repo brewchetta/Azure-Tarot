@@ -13,7 +13,7 @@ class LessonComponent extends React.Component {
 
   render(){
     return (
-      <div className='lesson-container'>
+      <div className='lesson-container' style={{ top: `${window.pageYOffset}px` }} >
 
         <div className='lesson-text'>
 
