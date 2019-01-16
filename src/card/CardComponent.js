@@ -43,6 +43,8 @@ class CardComponent extends React.Component {
     const cardToInspect = this.props.indexState.cardToInspect
 
     if (!animating && !cardToInspect) {
+      console.log(event.target)
+      // event.target.style.top = `${window.pageYOffset / 2}px`
       this.setState({ inspect: true })
     }
   }
@@ -92,8 +94,7 @@ class CardComponent extends React.Component {
       )
     } else if (inspect) {
       return (
-        <div className='card-component-inspect'
-        style={!this.state.unlocked ? { background: 'grey' } : null}>
+        <div className='card-component-inspect' style={{ top: `${window.pageYOffset - 100}px` }}>
 
           <div className='card-component-inspect-inner'>
             {this.renderCardInspect()}
