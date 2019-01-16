@@ -94,7 +94,7 @@ class CardComponent extends React.Component {
       )
     } else if (inspect) {
       return (
-        <div className='card-component-inspect' style={{ top: `${window.pageYOffset - 100}px` }}>
+        <div className='card-component-inspect' style={{ top: `${window.pageYOffset}px` }}>
 
           <div className='card-component-inspect-inner'>
             {this.renderCardInspect()}

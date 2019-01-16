@@ -89,17 +89,20 @@ code {
 }
 
 .card-name {
-  font-family: 'Satisfy', cursive;
   color: white;
+  font-family: 'Satisfy', cursive;
   position: absolute;
-  width: 100%;
   top: 86%;
+  width: 100%;
 }
 
 .card-name-inspect {
+  color: white;
   font-family: 'Satisfy', cursive;
   font-size: 2em;
-  color: white;
+  position: absolute;
+  top: 86%;
+  width: 90%;
 }
 
 /* Card Tabs */
