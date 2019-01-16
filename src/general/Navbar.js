@@ -25,8 +25,7 @@ const Navbar = (props) => {
       </div>
 
       <div className='navbar-right'>
-        <p>Current user is: {user ? user.username : 'No user'}</p>
-        {localStorage.jwt ? <button onClick={props.handleLogout}>Log Out</button> : null}
+        {localStorage.jwt ? <Link to='/' onClick={props.handleLogout}>Logout</Link> : null}
       </div>
 
     </div>

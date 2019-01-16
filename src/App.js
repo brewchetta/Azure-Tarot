@@ -52,7 +52,7 @@ class App extends Component {
           </div>
 
           {/* Navbar */}
-          {window.localStorage.jwt ? <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} /> : null }
+          {window.localStorage.jwt ? <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} setCurrentUser={this.setCurrentUser} /> : null }
 
           {/* Sign Up */}
           <Route path='/' exact
