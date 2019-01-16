@@ -9,6 +9,10 @@ class LessonComponent extends React.Component {
     card: this.props.card
   }
 
+  exitLesson = () => {
+    this.props.setIndexState({ cardLesson: null })
+  }
+
   render(){
     return (
       <div className='lesson-container' style={{ top: `${window.pageYOffset}px` }} >
@@ -27,7 +31,8 @@ class LessonComponent extends React.Component {
           <CardIllustration card={this.state.card} />
         </div>
 
-        <p className='lesson-exit-button'>X</p>
+        {/* Exit Button */}
+        <p className='lesson-exit-button' onClick={this.exitLesson}>X</p>
 
       </div>
     )
