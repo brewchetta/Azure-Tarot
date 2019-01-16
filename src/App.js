@@ -45,9 +45,16 @@ class App extends Component {
       return (
         <Router>
         <>
+
+          {/* Header */}
+          <div className='title'>
           <h1>Tarot App</h1>
+          </div>
+
+          {/* Navbar */}
           {window.localStorage.jwt ? <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} /> : null }
 
+          {/* Sign Up */}
           <Route path='/' exact
           render={
             props => <UserSignUp {...props}
@@ -55,14 +62,18 @@ class App extends Component {
             currentUser={currentUser} />
           } />
 
+          {/* Hidden Card Create */}
           <Route path='/card-create' exact component={CardCreate} />
 
+          {/* Profile */}
           <Route path='/profile/:user_id' exact render={
             props => <UserProfile {...props} currentUser={currentUser} />
           } />
 
+          {/* Card Index */}
           <Route path='/card-index' exact render={ props=> <CardIndex {...props} currentUser={currentUser} />} />
 
+          {/* Spread */}
           <Route path='/reading' exact render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
 
         </>

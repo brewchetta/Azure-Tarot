@@ -13,7 +13,7 @@ export const Star = props => {
 
       <img alt='' src={lighthouse}
       className='card-fit-width'
-      style={{ top: '20%', zIndex: '100' }}
+      style={{ top: '20%', zIndex: '3' }}
       />
 
       <img alt='' src={stars}

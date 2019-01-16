@@ -51,7 +51,7 @@ export default class UserSignUp extends React.Component {
     }
 
     return(
-      <div>
+      <div className='user-signup-login-container'>
       <p>Sign Up!</p>
       <form name='signup'
       onSubmit={this.handleSubmitSignUp}>
@@ -89,9 +89,5 @@ export default class UserSignUp extends React.Component {
 
       </div>
     )
-  // } else {
-    // this.props.history.push(`/profile/${localUser.id}`)
-    // return (<p>Redirecting</p>)
-  // }
   }
 }
