@@ -6,9 +6,7 @@ import CardIllustration from '../card/CardIllustration'
 class LessonComponent extends React.Component {
 
   state = {
-    card: {
-      card_name: 'Death'
-    }
+    card: this.props.card
   }
 
   render(){

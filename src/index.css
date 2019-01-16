@@ -79,7 +79,6 @@ code {
 }
 
 .card-illustration {
-  /* box-sizing: border-box; */
   margin: auto;
   margin-top: 5%;
   width: 90%;
@@ -327,9 +326,10 @@ code {
 .lesson-image {
   display: inline-block;
   float: left;
+  height: 420px;
+  margin-top: 1em;
   margin-left: 2%;
-  min-width: 300px;
-  width: 30%;
+  width: 280px;
 }
 
 .lesson-text {
