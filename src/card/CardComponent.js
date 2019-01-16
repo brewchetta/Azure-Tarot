@@ -21,18 +21,21 @@ class CardComponent extends React.Component {
     }
   }
 
+  componentDidUpdate() {
+    if (this.props.currentUser) {
+      this.lockCard()
+    }
+  }
+
   // Checks whether a card has been unlocked by the user
   lockCard = () => {
     const currentUser = this.props.currentUser
     const thisCard = this.props.card
     const cardIds = currentUser.cards.map(card => card.id)
+    const unlocked = this.state.unlocked
 
-    if (cardIds.includes(thisCard.id)) {
+    if (cardIds.includes(thisCard.id) && unlocked === false) {
       this.setState({ unlocked: true })
-      // console.log(`! ${thisCard.card_name} is unlocked`)
-    } else {
-      this.setState({ unlocked: false })
-      // console.log(`# ${thisCard.card_name} is locked`)
     }
   }
 
