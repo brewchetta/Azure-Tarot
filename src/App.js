@@ -22,7 +22,7 @@ class App extends Component {
   // Checks if the JWT token has an associated user
   componentDidMount() {
     const jwt = localStorage.jwt
-    fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }, ()=>console.log(this.state.currentUser)))
+    fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }))
   }
 
   // Sets the current user when logging in or signing up

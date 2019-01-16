@@ -37,21 +37,18 @@ class CardComponent extends React.Component {
     }
   }
 
-  // Switches to the inspect view
+  // Switches to the inspect or lesson view
   handleClickInspect = (event) => {
     const animating = this.props.indexState.animating
     const cardToInspect = this.props.indexState.cardToInspect
 
-    if (!animating && !cardToInspect) {
-      console.log(event.target)
-      // event.target.style.top = `${window.pageYOffset / 2}px`
+    if (!animating && !cardToInspect && this.state.unlocked) {
       this.setState({ inspect: true })
+      this.props.setIndexState({ cardToInspect: this.props.card })
     }
   }
-  /* TODO: Build animation for card */
 
   /* TODO: REMOVE UNLOCK CARD ON CLICK */
-  // This will automatically unlock the card if the character clicks anything on it
   handleClickTab = (event) => {
     const id = event.target.dataset.id
 

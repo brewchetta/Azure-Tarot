@@ -9,8 +9,6 @@ export default function UserProfile(props) {
 
         <UserSpreadsIndex currentUser={props.currentUser} />
 
-        <p>I AM PROFILE</p>
-
       </div>
     )
   } else {

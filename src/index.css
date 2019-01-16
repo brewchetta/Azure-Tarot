@@ -23,7 +23,7 @@ code {
     monospace;
 }
 
-/* Card Index */
+/* Card Index -------------------------------------- Card Index */
 
 .card-index {
   text-align: center;
@@ -105,7 +105,7 @@ code {
   width: 90%;
 }
 
-/* Card Tabs */
+/* Card Tabs ------------------------------------------- Card Tabs */
 
 .card-tab-index {
   z-index: -1;
@@ -166,7 +166,7 @@ code {
 
 /* ----------- */
 
-/* Illustration Animations */
+/* Illustration Animations ------------------------ Illustration Animations */
 
 @keyframes death-pulse {
   0% { background: #003300 }
@@ -178,8 +178,7 @@ code {
   animation: death-pulse 4s infinite alternate;
 }
 
-/* Raven Feather Animations */
-
+/* Raven Feather */
 @keyframes featherfall-one {
   0% { top: 30%; right: 20%; }
   100% { top: 90%; right: 120%; }
@@ -204,7 +203,6 @@ code {
   0% { top: 40%; right: 0%; }
   100% { top: 110%; right: 120%; }
 }
-
 /* ---------- */
 
 @keyframes firefly {
@@ -275,7 +273,7 @@ code {
 
 /* ---------- */
 
-/* Header */
+/* Header ----------------------------------- Header */
 
 .title {
   margin: 5px;
@@ -283,7 +281,72 @@ code {
 
 /* ---------- */
 
-/* Login & Signup */
+/* Lesson --------------------------------------------- Lesson */
+
+.lesson-buttons {
+  text-align: center;
+  width: 100%;
+}
+
+.lesson-buttons p {
+  border: solid white 2px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 1em;
+}
+
+.lesson-container {
+  background: black;
+  border: 2px white solid;
+  border-radius: 5px;
+  left: 10vw;
+  min-height: 60vh;
+  position: absolute;
+  text-align: center;
+  width: 80vw;
+  z-index: 100;
+}
+
+.lesson-container p {
+  margin: 1em;
+}
+
+.lesson-exit-button {
+  background: black;
+  border: solid white 10px;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  right: -1em;
+  top: -1em;
+  width: 20px;
+}
+
+.lesson-image {
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+  min-width: 300px;
+  width: 30%;
+}
+
+.lesson-text {
+  border: 2px white solid;
+  display: inline-block;
+  float: left;
+  margin-top: 2%;
+  margin-left: 2%;
+  min-height: 395px;
+  min-width: 300px;
+  text-align: left;
+  width: 60%;
+}
+
+/* ---------- */
+
+/* Login & Signup ------------------------------- Login & Signup */
 
 .user-signup-login-container {
   margin: 10px;
@@ -291,7 +354,7 @@ code {
 
 /* ---------- */
 
-/* Navbar */
+/* Navbar --------------------------------------- Navbar */
 
 .navbar {
   width: 100%;
@@ -322,7 +385,7 @@ code {
 
 /* ---------- */
 
-/* Spread Components */
+/* Spread Components ------------------------------------- Spread Components */
 
 .table-card-container {
   text-align: center;

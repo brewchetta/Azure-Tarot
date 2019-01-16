@@ -5,12 +5,14 @@ import { Redirect } from 'react-router-dom'
 import { fetchGetAllCards } from './FetchCard'
 // Components
 import CardComponent from './CardComponent'
+import LessonComponent from '../lesson/LessonComponent'
 
 export default class CardIndex extends React.Component {
 
   state = {
     cards: [],
     cardToInspect: null,
+    cardLesson: null,
     animating: false
   }
 
@@ -26,19 +28,31 @@ export default class CardIndex extends React.Component {
     })
   }
 
+  setIndexState = (object) => {
+    this.setState(object)
+  }
+
   renderAllCards = () => {
     return this.state.cards.map((card,i) => (
-      <CardComponent key={i} card={card} indexState={this.state} currentUser={this.props.currentUser} />
+      <CardComponent key={i} card={card} indexState={this.state} currentUser={this.props.currentUser} setIndexState={this.setIndexState} />
     ))
   }
 
   render() {
     return (
       <div className='card-index'>
+
+
         <h2>Card Index</h2>
+
         {this.renderAllCards()}
+
+        {/* Redirects back to profile if not logged in */}
         {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
+
       </div>
     )
   }
 }
+
+// <LessonComponent />
