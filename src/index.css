@@ -290,6 +290,7 @@ code {
 .lesson-buttons p {
   border: solid white 2px;
   border-radius: 5px;
+  cursor: pointer;
   display: inline-block;
   padding: 1em;
 }
@@ -333,7 +334,6 @@ code {
 }
 
 .lesson-text {
-  border: 2px white solid;
   display: inline-block;
   float: left;
   margin-top: 2%;

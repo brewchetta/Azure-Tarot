@@ -3,6 +3,7 @@ import React from  'react'
 import { Redirect } from 'react-router-dom'
 // Fetches
 import { fetchGetAllCards } from './FetchCard'
+import { fetchUnlockCard } from './FetchCard'
 // Components
 import CardComponent from './CardComponent'
 import LessonComponent from '../lesson/LessonComponent'
@@ -38,6 +39,16 @@ export default class CardIndex extends React.Component {
     ))
   }
 
+  unlockCard = (card) => {
+    const user = this.props.currentUser
+
+    fetchUnlockCard(card, user)
+    .then(console.log)
+    .then(() => {
+      this.props.setCurrentUser({ ...user, cards: [...user.cards, card] })
+    })
+  }
+
   render() {
     return (
       <div className='card-index'>
@@ -48,7 +59,7 @@ export default class CardIndex extends React.Component {
         {this.renderAllCards()}
 
         {/* Shows lesson if one has been selected */}
-        {this.state.cardLesson ? <LessonComponent card={this.state.cardLesson} setIndexState={this.setIndexState} /> : null }
+        {this.state.cardLesson ? <LessonComponent card={this.state.cardLesson} setIndexState={this.setIndexState} unlockCard={this.unlockCard} /> : null }
 
         {/* Redirects back to profile if not logged in */}
         {localStorage.getItem('jwt') ? null : <Redirect to='/' />}

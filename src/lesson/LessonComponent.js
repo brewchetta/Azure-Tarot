@@ -13,6 +13,12 @@ class LessonComponent extends React.Component {
     this.props.setIndexState({ cardLesson: null })
   }
 
+  unlockLesson = () => {
+    this.props.unlockCard(this.state.card)
+
+    this.exitLesson()
+  }
+
   render(){
     return (
       <div className='lesson-container' style={{ top: `${window.pageYOffset}px` }} >
@@ -21,7 +27,7 @@ class LessonComponent extends React.Component {
 
         <p>I am a large block of text full of stuff that you probably want to know about things.</p>
 
-          <div className='lesson-buttons'>
+          <div className='lesson-buttons' onClick={this.unlockLesson}>
             <p>Unlock Card</p>
           </div>
 

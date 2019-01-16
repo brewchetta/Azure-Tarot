@@ -1,5 +1,4 @@
 import React from 'react'
-import { fetchUnlockCard } from './FetchCard'
 import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
 import CardDescriptionReversal from './CardDescriptionReversal'
@@ -51,20 +50,12 @@ class CardComponent extends React.Component {
 
     // Sends to card lesson if card is locked
     else if (!animating && !cardToInspect && !cardLesson) {
-      console.log('Prepare the lessons')
       this.props.setIndexState({ cardLesson: this.props.card })
     }
   }
 
-  /* TODO: REMOVE UNLOCK CARD ON CLICK */
   handleClickTab = (event) => {
     const id = event.target.dataset.id
-
-    if (!this.state.unlocked && this.props.currentUser) {
-      this.setState({ unlocked: true })
-      fetchUnlockCard(this.props.card, this.props.currentUser)
-      .then(console.log)
-    }
 
     if (id === 'exit') {
       this.setState({ inspect: false })
