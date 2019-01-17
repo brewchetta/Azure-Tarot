@@ -89,10 +89,6 @@ export default class SpreadTable extends React.Component {
       return (
         <div>
           {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
-          <p>I am Spread Table</p>
-          <p>I have {this.state.cards.length} cards in my state</p>
-          <p>I have {unlockedCards.length} unlocked cards in my state</p>
-          <p>I have {selectedCards.length} selected cards.</p>
           {selectedCards.length < 3 && (unlockedCards.length + selectedCards.length) >= 5 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
           <div className='table-card-container'>
             {this.renderCardPositions()}

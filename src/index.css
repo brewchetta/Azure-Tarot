@@ -48,6 +48,33 @@ code {
   width: 200px;
 }
 
+.card-component-back {
+  background: grey;
+  border: solid #4d1a00 2px;
+  border-radius: 3%;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+  cursor: pointer;
+  height: 300px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 200px;
+  z-index: 500;
+  /* visibility: hidden; */
+}
+
+.card-component-flip-container {
+  border: solid white 2px;
+  height: 310px;
+  position: relative;
+  perspective: 500px;
+  width: 210px;
+}
+
+.card-component-flip-container-inner {
+
+}
+
 .card-component-inspect {
   height: 125vw;
   left: 15vw;
@@ -101,6 +128,7 @@ code {
   font-size: 2em;
   position: absolute;
   top: 86%;
+  transition: linear width 1s, height 1s, top 1s, left 1s;
   width: 90%;
 }
 

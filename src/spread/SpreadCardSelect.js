@@ -5,7 +5,7 @@ export default class SpreadCardSelect extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.selectCard}>Add Card to Spread</button>
+        <button onClick={this.props.selectCard}>Draw a Card</button>
       </div>
     )
   }

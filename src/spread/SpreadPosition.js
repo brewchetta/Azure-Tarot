@@ -8,10 +8,17 @@ const SpreadPosition = (props) => {
     <div className='position-container-threecard'>
       <p>{props.position}</p>
 
-      <CardComponent card={props.card} 
-      indexState={props.indexState}
-      setIndexState={props.setIndexState}
-      currentUser={props.currentUser} />
+      <div className='card-component-flip-container'>
+
+        <CardComponent card={props.card}
+        indexState={props.indexState}
+        setIndexState={props.setIndexState}
+        currentUser={props.currentUser} />
+
+        <div className='card-component-back'>
+        </div>
+
+      </div>
 
     </div>
   )
