@@ -101,6 +101,7 @@ code {
 }
 
 .card-component-inspect {
+  animation: card-inspect-appear 0.5s;
   height: 125vw;
   left: 15vw;
   max-height: 700px;
@@ -108,6 +109,11 @@ code {
   position: absolute;
   width: 100vw;
   z-index: 100;
+}
+
+@keyframes card-inspect-appear {
+  from { left: -100vw }
+  to { left: 15vw }
 }
 
 .card-component-inspect-inner {

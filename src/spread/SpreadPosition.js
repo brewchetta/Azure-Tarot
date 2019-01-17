@@ -30,7 +30,8 @@ class SpreadPosition extends React.Component {
             <CardComponent card={card}
             indexState={this.props.indexState}
             setIndexState={this.props.setIndexState}
-            currentUser={this.props.currentUser} />
+            currentUser={this.props.currentUser}
+            spread={true} />
 
           <div className='card-component-back'>
           </div>
