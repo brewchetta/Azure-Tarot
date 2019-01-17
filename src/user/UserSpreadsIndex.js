@@ -26,6 +26,13 @@ class UserSpreadsIndex extends React.Component {
     })
   }
 
+  updateSpread = (updatedSpread) => {
+    const updatedSpreads = this.state.spreads.map(spread => (
+      spread.id === updatedSpread.id ? updatedSpread : spread
+    ))
+    this.setState({ spreads: updatedSpreads })
+  }
+
   setIndexState = (object) => {
     this.setState(object)
   }
@@ -33,7 +40,13 @@ class UserSpreadsIndex extends React.Component {
   renderSpreads = () => {
     if (this.state.spreads) {
       return this.state.spreads.map(spread =>(
-        <UserSpread key={Math.random()} indexState={this.state} setIndexState={this.setIndexState} spread={spread} currentUser={this.props.currentUser} />
+        <UserSpread
+        key={Math.random()}
+        indexState={this.state}
+        setIndexState={this.setIndexState}
+        spread={spread}
+        currentUser={this.props.currentUser}
+        updateSpread={this.updateSpread} />
       ))
     }
   }

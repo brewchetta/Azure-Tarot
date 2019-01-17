@@ -20,8 +20,8 @@ const UserSpread = (props) => {
   const renderNotes = () => {
     return props.spread.notes.map(note => {
       return (
-        <div>
-          <p>Note Goes Here</p>
+        <div key={Math.random()}>
+          <p>{note.content} <br/> {note.created_at.split('T')[0]}</p>
         </div>
       )
     })
@@ -43,7 +43,9 @@ const UserSpread = (props) => {
 
         {renderNotes()}
 
-        <UserSpreadNoteForm spreadId={props.spread.id} />
+        <UserSpreadNoteForm
+        spreadId={props.spread.id}
+        updateSpread={props.updateSpread} />
 
       </div>
 

@@ -20,7 +20,7 @@ export default class UserSpreadNoteForm extends React.Component {
     }
 
     fetchCreateNote(body)
-    .then(console.log)
+    .then(r => this.props.updateSpread(r.spread))
   }
 
   render() {
