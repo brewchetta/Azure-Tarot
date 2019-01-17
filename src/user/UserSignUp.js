@@ -23,9 +23,9 @@ export default class UserSignUp extends React.Component {
       if (response.errors) {
         console.log('Error: ', response.errors)
       } else if (response.user) {
+        this.setLocalStorage(response)
         console.log('Created user: ', response.user)
         this.props.setCurrentUser(response.user)
-        this.setLocalStorage(response)
       }
     })
   }
@@ -35,14 +35,13 @@ export default class UserSignUp extends React.Component {
 
     fetchUserLogin(this.state)
     .then(response => {
-      console.log(response)
       this.setLocalStorage(response)
       this.props.setCurrentUser(response.user)
     })
   }
 
   setLocalStorage = (response) => {
-    localStorage.setItem('jwt', response.jwt)
+    window.localStorage.setItem('jwt', response.jwt)
   }
 
   render() {
