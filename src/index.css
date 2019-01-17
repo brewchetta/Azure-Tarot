@@ -54,6 +54,13 @@ code {
   width: 200px;
 }
 
+.card-index-space {
+  display: inline-block;
+  border-radius: 3%;
+  height: 314px;
+  width: 214px;
+}
+
 .card-component-back {
   background: grey;
   backface-visibility: hidden;

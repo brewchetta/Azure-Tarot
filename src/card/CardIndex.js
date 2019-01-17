@@ -35,7 +35,9 @@ export default class CardIndex extends React.Component {
 
   renderAllCards = () => {
     return this.state.cards.map((card,i) => (
-      <CardComponent key={i} card={card} indexState={this.state} currentUser={this.props.currentUser} setIndexState={this.setIndexState} />
+      <div className='card-index-space'>
+        <CardComponent key={i} card={card} indexState={this.state} currentUser={this.props.currentUser} setIndexState={this.setIndexState} />
+      </div>
     ))
   }
 
