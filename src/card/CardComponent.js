@@ -82,7 +82,6 @@ class CardComponent extends React.Component {
   render() {
     const inspect = (this.props.indexState.cardToInspect === this.props.card)
     const card = this.props.card
-    console.log(card.card_name)
 
     if (!inspect) {
       return(
