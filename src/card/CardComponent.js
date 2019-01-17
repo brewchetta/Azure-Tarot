@@ -8,11 +8,10 @@ import CardDescriptionReversal from './CardDescriptionReversal'
 class CardComponent extends React.Component {
 
   state = {
-    inspect: false,
     mode: 'illustration',
     unlocked: false
   }
-  // Inspect determines whether that card has been zoomed in
+
   // Modes are illustration, description, reversal
 
   componentDidMount() {
@@ -41,13 +40,14 @@ class CardComponent extends React.Component {
 
   // Switches to the inspect or lesson view
   handleClickInspect = (event) => {
+    // console.log(this.props.indexState)
+    // console.log(this.state.unlocked)
     const animating = this.props.indexState.animating
     const cardToInspect = this.props.indexState.cardToInspect
     const cardLesson = this.props.indexState.cardLesson
 
     // Sends to card inspect if no other inspects or lesson
     if (!animating && !cardToInspect && !cardLesson && this.state.unlocked) {
-      this.setState({ inspect: true })
       this.props.setIndexState({ cardToInspect: this.props.card })
     }
 
@@ -61,7 +61,6 @@ class CardComponent extends React.Component {
     const id = event.target.dataset.id
 
     if (id === 'exit') {
-      this.setState({ inspect: false })
       this.props.setIndexState({ cardToInspect: null })
     } else {
       this.setState({ mode: id })
@@ -81,7 +80,7 @@ class CardComponent extends React.Component {
 
 
   render() {
-    const inspect = this.state.inspect
+    const inspect = (this.props.indexState.cardToInspect === this.props.card)
     const card = this.props.card
 
     if (!inspect) {

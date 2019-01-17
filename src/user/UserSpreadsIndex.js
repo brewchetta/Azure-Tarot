@@ -8,9 +8,11 @@ import UserSpread from './UserSpread'
 class UserSpreadsIndex extends React.Component {
 
   state = {
+    animating: false,
     cards: [],
-    spreads: [],
-    cardToInspect: null
+    cardLesson: null,
+    cardToInspect: null,
+    spreads: []
   }
 
   componentDidMount() {
@@ -24,10 +26,14 @@ class UserSpreadsIndex extends React.Component {
     })
   }
 
+  setIndexState = (object) => {
+    this.setState(object)
+  }
+
   renderSpreads = () => {
     if (this.state.spreads) {
       return this.state.spreads.map(spread =>(
-        <UserSpread key={spread.id} indexState={this.state} spread={spread} currentUser={this.props.currentUser} />
+        <UserSpread key={spread.id} indexState={this.state} setIndexState={this.setIndexState} spread={spread} currentUser={this.props.currentUser} />
       ))
     }
   }
