@@ -1,29 +1,44 @@
 import React from 'react'
 import CardComponent from '../card/CardComponent'
 
-const SpreadPosition = (props) => {
+class SpreadPosition extends React.Component {
 
+  state = {
+    flipped: false
+  }
 
-  return (
-    <div className='position-container-threecard'>
-      <p>{props.position}</p>
+  flip = () => {
+    if (!this.state.flipped) {
+      console.log('Card shall flip!')
+      this.setState({ flipped: true })
+    }
+  }
 
-      <div className='card-component-flip-container'>
-      <div className='card-component-flip-container-inner'>
+  render() {
+    const flipped = this.state.flipped
 
-        <CardComponent card={props.card}
-        indexState={props.indexState}
-        setIndexState={props.setIndexState}
-        currentUser={props.currentUser} />
+    return (
+      <div className='position-container-threecard'>
+        <p>{this.props.position}</p>
+
+        <div className='card-component-flip-container' onClick={this.flip}>
+        <div className='card-component-flip-container-inner'
+        style={flipped ? {transform: 'rotateY(0deg)'} : null }>
+
+          <CardComponent card={this.props.card}
+          indexState={this.props.indexState}
+          setIndexState={this.props.setIndexState}
+          currentUser={this.props.currentUser} />
 
         <div className='card-component-back'>
         </div>
 
-      </div>
-      </div>
+        </div>
+        </div>
 
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 export default SpreadPosition

@@ -89,12 +89,9 @@ code {
   width: 100%;
 }
 
-.card-component-flip-container-inner:hover {
-  transform: rotateY(180deg);
-}
-
-.card-component-flip-container-inner {
-
+@keyframes card-flip-up {
+  from { transform: rotateY(180deg) }
+  to { transform: rotateY(0) }
 }
 
 .card-component-inspect {
