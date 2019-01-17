@@ -1,4 +1,5 @@
 import React from 'react'
+import { fetchCreateNote } from './FetchSpreads'
 
 export default class UserSpreadNoteForm extends React.Component {
 
@@ -12,6 +13,14 @@ export default class UserSpreadNoteForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
+
+    const body = {
+      content: this.state.content,
+      spread_id: this.props.spreadId
+    }
+
+    fetchCreateNote(body)
+    .then(console.log)
   }
 
   render() {

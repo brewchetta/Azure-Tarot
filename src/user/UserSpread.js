@@ -1,6 +1,6 @@
 import React from 'react'
 import CardComponent from '../card/CardComponent'
-import UserSpreadNoteForm from './UserSpreadNoteForm'
+import UserSpreadNoteForm from '../spread/SpreadNoteForm'
 
 const UserSpread = (props) => {
 
@@ -43,7 +43,7 @@ const UserSpread = (props) => {
 
         {renderNotes()}
 
-        <UserSpreadNoteForm />
+        <UserSpreadNoteForm spreadId={props.spread.id} />
 
       </div>
 

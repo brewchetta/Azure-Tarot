@@ -23,3 +23,12 @@ export function fetchGetSpreadsByUser() {
   })
   .then(r => r.json())
 }
+
+export function fetchCreateNote(body) {
+  return fetch(API + 'notes', {
+    method: 'POST',
+    headers: { 'Accept':'application/json', 'Content-Type':'application/json', Authorization: `Bearer ${localStorage.jwt}` },
+    body: JSON.stringify(body)
+  })
+  .then(r=>r.json())
+}
