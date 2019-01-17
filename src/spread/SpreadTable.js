@@ -25,6 +25,10 @@ export default class SpreadTable extends React.Component {
     })
   }
 
+  setIndexState = (object) => {
+    this.setState(object)
+  }
+
   // Sets pool of cards that user can draw from
   setUnlockedCards = () => {
     const currentUser = this.props.currentUser
@@ -73,7 +77,7 @@ export default class SpreadTable extends React.Component {
   renderCardPositions = () => {
     const positions = ['past', 'present', 'future']
     return this.state.selectedCards.map((card, i) => (
-      <SpreadPosition key={i} card={card} position={positions[i]} indexState={this.state} currentUser={this.props.currentUser} />
+      <SpreadPosition key={i} card={card} position={positions[i]} indexState={this.state} setIndexState={this.setIndexState} currentUser={this.props.currentUser} />
     ))
   }
 
