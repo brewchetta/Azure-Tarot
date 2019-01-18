@@ -444,6 +444,27 @@ code {
 
 /* ---------- */
 
+/* Profile Components ------------------------------------- Profile Components */
+
+.profile-info-container {
+  float: left;
+  margin-right: 2.2%;
+  min-height: 80vh;
+  min-width: 650px;
+  padding: 5px;
+  width: 48%;
+}
+
+.profile-spread-index {
+  float: left;
+  min-width: 650px;
+  padding: 5px;
+  text-align: right;
+  width: 48%;
+}
+
+/* ---------- */
+
 /* Spread Components ------------------------------------- Spread Components */
 
 .table-card-container {

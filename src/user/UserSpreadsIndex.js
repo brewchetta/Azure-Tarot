@@ -53,7 +53,7 @@ class UserSpreadsIndex extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='profile-spread-index'>
 
         {this.renderSpreads()}
 
