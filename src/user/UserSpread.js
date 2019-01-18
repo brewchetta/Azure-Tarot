@@ -20,7 +20,7 @@ const UserSpread = (props) => {
   const renderNotes = () => {
     return props.spread.notes.map(note => {
       return (
-        <div key={Math.random()}>
+        <div key={Math.random()} className='profile-note'>
           <p>{note.content} <br/> {note.created_at.split('T')[0]}</p>
         </div>
       )
@@ -39,9 +39,16 @@ const UserSpread = (props) => {
 
       {renderCards()}
 
-      <div>
+      <div className='profile-notes-container'>
 
         {renderNotes()}
+
+        {!props.spread.notes.length ?
+          <p style={{ float: 'left', marginLeft: '0.5em' }}>You haven't written notes for this reading! <br/>Click the button to write your first!</p>
+          : null}
+
+        <img className='profile-note-create' alt='Write New Note'
+        src='https://www.fileformat.info/info/unicode/char/270d/writing_hand.png'/>
 
         <UserSpreadNoteForm
         spreadId={props.spread.id}
