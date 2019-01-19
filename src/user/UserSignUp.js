@@ -35,8 +35,13 @@ export default class UserSignUp extends React.Component {
 
     fetchUserLogin(this.state)
     .then(response => {
-      this.setLocalStorage(response)
-      this.props.setCurrentUser(response.user)
+      console.log(response)
+      if (response.errors) {console.log('Error:, response.errors')}
+      else if (response.user) {
+        console.log(response.user)
+        // this.setLocalStorage(response)
+        this.props.setCurrentUser(response.user)
+      }
     })
   }
 
