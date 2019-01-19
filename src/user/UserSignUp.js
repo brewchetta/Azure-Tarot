@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 export default class UserSignUp extends React.Component {
 
   state = {
+    errors: '',
     username: '',
     password: '',
     login_username: '',
@@ -20,8 +21,9 @@ export default class UserSignUp extends React.Component {
 
     fetchCreateUser(this.state)
     .then(response => {
-      if (response.errors) {
-        console.log('Error: ', response.errors)
+      if (!response.user) {
+        console.log('Error: ', response)
+        this.setState({ errors: response.message })
       } else if (response.user) {
         this.setLocalStorage(response)
         console.log('Created user: ', response.user)
@@ -35,11 +37,13 @@ export default class UserSignUp extends React.Component {
 
     fetchUserLogin(this.state)
     .then(response => {
-      console.log(response)
-      if (response.errors) {console.log('Error:, response.errors')}
+      if (!response.user) {
+        console.log('Error: ', response)
+        this.setState({ errors: response.message })
+      }
       else if (response.user) {
-        console.log(response.user)
-        // this.setLocalStorage(response)
+        console.log(response)
+        this.setLocalStorage(response)
         this.props.setCurrentUser(response.user)
       }
     })
@@ -76,6 +80,7 @@ export default class UserSignUp extends React.Component {
 
       {/* ----------------- */}
 
+
       <p>Log In!</p>
       <form name='login' onSubmit={this.handleSubmitLogin}>
       <label name='login_username'>Name</label>
@@ -90,6 +95,8 @@ export default class UserSignUp extends React.Component {
 
       <input type='submit' />
       </form>
+
+      {this.state.errors ? <p>{this.state.errors}</p> : null}
 
       </div>
     )
