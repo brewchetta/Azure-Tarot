@@ -7,6 +7,20 @@ export default class UserSpreadNoteForm extends React.Component {
     content: ''
   }
 
+  componentDidMount() {
+    const noteContainers = Array.from(document.getElementsByClassName('profile-notes-container'))
+    noteContainers.forEach(noteContainer => {
+      noteContainer.scrollTop = noteContainer.scrollHeight
+    })
+  }
+
+  componentDidUpdate() {
+    const noteContainers = Array.from(document.getElementsByClassName('profile-notes-container'))
+    noteContainers.forEach(noteContainer => {
+      noteContainer.scrollTop = noteContainer.scrollHeight
+    })
+  }
+
   handleChange = event => {
     this.setState({ content: event.target.value })
   }
@@ -14,31 +28,36 @@ export default class UserSpreadNoteForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
 
-    const body = {
-      content: this.state.content,
-      spread_id: this.props.spreadId
-    }
+    const body = { content: this.state.content, spread_id: this.props.spreadId }
 
     fetchCreateNote(body)
     .then(r => this.props.updateSpread(r.spread))
+
+    this.props.handleToggleForm()
   }
 
   render() {
-    return (
-      <div className='note-form' onSubmit={this.handleSubmit}>
+    if (this.props.noteFormVisible) {
+      return (
+        <div className='profile-note-form' onSubmit={this.handleSubmit}>
 
         <p>Add Note</p>
 
         <form>
 
-          <textarea value={this.state.content} onChange={this.handleChange} />
+        <textarea value={this.state.content} onChange={this.handleChange} />
 
-          <input type="submit" />
+        <br/>
+
+        <input type="submit" />
 
         </form>
 
-      </div>
-    )
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 
 }

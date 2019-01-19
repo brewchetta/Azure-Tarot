@@ -478,12 +478,31 @@ code {
 .profile-note-create {
   background: white;
   border-radius: 5px;
+  cursor: pointer;
   filter: invert(1);
   margin: 5px;
   width: 4em;
 }
 
 .profile-note-form {
+  text-align: center;
+  margin: 0.5em;
+  width: 100%;
+}
+
+.profile-note-form textarea {
+  background: rgba(125,125,125,0.3);
+  border: solid white 2px;
+  border-radius: 5px;
+  color: white;
+  width: 80%;
+}
+
+.profile-note-form input {
+  background: rgba(0,0,0,0);
+  border: solid white 2px;
+  border-radius: 3px;
+  color: white;
 
 }
 
