@@ -1,7 +1,7 @@
 import React from 'react'
 import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
-import CardDescriptionReversal from './CardDescriptionReversal'
+import CardDescriptionUser from './CardDescriptionUser'
 
 // To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}, currentUser
 
@@ -70,11 +70,15 @@ class CardComponent extends React.Component {
   renderCardInspect = () => {
     const mode = this.state.mode
     const card = this.props.card
+    const cardUnlocks = this.props.currentUser.card_unlocks
+    const user_description = cardUnlocks.filter(unlock => unlock.card_id === card.id)[0].user_description
+
+    console.log(user_description)
 
     return mode === 'illustration' ? (<> <CardIllustration card={card} />
       <p className='card-name-inspect'>{card.card_rank}. The {card.card_name}</p> </>)
       : mode === 'description' ? (<CardDescription card={card} />)
-      : mode === 'reversal' ? (<CardDescriptionReversal card={card} />)
+      : mode === 'user-info' ? (<CardDescriptionUser card={card} user_description={user_description} />)
       : null
   }
 
@@ -96,7 +100,7 @@ class CardComponent extends React.Component {
       )
     } else if (inspect) {
       return (
-        <div className='card-component-inspect' style={{ top: `${window.pageYOffset}px` }}>
+        <div className='card-component-inspect'>
 
           <div className='card-component-inspect-inner'>
             {this.renderCardInspect()}
@@ -106,7 +110,7 @@ class CardComponent extends React.Component {
             <p className='card-tab' onClick={this.handleClickTab} data-id='exit'>X</p>
             <p className='card-tab' onClick={this.handleClickTab} data-id='illustration'>Pic</p>
             <p className='card-tab' onClick={this.handleClickTab} data-id='description'>Info</p>
-            <p className='card-tab' onClick={this.handleClickTab} data-id='reversal'>Reversal</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='user-info'>Yours</p>
           </div>
 
         </div>

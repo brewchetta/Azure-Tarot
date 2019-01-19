@@ -100,8 +100,8 @@ code {
   animation: card-inspect-appear 0.5s;
   height: 125vw;
   left: 15vw;
-  max-height: 700px;
-  max-width: 529px;
+  max-height: 563px;
+  max-width: 450px;
   position: absolute;
   width: 100vw;
   z-index: 100;
@@ -124,12 +124,13 @@ code {
 }
 
 .card-description {
-
+  margin: 5%;
   width: 90%;
 }
 
 .card-description-reversal {
-
+  margin: 5%;
+  width: 90%;
 }
 
 .card-illustration {
@@ -170,7 +171,7 @@ code {
 }
 
 .card-tab {
-  font-size: 1.2em;
+  font-size: 90%;
   font-family: 'Satisfy', cursive;
   position: relative;
   top: 5%;

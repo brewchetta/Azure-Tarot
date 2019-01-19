@@ -6,12 +6,11 @@ const CardDescription = props => {
 
   return (
     <div className='card-description'>
-      <p>Suit: {card.card_suit}</p>
-      <p>Description: {card.description}</p>
-      <p>Keywords: {card.keywords.join(", ")}</p>
-      <p>Reversal Description: {card.rev_description}</p>
-      <p>Reversal Keywords: {card.rev_keywords.join(", ")}</p>
-      <p>{card.major_arcana ? 'Part of the Major Arcana' : 'Not Major Arcana'}</p>
+      <h4>The {card.card_name}</h4>
+      <p>{card.major_arcana ? 'Part of the Major Arcana' : null }</p>
+      <p>{card.description}</p>
+      <p>{card.keywords.join(", ")}</p>
+      <p>{card.rev_description}</p>
     </div>
   )
 }
