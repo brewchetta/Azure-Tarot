@@ -2,40 +2,52 @@
 import React from 'react'
 // Components
 import CardIllustration from '../card/CardIllustration'
+import LessonDescription from './LessonDescription'
+import LessonWriteForm from './LessonWriteForm'
 
 class LessonComponent extends React.Component {
 
   state = {
-    card: this.props.card
+    form: false
   }
 
   exitLesson = () => {
     this.props.setIndexState({ cardLesson: null })
   }
 
+  paginateLesson = () => {
+    this.setState({ form: !this.state.form })
+  }
+
   unlockLesson = () => {
-    this.props.unlockCard(this.state.card)
+    this.props.unlockCard(this.props.card)
 
     this.exitLesson()
   }
 
   render(){
+    const card = this.props.card
+    const form = this.state.form
+
     return (
-      <div className='lesson-container' style={{ top: `${window.pageYOffset}px` }} >
+      <div className='lesson-container' style={{ top: `${window.pageYOffset - 100}px` }} >
 
-        <div className='lesson-text'>
+        <h4>{card.card_name}</h4>
 
-        <p>I am a large block of text full of stuff that you probably want to know about things.</p>
+        {/* Lesson Description if not on form */}
+        { form === false ? <LessonDescription card={card} /> : <LessonWriteForm unlockLesson={this.unlocklesson} /> }
 
-          <div className='lesson-buttons' onClick={this.unlockLesson}>
-            <p>Unlock Card</p>
-          </div>
-
-        </div>
-
+        {/* Card Illustration */}
         <div className='lesson-image'>
-          <CardIllustration card={this.state.card} />
+          <CardIllustration card={card} />
         </div>
+
+        {/* Button to next or previous page of lesson */}
+        <p className='lesson-next-button'
+        style={form === false ? { left: '90%' } : null }
+        onClick={this.paginateLesson}>
+          {form === false ? 'Next' : 'Previous'}
+        </p>
 
         {/* Exit Button */}
         <p className='lesson-exit-button' onClick={this.exitLesson}>X</p>

@@ -14,7 +14,8 @@ export default class CardIndex extends React.Component {
     cards: [],
     cardToInspect: null,
     cardLesson: null,
-    animating: false
+    animating: false,
+    popupOpen: true
   }
 
   componentDidMount() {
@@ -53,25 +54,29 @@ export default class CardIndex extends React.Component {
 
   renderCardIndexIntro = () => {
     const user = this.props.currentUser
+    const popupOpen = this.state.popupOpen
 
     if (!user.cards.length) {
       return (
-        <div>
+        <div className='onboard-popup' style={ popupOpen ? null : {left:'150%'} }>
 
-          <p>Look at all these cards! They're all rather .... facedown. That's because they're not part of your deck yet.</p>
+          <p>Look at all these cards! They're very .... facedown. That's because they're not part of your deck yet.</p>
 
-          <p>Learning takes time and learning tarot can take a long time. Every card in the deck has a different significance, and that significance can get even more complicated depending on where it's positioned during a reading.</p>
+          <p>You might wonder why you have no cards in your deck and the reason is because you haven't learned any yet. Every card in the deck is significant in a different way and we want you to have some familiarity before you use a card.</p>
 
-          <p>Don't be alarmed! Every time you learn a new card you'll add it to your deck and be able to use it in your readings.</p>
+          <p>Don't worry, this'll still be pretty easy! Every time you learn a new card you'll add it to your deck, and once you've got at least five cards in your deck you'll get to start doing those fancy readings.</p>
 
-          <p>Go ahead and click a card to start learning! That one in the top left might be a good one to start on.</p>
+          <p>Go ahead and click a card to start learning! That one in the top left looks like a good one.</p>
 
-
-          <p></p>
+          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
 
         </div>
       )
     }
+  }
+
+  exitPopup = () => {
+    this.setState({ popupOpen: false })
   }
 
   render() {

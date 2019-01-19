@@ -24,7 +24,7 @@ export default class UserProfile extends React.Component {
   renderSpreadIntro = () => {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
-    if (!user.spreads.length /* && user.cards.length */)
+    if (!user.spreads.length && user.cards.length > 5 )
     return (
       <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
         <p>Great! You've unlocked enough cards to start your first reading! As you unlock cards you'll be able to do different types of readings but for now you can try out the single card reading <Link to='/reading/one-card'>here!</Link></p>
@@ -36,12 +36,14 @@ export default class UserProfile extends React.Component {
 
   renderProfileWelcome = () => {
     const user = this.props.currentUser
+    const popupOpen = this.state.popupOpen
     if (!user.cards.length) {
       return (
-        <div>
+        <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
           <p>Welcome {user.username}! Are you ready to learn some tarot?</p>
           <p>You're probably eager to start doing readings but slow down! Tarot is a big subject and it won't make sense all at once.</p>
           <p>To help you understand what the different cards mean, let's head over to where they live. You can get there by clicking Cards on the navbar, or for now just clicking <Link to='/card-index'>here!</Link></p>
+          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
         </div>
       )
     }
