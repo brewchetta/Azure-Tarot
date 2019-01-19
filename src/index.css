@@ -223,6 +223,19 @@ code {
 
 /* Illustration Animations ------------------------ Illustration Animations */
 
+/* 0 Fool */
+
+@keyframes fool-sway {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(15deg); }
+}
+
+.fool-sway {
+  animation: fool-sway 5s infinite alternate;
+  z-index: 1;
+}
+
+/* 13 Death */
 @keyframes death-pulse {
   0% { background: #003300 }
   20% { background: #003300 }
