@@ -84,8 +84,13 @@ export default class SpreadTable extends React.Component {
   render() {
     const selectedCards = this.state.selectedCards
     const unlockedCards = this.state.unlockedCards
+    // cardsLoaded determines whether there are any cards in state
+    const cardsLoaded = this.state.cards.length
+    // readingType is determined by the url params
+    const readingType = this.props.match.params.readingtype
 
-    if (this.state.cards.length) {
+    // Three card reading
+    if (cardsLoaded && cardsLoaded.length > 20 && readingType === 'three-card') {
       return (
         <div>
           {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
@@ -95,7 +100,15 @@ export default class SpreadTable extends React.Component {
           </div>
         </div>
       )
-    } else {
+    }
+
+    else if (cardsLoaded) {
+      return (
+        <p>It seems you've gotten to this page by accident.</p>
+      )
+    }
+
+    else {
       return (<p>Loading spinner goes heeya</p>)
     }
   }

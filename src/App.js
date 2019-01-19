@@ -74,7 +74,7 @@ class App extends Component {
           <Route path='/card-index' exact render={ props=> <CardIndex {...props} currentUser={currentUser} setCurrentUser={this.setCurrentUser} />} />
 
           {/* Spread */}
-          <Route path='/reading' exact render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
+          <Route path='/reading/:readingtype' render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
 
         </>
         </Router>
