@@ -1,6 +1,6 @@
 // React
 import React from  'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 // Fetches
 import { fetchGetAllCards } from './FetchCard'
 import { fetchUnlockCard } from './FetchCard'
@@ -75,6 +75,25 @@ export default class CardIndex extends React.Component {
     }
   }
 
+  renderPromptReading = () => {
+    const user = this.props.currentUser
+    const popupOpen = this.state.popupOpen
+
+    if (user.cards.length > 5 && !user.spreads.length) {
+      return (
+        <div className='onboard-popup' style={ popupOpen ? null : {left:'150%'} }>
+
+        <p>You've got enough cards for a proper reading!</p>
+
+        <p>Start your first reading by clicking the New Readings tab or by clicking <Link to='reading/single'>here</Link></p>
+
+        <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+
+        </div>
+      )
+    }
+  }
+
   exitPopup = () => {
     this.setState({ popupOpen: false })
   }
@@ -84,6 +103,8 @@ export default class CardIndex extends React.Component {
       <div className='card-index'>
 
         {this.renderCardIndexIntro()}
+
+        {this.renderPromptReading()}
 
         {this.renderAllCards()}
 

@@ -73,8 +73,6 @@ class CardComponent extends React.Component {
     const cardUnlocks = this.props.currentUser.card_unlocks
     const user_description = cardUnlocks.filter(unlock => unlock.card_id === card.id)[0].user_description
 
-    console.log(user_description)
-
     return mode === 'illustration' ? (<> <CardIllustration card={card} />
       <p className='card-name-inspect'>{card.card_rank}. The {card.card_name}</p> </>)
       : mode === 'description' ? (<CardDescription card={card} />)
