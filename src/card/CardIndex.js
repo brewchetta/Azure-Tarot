@@ -42,10 +42,10 @@ export default class CardIndex extends React.Component {
     ))
   }
 
-  unlockCard = (card) => {
+  unlockCard = (card, user_description) => {
     const user = this.props.currentUser
 
-    fetchUnlockCard(card, user)
+    fetchUnlockCard(card, user_description, user)
     .then(console.log)
     .then(() => {
       this.props.setCurrentUser({ ...user, cards: [...user.cards, card] })

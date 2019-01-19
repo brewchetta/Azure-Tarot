@@ -19,8 +19,8 @@ class LessonComponent extends React.Component {
     this.setState({ form: !this.state.form })
   }
 
-  unlockLesson = () => {
-    this.props.unlockCard(this.props.card)
+  unlockLesson = (user_description) => {
+    this.props.unlockCard(this.props.card, user_description)
 
     this.exitLesson()
   }
@@ -35,7 +35,7 @@ class LessonComponent extends React.Component {
         <h4>{card.card_name}</h4>
 
         {/* Lesson Description if not on form */}
-        { form === false ? <LessonDescription card={card} /> : <LessonWriteForm unlockLesson={this.unlocklesson} /> }
+        { form === false ? <LessonDescription card={card} /> : <LessonWriteForm unlockLesson={this.unlockLesson} /> }
 
         {/* Card Illustration */}
         <div className='lesson-image'>

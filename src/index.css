@@ -408,6 +408,12 @@ code {
   color: grey;
 }
 
+.lesson-submit-button {
+  color: white;
+  background: black;
+  border: white solid 1px;
+}
+
 .lesson-text {
   display: inline-block;
   float: left;

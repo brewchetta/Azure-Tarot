@@ -27,9 +27,15 @@ export function fetchCreateCard(card) {
 }
 
 // Card unlock fetch
-export function fetchUnlockCard(card, currentUser) {
+export function fetchUnlockCard(card, user_description, currentUser) {
   const jwt = window.localStorage.getItem('jwt')
-  const body = { card_unlock: { card_id: card.id, user_id: currentUser.id } }
+  const body = {
+    card_unlock: {
+      card_id: card.id,
+      user_id: currentUser.id,
+      user_description
+    }
+  }
 
   if (jwt) {
     return fetch(API + 'card_unlocks', {

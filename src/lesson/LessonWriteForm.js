@@ -7,14 +7,19 @@ export default class LessonWriteForm extends React.Component {
     user_description: ''
   }
 
+  // Focuses the text area upon clicking to this component
+  componentDidMount() {
+    const textarea = document.getElementsByClassName('lesson-form-text')[0]
+    textarea.focus()
+  }
+
   handleChange = event => {
     this.setState({ user_description: event.target.value })
   }
 
   handleSubmit = event => {
     event.preventDefault()
-
-    console.log(this.state.user_description)
+    this.props.unlockLesson(this.state.user_description)
   }
 
   render() {
@@ -34,7 +39,9 @@ export default class LessonWriteForm extends React.Component {
 
           <br/>
 
-          <input type='submit' />
+          <input type='submit'
+          className='lesson-submit-button'
+          value='Add Description' />
 
         </form>
 
