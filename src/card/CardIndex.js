@@ -51,12 +51,34 @@ export default class CardIndex extends React.Component {
     })
   }
 
+  renderCardIndexIntro = () => {
+    const user = this.props.currentUser
+
+    if (!user.cards.length) {
+      return (
+        <div>
+
+          <p>Look at all these cards! They're all rather .... facedown. That's because they're not part of your deck yet.</p>
+
+          <p>Learning takes time and learning tarot can take a long time. Every card in the deck has a different significance, and that significance can get even more complicated depending on where it's positioned during a reading.</p>
+
+          <p>Don't be alarmed! Every time you learn a new card you'll add it to your deck and be able to use it in your readings.</p>
+
+          <p>Go ahead and click a card to start learning! That one in the top left might be a good one to start on.</p>
+
+
+          <p></p>
+
+        </div>
+      )
+    }
+  }
+
   render() {
     return (
       <div className='card-index'>
 
-
-        <h2>Card Index</h2>
+        {this.renderCardIndexIntro()}
 
         {this.renderAllCards()}
 

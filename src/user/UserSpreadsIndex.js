@@ -1,8 +1,9 @@
+// React
 import React from 'react'
-
+// Fetches
 import { fetchGetSpreadsByUser } from '../spread/FetchSpreads'
 import { fetchGetAllCards } from '../card/FetchCard'
-
+// Components
 import UserSpread from './UserSpread'
 
 class UserSpreadsIndex extends React.Component {
@@ -53,21 +54,11 @@ class UserSpreadsIndex extends React.Component {
     }
   }
 
-  renderSpreadIntro = () => {
-    if (!this.state.spreads.length)
-    return (
-      <p>I am intro to spreads</p>
-    )
-  }
-
   render() {
-    const spreads = this.state.spreads
     return (
       <div className='profile-spread-index'>
 
         {this.renderSpreads()}
-
-        {this.renderSpreadIntro()}
 
       </div>
     )

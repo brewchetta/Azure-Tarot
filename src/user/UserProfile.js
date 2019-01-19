@@ -1,35 +1,78 @@
+// React
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+// Components
 import UserSpreadsIndex from './UserSpreadsIndex'
 
-export default function UserProfile(props) {
+export default class UserProfile extends React.Component {
 
-  // const renderMostRecentCard = () => {
-  //   console.log(props.currentUser.cards)
+  state = {
+    popupOpen: true
+  }
+
+  // renderMostRecentCard = () => {
+  //   console.log(this.props.currentUser.cards)
   // }
 
-  if (props.currentUser) {
-    return(
-      <div>
+  // Removes all popups when executed
+  exitPopup = () => {
+    this.setState({ popupOpen: false })
+  }
 
+  // Once a user has enough cards for a reading this will direct them to the reading
+  renderSpreadIntro = () => {
+    const user = this.props.currentUser
+    const popupOpen = this.state.popupOpen
+    if (!user.spreads.length /* && user.cards.length */)
+    return (
+      <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
+        <p>Great! You've unlocked enough cards to start your first reading! As you unlock cards you'll be able to do different types of readings but for now you can try out the single card reading <Link to='/reading/one-card'>here!</Link></p>
 
-        {/* User Info Box */}
-        <div className='profile-info-container'>
-
-        {/* Shows the most recent card unlock */}
-        {/* renderMostRecentCard() */}
-
-        </div>
-
-
-        {/* Recent Readings */}
-        <UserSpreadsIndex currentUser={props.currentUser} />
-
-        {/* If No Cards Will Explain How to Unlock Readings */}
-
+        <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
       </div>
     )
-  } else {
-    return (<Redirect to='/' />)
+  }
+
+  renderProfileWelcome = () => {
+    const user = this.props.currentUser
+    if (!user.cards.length) {
+      return (
+        <div>
+          <p>Welcome {user.username}! Are you ready to learn some tarot?</p>
+          <p>You're probably eager to start doing readings but slow down! Tarot is a big subject and it won't make sense all at once.</p>
+          <p>To help you understand what the different cards mean, let's head over to where they live. You can get there by clicking Cards on the navbar, or for now just clicking <Link to='/card-index'>here!</Link></p>
+        </div>
+      )
+    }
+  }
+
+  render() {
+    if (this.props.currentUser) {
+      return(
+        <div>
+
+        {/* Onboarding Functions */}
+        {this.renderSpreadIntro()}
+        {this.renderProfileWelcome()}
+
+          {/* User Info Box */}
+          <div className='profile-info-container'>
+
+            {/* Shows the most recent card unlock */}
+            {/* this.renderMostRecentCard() */}
+
+          </div>
+
+          {/* Recent Readings */}
+          <UserSpreadsIndex currentUser={this.props.currentUser} />
+
+          {/* If No Cards Will Explain How to Unlock Readings */}
+
+        </div>
+      )
+    } else {
+      return (<Redirect to='/' />)
+    }
   }
 }

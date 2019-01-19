@@ -440,14 +440,53 @@ code {
 
 /* ---------- */
 
+/* Onboarding Components ----------------------------- Onboarding Components */
+
+.onboard-popup {
+  animation: onboard-popup-appear 1s;
+  background: #ccffff;
+  border: black solid 2px;
+  border-radius: 5px;
+  color: black;
+  left: 25%;
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: left 1s;
+  transition: left 1s;
+  width: 50%;
+}
+
+@keyframes onboard-popup-appear {
+  from { left: -75% }
+  to { left: 25% }
+}
+
+.onboard-popup-exit {
+  background: #ccffff;
+  border: black solid 2px;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  right: -1.5em;
+  top: -1.5em;
+  width: 1.1em;
+}
+
+.onboard-popup-exit:hover {
+  color: red;
+}
+
+/* ---------- */
+
 /* Profile Components ------------------------------------- Profile Components */
 
 .profile-info-container {
+  box-sizing: border-box;
   float: left;
   margin-right: 2.2%;
-  min-height: 80vh;
   min-width: 650px;
-  padding: 5px;
+  padding: 1em;
   width: 48%;
 }
 
