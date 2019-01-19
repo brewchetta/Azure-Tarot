@@ -6,7 +6,7 @@ const CardDescription = props => {
 
   return (
     <div className='card-description'>
-      <h4>The {card.card_name}</h4>
+      <h4>{card.card_name}</h4>
       <p>{card.major_arcana ? 'Part of the Major Arcana' : null }</p>
       <p>{card.description}</p>
       <p>{card.keywords.join(", ")}</p>

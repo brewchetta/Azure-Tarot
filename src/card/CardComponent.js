@@ -74,7 +74,7 @@ class CardComponent extends React.Component {
     const user_description = cardUnlocks.filter(unlock => unlock.card_id === card.id)[0].user_description
 
     return mode === 'illustration' ? (<> <CardIllustration card={card} />
-      <p className='card-name-inspect'>{card.card_rank}. The {card.card_name}</p> </>)
+      <p className='card-name-inspect'>{card.card_rank}. {card.card_name}</p> </>)
       : mode === 'description' ? (<CardDescription card={card} />)
       : mode === 'user-info' ? (<CardDescriptionUser card={card} user_description={user_description} />)
       : null
@@ -92,7 +92,7 @@ class CardComponent extends React.Component {
         style={!this.state.unlocked ? { background: 'grey' } : this.props.spread ? {zIndex: -1} : null} >
 
           <CardIllustration card={card} />
-          <p className='card-name'>{card.card_rank}. The {card.card_name}</p>
+          <p className='card-name'>{card.card_rank}. {card.card_name}</p>
 
         </div>
       )
