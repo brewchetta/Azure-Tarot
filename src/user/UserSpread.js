@@ -56,7 +56,7 @@ class UserSpread extends React.Component {
             : null}
 
             <img className='profile-note-create' alt='Write New Note' onClick={this.handleToggleForm}
-            src='https://www.fileformat.info/info/unicode/char/270d/writing_hand.png'/>
+            src='https://www.charbase.com/images/glyph/9997'/>
 
             <UserSpreadNoteForm
             noteFormVisible={this.state.noteFormVisible}

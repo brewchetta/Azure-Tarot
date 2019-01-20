@@ -58,7 +58,10 @@ export default class SpreadTable extends React.Component {
 
   // Saves spread if final card is selected
   saveSpread = () => {
-    if (this.state.selectedCards.length >= 3) {
+    const readingType = this.props.match.params.readingtype
+    const cardsLength = this.state.selectedCards.length
+
+    if (cardsLength >= 3 && readingType === 'three-card' || cardsLength >= 1 && readingType === 'single' ) {
       const body = {
         spread: {
           spread_type: "threecard",

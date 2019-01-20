@@ -255,6 +255,7 @@ code {
   color: white;
   font-family: 'Satisfy', cursive;
   position: absolute;
+  text-align: center;
   top: 86%;
   width: 100%;
 }
@@ -264,6 +265,7 @@ code {
   font-family: 'Satisfy', cursive;
   font-size: 2em;
   position: absolute;
+  text-align: center;
   top: 86%;
   transition: linear width 1s, height 1s, top 1s, left 1s;
   width: 90%;

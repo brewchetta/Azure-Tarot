@@ -39,7 +39,7 @@ class UserSpreadsIndex extends React.Component {
   }
 
   renderSpreads = () => {
-    const spreads = this.state.spreads.length
+    const spreads = this.state.spreads
     if (spreads) {
       return spreads.map((spread,i) =>(
         <UserSpread
