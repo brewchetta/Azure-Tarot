@@ -18,7 +18,7 @@ export class Tower extends React.Component {
 
         <img alt='' src={baobab}
         className='card-fit-height'
-        style={{ right: '100%', zIndex: '100' }}
+        style={{ right: '100%', zIndex: '1' }}
         />
 
         <img alt='' src={cloud}
