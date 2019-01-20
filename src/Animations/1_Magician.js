@@ -9,7 +9,26 @@ export const Magician = props => {
       <img alt='' src={hand}
       style={{ height: '100%', width: '100%' }} />
 
-      <img alt='' src={fingers} style={{ height: '100%', width: '100%', position: 'relative', top: '-10%' }} />
+      <div className='magician-rotator-container'>
+        <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+          <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+            <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+              <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+                <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+                  <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+                    <div className='magician-rotator' style={{ animation: 'm-rotate 16s infinite linear'  }}>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img alt='' src={fingers}
+      style={{ height: '100%', width: '100%', position: 'absolute', left: '0', top: '0', zIndex: '1' }} />
+
     </div>
   )
 }

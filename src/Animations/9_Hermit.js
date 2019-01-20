@@ -8,11 +8,37 @@ export const Hermit = props => {
 
       <img alt='' src={background}
       className='card-fit-height'
-      style={{ width: 'auto', left: '-70%' }} />
+      style={{ width: 'auto', left: '-60%' }} />
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
 
       <img alt='' src={foreground}
       className='card-fit-height'
-      style={{ top: '-101%', left: '-70%' }} />
+      style={{ top: '-101%', left: '-60%', zIndex: '2' }} />
 
     </div>
   )
