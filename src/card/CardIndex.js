@@ -64,9 +64,9 @@ export default class CardIndex extends React.Component {
     const user = this.props.currentUser
 
     fetchUnlockCard(card, user_description, user)
-    .then(console.log)
-    .then(() => {
-      this.props.setCurrentUser({ ...user, cards: [...user.cards, card] })
+    .then(response => {console.log('Response: ', response); return response})
+    .then(response => {
+      this.props.setCurrentUser({ ...user, cards: [...user.cards, card], card_unlocks: [...user.card_unlocks, response.card_unlock] })
     })
   }
 

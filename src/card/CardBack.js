@@ -7,6 +7,7 @@ import cornerLeaf from '../Assets/Corner_Leaf.png'
 import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
 import CardDescriptionUser from './CardDescriptionUser'
+import CardComponent from './CardComponent'
 
 // To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}, currentUser
 
@@ -14,30 +15,6 @@ class CardBack extends React.Component {
 
   state = {
     unlocked: false
-  }
-
-  componentDidMount() {
-    if (this.props.currentUser) {
-      this.lockCard()
-    }
-  }
-
-  componentDidUpdate() {
-    if (this.props.currentUser) {
-      this.lockCard()
-    }
-  }
-
-  // Checks whether a card has been unlocked by the user
-  lockCard = () => {
-    const currentUser = this.props.currentUser
-    const thisCard = this.props.card
-    const cardIds = currentUser.cards.map(card => card.id)
-    const unlocked = this.state.unlocked
-
-    if (cardIds.includes(thisCard.id) && unlocked === false) {
-      this.setState({ unlocked: true })
-    }
   }
 
   // Switches to lesson view
@@ -59,7 +36,6 @@ class CardBack extends React.Component {
       <div className='card-locked' onClick={this.handleClickInspect}>
       </div>
     )
-
   }
 }
 
