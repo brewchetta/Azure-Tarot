@@ -145,6 +145,26 @@ code {
   z-index: 500;
 }
 
+.card-component-corner-left {
+  bottom: 0;
+  filter: invert(1);
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  transform: rotateZ(180deg);
+  width: 30%;
+}
+
+.card-component-corner-right {
+  filter: invert(1);
+  opacity: 0.4;
+  position: absolute;
+  right: 0%;
+  transform: rotate(90deg);
+  bottom: 0;
+  width: 30%;
+}
+
 .card-component-flip-container {
   border: solid white 2px;
   height: 314px;

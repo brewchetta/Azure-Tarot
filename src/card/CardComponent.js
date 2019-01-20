@@ -1,4 +1,9 @@
+// React
 import React from 'react'
+// Assets
+import cornerFern from '../Assets/Corner_Fern.png'
+import cornerLeaf from '../Assets/Corner_Leaf.png'
+// Components
 import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
 import CardDescriptionUser from './CardDescriptionUser'
@@ -91,8 +96,13 @@ class CardComponent extends React.Component {
         onClick={this.handleClickInspect}
         style={!this.state.unlocked ? { background: 'grey' } : this.props.spread ? {zIndex: -1} : null} >
 
+          <img alt='' src={cornerFern} className='card-component-corner-left' />
+
+          <img alt='' src={cornerLeaf} className='card-component-corner-right' />
+
           <CardIllustration card={card} />
           <p className='card-name'>{card.card_rank}. {card.card_name}</p>
+
 
         </div>
       )
@@ -101,7 +111,13 @@ class CardComponent extends React.Component {
         <div className='card-component-inspect'>
 
           <div className='card-component-inspect-inner'>
+
+            <img alt='' src={cornerFern} className='card-component-corner-left' style={{ width: '25%' }} />
+
+            <img alt='' src={cornerLeaf} className='card-component-corner-right' style={{ width: '25%', right: '10%' }} />
+
             {this.renderCardInspect()}
+
           </div>
 
           <div className='card-tab-index'>
