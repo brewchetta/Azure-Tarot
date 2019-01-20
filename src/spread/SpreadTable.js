@@ -133,7 +133,9 @@ export default class SpreadTable extends React.Component {
           {this.renderSpreadWelcome()}
 
           {/* Select Card Button */}
-          {selectedCards.length < 1 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+          <SpreadCardSelect cards={this.state.cards}
+          selectCard={this.selectCard}
+          fullCards={selectedCards.length >= 1} />
 
           {/* Spread Card Positions */}
           <div className='table-card-container'>
@@ -149,8 +151,10 @@ export default class SpreadTable extends React.Component {
       return (
         <div>
 
-          {/* Select Card Button */}
-          {selectedCards.length < 3 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+        {/* Select Card Button */}
+        <SpreadCardSelect cards={this.state.cards}
+        selectCard={this.selectCard}
+        fullCards={selectedCards.length >= 3} />
 
           {/* Spread Card Positions */}
           <div className='table-card-container'>

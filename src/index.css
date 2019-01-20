@@ -551,6 +551,17 @@ code {
   z-index: 2;
 }
 
+/* 12 Hanged Man */
+
+@keyframes rainbow-shift {
+  from { filter: hue-rotate(0deg) }
+  to { filter: hue-rotate(360deg) }
+}
+
+.rainbow-shift {
+  animation: rainbow-shift 10s infinite linear;
+}
+
 /* 13 Death */
 @keyframes death-pulse {
   0% { background: #003300 }
@@ -560,6 +571,21 @@ code {
 
 .death-pulse {
   animation: death-pulse 4s infinite alternate;
+}
+
+/* 16 Tower */
+
+@keyframes thunder {
+  0% { filter: brightness(1); }
+  0.5% { filter: brightness(5); }
+  1% { filter: brightness(3); }
+  1.5% { filter: brightness(5); }
+  3% { filter: brightness(1); }
+  100% { filter: brightness(1); }
+}
+
+.thunder {
+  animation: thunder 15s infinite linear;
 }
 
 /* 18 Moon */
@@ -575,14 +601,7 @@ code {
   animation: firefly 12s infinite;
 }
 
-@keyframes rainbow-shift {
-  from { filter: hue-rotate(0deg) }
-  to { filter: hue-rotate(360deg) }
-}
-
-.rainbow-shift {
-  animation: rainbow-shift 10s infinite linear;
-}
+/* General Animations */
 
 @keyframes rotate {
   from { transform: rotate(0deg)}
@@ -603,19 +622,6 @@ code {
 
 .animation-rotate-slowest {
   animation: rotate 60s infinite linear;
-}
-
-@keyframes thunder {
-  0% { filter: brightness(1); }
-  0.5% { filter: brightness(5); }
-  1% { filter: brightness(3); }
-  1.5% { filter: brightness(5); }
-  3% { filter: brightness(1); }
-  100% { filter: brightness(1); }
-}
-
-.thunder {
-  animation: thunder 15s infinite linear;
 }
 
 /* ---------- */
@@ -881,9 +887,10 @@ code {
 }
 
 .position-container-threecard {
+  display: inline-block;
+  float: left;
   text-align: center;
   width: 25%;
-  display: inline-block;
 }
 
 /* ---------- */
