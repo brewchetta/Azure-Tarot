@@ -7,15 +7,18 @@ import { fetchCreateSpread } from './FetchSpreads'
 // Components
 import SpreadCardSelect from './SpreadCardSelect'
 import SpreadPosition from './SpreadPosition'
+// Assets
+import seeds from '../Assets/19_Sun_Seeds.png'
 
 export default class SpreadTable extends React.Component {
 
   state = {
-    cards: [],
-    unlockedCards: [],
-    selectedCards: [],
     animating: false,
-    cardToInspect: null
+    cards: [],
+    cardToInspect: null,
+    popupOpen: true,
+    selectedCards: [],
+    unlockedCards: []
   }
 
   componentDidMount() {
@@ -61,7 +64,7 @@ export default class SpreadTable extends React.Component {
     const readingType = this.props.match.params.readingtype
     const cardsLength = this.state.selectedCards.length
 
-    if (cardsLength >= 3 && readingType === 'three-card' || cardsLength >= 1 && readingType === 'single' ) {
+    if ((cardsLength >= 3 && readingType === 'three-card') || (cardsLength >= 1 && readingType === 'single') ) {
       const body = {
         spread: {
           spread_type: "threecard",
@@ -77,6 +80,7 @@ export default class SpreadTable extends React.Component {
   }
 
   // Shows the cards and determines their position
+  // For future Chett, this uses the render three cards css class
   renderCardPositions = () => {
     const readingType = this.props.match.params.readingtype
     let positions
@@ -85,6 +89,28 @@ export default class SpreadTable extends React.Component {
     return this.state.selectedCards.map((card, i) => (
       <SpreadPosition key={i} card={card} position={positions[i]} indexState={this.state} setIndexState={this.setIndexState} currentUser={this.props.currentUser} />
     ))
+  }
+
+  // Renders onboarding for first reading
+  renderSpreadWelcome = () => {
+    const user = this.props.currentUser
+    const popupOpen = this.state.popupOpen
+    if (!user.spreads.length) {
+      return (
+        <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
+          <p>Hey {user.username}! Welcome to your first tarot reading on Azure!</p>
+          <p>Generally you'll only want to do one reading for a person a day. It's very simple: draw a card and then flip it over to see what you got.</p>
+          <p>Your card wont actually tell you the future or anything fancy like that. Think of it more as a frame of reference. How does the card relate to whats going on around you? What insights can it give for your situation? Does it warn you about something? Ask you to embrace something? To let it go? Its up to you to decide what the card is saying, just remember there are no wrong answers!</p>
+          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+          <img alt='' src={seeds} className='onboard-background' />
+        </div>
+      )
+    }
+  }
+
+  // Removes all popups when executed
+  exitPopup = () => {
+    this.setState({ popupOpen: false })
   }
 
   render() {
@@ -99,9 +125,12 @@ export default class SpreadTable extends React.Component {
     if (!localStorage.getItem('jwt')) { return (<Redirect to='/' />) }
 
     // One card reading
-    if (cardsLoaded > 5 && unlockedCards.length > 5 && readingType === 'single') {
+    if (cardsLoaded > 4 && unlockedCards.length > 4 && readingType === 'single') {
       return (
         <div>
+
+          {/* Onboarding if the user needs it */}
+          {this.renderSpreadWelcome()}
 
           {/* Select Card Button */}
           {selectedCards.length < 1 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
@@ -116,7 +145,7 @@ export default class SpreadTable extends React.Component {
     }
 
     // Three card reading
-    if (cardsLoaded > 20 && unlockedCards.length > 20 && readingType === 'three-card') {
+    if (cardsLoaded > 19 && unlockedCards.length > 19 && readingType === 'three-card') {
       return (
         <div>
 

@@ -5,7 +5,12 @@ export default class SpreadCardSelect extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.selectCard}>Draw a Card</button>
+
+        <img alt=''
+        src='../Assets/Card_Back'
+        className='card-locked'
+        onClick={this.props.selectCard}/>
+
       </div>
     )
   }

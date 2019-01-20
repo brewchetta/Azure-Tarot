@@ -12,8 +12,8 @@ const Navbar = (props) => {
         <>
           <Link to={user ? `/profile/${user.id}` : '/'} >{user ? 'Profile' : 'Home'}</Link>
           <Link to='/card-index'>Cards</Link>
-          { cards.length > 5 ? <Link to='/reading/three-card'>Start a New Reading</Link> : null }
-          <Link to='/reading/three-card'>Three Card (REMOVE)</Link>
+          { cards.length > 5 ? <Link to='/reading/single'>Single Card Reading</Link> : null }
+          { cards.length > 19 ? <Link to='/reading/three-card'>Three Card Reading</Link> : null }
         </>
       )
     }

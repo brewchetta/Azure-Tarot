@@ -186,6 +186,7 @@ code {
 .card-component-flip-container {
   border: solid white 2px;
   height: 314px;
+  margin: auto;
   position: relative;
   perspective: 500px;
   width: 214px;
