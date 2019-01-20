@@ -125,7 +125,7 @@ export default class SpreadTable extends React.Component {
     if (!localStorage.getItem('jwt')) { return (<Redirect to='/' />) }
 
     // One card reading
-    if (cardsLoaded > 4 && unlockedCards.length > 4 && readingType === 'single') {
+    if (cardsLoaded > 4 && unlockedCards.length + selectedCards.length > 4 && readingType === 'single') {
       return (
         <div>
 
@@ -145,7 +145,7 @@ export default class SpreadTable extends React.Component {
     }
 
     // Three card reading
-    if (cardsLoaded > 19 && unlockedCards.length > 19 && readingType === 'three-card') {
+    if (cardsLoaded > 19 && unlockedCards.length + selectedCards.length > 19 && readingType === 'three-card') {
       return (
         <div>
 
