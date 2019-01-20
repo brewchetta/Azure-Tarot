@@ -285,7 +285,7 @@ code {
   z-index: 2;
 }
 
-/* Emperor */
+/* 4 Emperor */
 
 .emperor-starmap {
   animation: rotate 20s reverse infinite linear;
@@ -294,6 +294,25 @@ code {
   width: 200%;
   position: absolute;
   top: -30%;
+}
+
+/* 7 Chariot */
+
+@keyframes chariot-wheel {
+  0% { transform: rotate(0deg); background-color: #cccc00 }
+  16.7% { transform: rotate(120deg); background-color: #009933 }
+  33.3% { transform: rotate(240deg); background-color: #006699 }
+  50% { transform: rotate(360deg); background-color: #3333ff }
+  66.7% { transform: rotate(480deg); background-color: #cc00cc }
+  83.3% { transform: rotate(600deg); background-color: #cc0000 }
+  100% { transform: rotate(720deg); background-color: #cc9900 }
+}
+
+.chariot-wheel {
+  animation: chariot-wheel 10s infinite linear;
+  background-color: red;
+  position: absolute;
+  width: 41%;
 }
 
 /* 10 Wheel */

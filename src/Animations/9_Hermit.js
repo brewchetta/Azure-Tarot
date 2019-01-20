@@ -10,31 +10,31 @@ export const Hermit = props => {
       className='card-fit-height'
       style={{ width: 'auto', left: '-60%' }} />
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
-      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 7}s` }}></div>
+      <div className='empress-snow' style={{ left: `${Math.random() * 100}%`, animationDelay: `${(Math.random() * 7) - 5 }s` }}></div>
 
       <img alt='' src={foreground}
       className='card-fit-height'
