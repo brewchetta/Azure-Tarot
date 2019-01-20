@@ -8,6 +8,7 @@ import { fetchGetAllCards } from './FetchCard'
 import { fetchUnlockCard } from './FetchCard'
 // Components
 import CardComponent from './CardComponent'
+import CardBack from './CardBack'
 import LessonComponent from '../lesson/LessonComponent'
 
 export default class CardIndex extends React.Component {
@@ -37,9 +38,24 @@ export default class CardIndex extends React.Component {
   }
 
   renderAllCards = () => {
+    const currentUser = this.props.currentUser
+    const cardUnlockIds = currentUser.card_unlocks.map(card => card.card_id )
+    console.log(cardUnlockIds)
     return this.state.cards.map((card,i) => (
       <div className='card-index-space' key={i}>
-        <CardComponent card={card} indexState={this.state} currentUser={this.props.currentUser} setIndexState={this.setIndexState} />
+
+        { cardUnlockIds.includes(card.id) ?
+        // If unlocked uses card front
+        <CardComponent card={card}
+        indexState={this.state} currentUser={currentUser}
+        setIndexState={this.setIndexState} />
+        // If locked uses card back
+        : <CardBack card={card}
+        indexState={this.state}
+        currentUser={currentUser}
+        setIndexState={this.setIndexState} /> }
+
+
       </div>
     ))
   }
