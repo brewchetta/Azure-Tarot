@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import seeds from '../Assets/19_Sun_Seeds.png'
 // Components
 import UserSpreadsIndex from './UserSpreadsIndex'
+import CardIllustration from '../card/CardIllustration'
 
 export default class UserProfile extends React.Component {
 
@@ -13,9 +14,26 @@ export default class UserProfile extends React.Component {
     popupOpen: true
   }
 
-  // renderMostRecentCard = () => {
-  //   console.log(this.props.currentUser.cards)
-  // }
+  // Shows most recent card unlock
+  renderMostRecentCard = () => {
+    const cards = this.props.currentUser.cards
+    if (cards) {
+      return (
+        <div>
+
+          <p style={{ marginLeft: '1em' }}>You most recently unlocked</p>
+
+          <h3 style={{ marginLeft: '1em' }}>{cards[cards.length - 1].card_name}</h3>
+
+          <div style={{ width: '200px', height: '300px' }}>
+            <CardIllustration card={cards[cards.length - 1]} />
+          </div>
+
+        </div>
+      )
+    }
+    console.log(this.props.currentUser.cards)
+  }
 
   // Removes all popups when executed
   exitPopup = () => {
@@ -45,7 +63,7 @@ export default class UserProfile extends React.Component {
         <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
           <p>Welcome {user.username}! Are you ready to learn some tarot?</p>
           <p>You're probably eager to start doing readings but slow down! Tarot is a big subject and it won't make sense all at once.</p>
-          <p>To help you understand what the different cards mean, let's head over to where they live. You can get there by clicking Cards on the navbar, or for now just clicking <Link to='/card-index'>here!</Link></p>
+          <p>To help you understand what the different cards mean, let's head over to where they live. You can get there by clicking Cards on the navbar, or for now just clickin' <Link to='/card-index'>here!</Link></p>
           <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
           <img alt='' src={seeds} className='onboard-background' />
         </div>
@@ -66,7 +84,7 @@ export default class UserProfile extends React.Component {
           <div className='profile-info-container'>
 
             {/* Shows the most recent card unlock */}
-            {/* this.renderMostRecentCard() */}
+            {this.renderMostRecentCard()}
 
           </div>
 
