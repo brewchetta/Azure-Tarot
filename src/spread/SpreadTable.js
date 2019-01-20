@@ -75,7 +75,10 @@ export default class SpreadTable extends React.Component {
 
   // Shows the cards and determines their position
   renderCardPositions = () => {
-    const positions = ['past', 'present', 'future']
+    const readingType = this.props.match.params.readingtype
+    let positions
+    if (readingType === 'three-card') { positions = ['Past', 'Present', 'Future'] }
+    else if (readingType === 'single') { positions = ['Present'] }
     return this.state.selectedCards.map((card, i) => (
       <SpreadPosition key={i} card={card} position={positions[i]} indexState={this.state} setIndexState={this.setIndexState} currentUser={this.props.currentUser} />
     ))
@@ -89,22 +92,46 @@ export default class SpreadTable extends React.Component {
     // readingType is determined by the url params
     const readingType = this.props.match.params.readingtype
 
-    // Three card reading
-    if (cardsLoaded && cardsLoaded.length > 20 && readingType === 'three-card') {
+    // Kicks user if they're unregistered
+    if (!localStorage.getItem('jwt')) { return (<Redirect to='/' />) }
+
+    // One card reading
+    if (cardsLoaded > 5 && unlockedCards.length > 5 && readingType === 'single') {
       return (
         <div>
-          {localStorage.getItem('jwt') ? null : <Redirect to='/' />}
-          {selectedCards.length < 3 && (unlockedCards.length + selectedCards.length) >= 5 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+
+          {/* Select Card Button */}
+          {selectedCards.length < 1 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+
+          {/* Spread Card Positions */}
           <div className='table-card-container'>
             {this.renderCardPositions()}
           </div>
+
+        </div>
+      )
+    }
+
+    // Three card reading
+    if (cardsLoaded > 20 && unlockedCards.length > 20 && readingType === 'three-card') {
+      return (
+        <div>
+
+          {/* Select Card Button */}
+          {selectedCards.length < 3 ? <SpreadCardSelect cards={this.state.cards} selectCard={this.selectCard} /> : null}
+
+          {/* Spread Card Positions */}
+          <div className='table-card-container'>
+            {this.renderCardPositions()}
+          </div>
+
         </div>
       )
     }
 
     else if (cardsLoaded) {
       return (
-        <p>It seems you've gotten to this page by accident.</p>
+        <p>It seems you got to this page by accident.</p>
       )
     }
 

@@ -1,15 +1,5 @@
 // React
 import React from 'react'
-// Assets
-import cornerFern from '../Assets/Corner_Fern.png'
-import cornerLeaf from '../Assets/Corner_Leaf.png'
-// Components
-import CardIllustration from './CardIllustration'
-import CardDescription from './CardDescription'
-import CardDescriptionUser from './CardDescriptionUser'
-import CardComponent from './CardComponent'
-
-// To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}, currentUser
 
 class CardBack extends React.Component {
 
@@ -30,7 +20,6 @@ class CardBack extends React.Component {
   }
 
   render() {
-    const card = this.props.card
 
     return (
       <div className='card-locked' onClick={this.handleClickInspect}>
