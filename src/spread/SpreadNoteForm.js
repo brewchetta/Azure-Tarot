@@ -41,17 +41,15 @@ export default class UserSpreadNoteForm extends React.Component {
       return (
         <div className='profile-note-form' onSubmit={this.handleSubmit}>
 
-        <p>Add Note</p>
+          <form>
 
-        <form>
+            <textarea value={this.state.content} onChange={this.handleChange} />
 
-        <textarea value={this.state.content} onChange={this.handleChange} />
+            <br/>
 
-        <br/>
+            <input type="submit" />
 
-        <input type="submit" />
-
-        </form>
+          </form>
 
         </div>
       )

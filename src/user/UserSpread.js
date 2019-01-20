@@ -37,32 +37,34 @@ class UserSpread extends React.Component {
 
 
   render() {
-    const date = this.props.spread.created_at.split('T')[0]
-    const time = this.props.spread.created_at.split('T')[1].split('.')[0]
+    let date = this.props.spread.created_at.split('T')[0].split('-')
+    date.push(date[0])
+    date.shift()
+    date = date.join('-')
 
     return (
       <div style={this.props.finalSpread ? null : { borderBottom: 'solid white 3px', paddingBottom: '1em' }}>
 
-        <p>{date} {time}</p>
-
         {this.renderCards()}
+
+        <p>You made this reading on {date}</p>
 
         <div className='profile-notes-container'>
 
           {this.renderNotes()}
 
-          {!this.props.spread.notes.length ?
-            <p style={{ float: 'left', marginLeft: '0.5em' }}>You haven't written notes for this reading! <br/>Click the button to write your first!</p>
-            : null}
+          <img className='profile-note-create' alt='Write New Note' onClick={this.handleToggleForm}
+          src='https://www.charbase.com/images/glyph/9997' style={{ float: 'left' }} />
 
-            <img className='profile-note-create' alt='Write New Note' onClick={this.handleToggleForm}
-            src='https://www.charbase.com/images/glyph/9997'/>
+          {!this.props.spread.notes.length && !this.state.noteFormVisible ?
+          <p style={{ float: 'left', marginLeft: '0.5em' }}>You haven't written notes for this reading! <br/>Click the button to write your first!</p>
+          : null}
 
-            <UserSpreadNoteForm
-            noteFormVisible={this.state.noteFormVisible}
-            handleToggleForm={this.handleToggleForm}
-            spreadId={this.props.spread.id}
-            updateSpread={this.props.updateSpread} />
+          <UserSpreadNoteForm
+          noteFormVisible={this.state.noteFormVisible}
+          handleToggleForm={this.handleToggleForm}
+          spreadId={this.props.spread.id}
+          updateSpread={this.props.updateSpread} />
 
         </div>
 

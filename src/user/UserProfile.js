@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import seeds from '../Assets/19_Sun_Seeds.png'
 // Components
 import UserSpreadsIndex from './UserSpreadsIndex'
-import CardIllustration from '../card/CardIllustration'
 
 export default class UserProfile extends React.Component {
 
@@ -15,25 +14,21 @@ export default class UserProfile extends React.Component {
   }
 
   // Shows most recent card unlock
-  renderMostRecentCard = () => {
-    const cards = this.props.currentUser.cards
-    if (cards) {
-      return (
-        <div>
-
-          <p style={{ marginLeft: '1em' }}>You most recently unlocked</p>
-
-          <h3 style={{ marginLeft: '1em' }}>{cards[cards.length - 1].card_name}</h3>
-
-          <div style={{ width: '200px', height: '300px' }}>
-            <CardIllustration card={cards[cards.length - 1]} />
-          </div>
-
-        </div>
-      )
-    }
-    console.log(this.props.currentUser.cards)
-  }
+  // renderRandomCard = () => {
+  //   const cards = this.props.currentUser.cards
+  //   if (cards) {
+  //     return (
+  //       <div style={{ display: 'inline-box'}}>
+  //
+  //         <div style={{ width: '300px', height: '450px', position: 'relative', left: '-1em' }}>
+  //           <CardIllustration card={cards[Math.floor(Math.random() * cards.length)]} />
+  //         </div>
+  //
+  //       </div>
+  //     )
+  //   }
+  //   console.log(this.props.currentUser.cards)
+  // }
 
   // Removes all popups when executed
   exitPopup = () => {
@@ -72,24 +67,19 @@ export default class UserProfile extends React.Component {
   }
 
   render() {
-    if (this.props.currentUser) {
+    const currentUser = this.props.currentUser
+    if (currentUser) {
+      console.log(currentUser)
       return(
         <div>
 
-        {/* Onboarding Functions */}
-        {this.renderSpreadIntro()}
-        {this.renderProfileWelcome()}
+          {/* Onboarding Functions */}
+          {this.renderSpreadIntro()}
+          {this.renderProfileWelcome()}
 
-          {/* User Info Box */}
-          <div className='profile-info-container'>
-
-            {/* Shows the most recent card unlock */}
-            {this.renderMostRecentCard()}
-
-          </div>
 
           {/* Recent Readings */}
-          <UserSpreadsIndex currentUser={this.props.currentUser} />
+          <UserSpreadsIndex currentUser={currentUser} />
 
           {/* If No Cards Will Explain How to Unlock Readings */}
 

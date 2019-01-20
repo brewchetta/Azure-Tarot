@@ -58,6 +58,8 @@ class UserSpreadsIndex extends React.Component {
     return (
       <div className='profile-spread-index'>
 
+        <h3>{this.props.currentUser.spreads.length ? 'Your Tarot Readings' : null }</h3>
+
         {this.renderSpreads()}
 
       </div>

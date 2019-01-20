@@ -208,18 +208,19 @@ code {
 
 .card-component-inspect {
   animation: card-inspect-appear 0.5s;
-  height: 125vw;
-  left: 15vw;
+  height: 90vh;
+  left: 30vw;
   max-height: 563px;
   max-width: 420px;
-  position: absolute;
-  width: 100vw;
+  position: fixed;
+  top: 5vh;
+  width: 72vh;
   z-index: 100;
 }
 
 @keyframes card-inspect-appear {
   from { left: -100vw }
-  to { left: 15vw }
+  to { left: 30vw }
 }
 
 .card-component-inspect-inner {
@@ -806,26 +807,26 @@ code {
   box-sizing: border-box;
   float: left;
   margin-right: 2.2%;
-  min-width: 650px;
+  min-width: 300px;
   padding: 1em;
-  width: 48%;
+  width: 100%;
 }
 
 .profile-spread-index {
   float: left;
   min-width: 650px;
   padding: 5px;
-  text-align: right;
-  width: 48%;
+  text-align: left;
+  width: 100%;
 }
 
 .profile-notes-container {
   border: white solid 2px;
   border-radius: 5px;
-  margin-left: 13%;
   max-height: 300px;
+  overflow-x: hidden;
   overflow-y: auto;
-  width: 85%;
+  width: 50%;
 }
 
 .profile-note {

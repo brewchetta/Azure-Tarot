@@ -38,7 +38,7 @@ class CardComponent extends React.Component {
     const cardIds = currentUser.cards.map(card => card.id)
     const unlocked = this.state.unlocked
 
-    if (cardIds.includes(thisCard.id) && unlocked === false) {
+    if (thisCard && cardIds.includes(thisCard.id) && unlocked === false) {
       this.setState({ unlocked: true })
     }
   }
@@ -101,7 +101,7 @@ class CardComponent extends React.Component {
           <img alt='' src={cornerLeaf} className='card-component-corner-right' />
 
           <CardIllustration card={card} />
-          <p className='card-name'>{card.card_rank}. {card.card_name}</p>
+          { card ? <p className='card-name'>{card.card_rank}. {card.card_name}</p> : null}
 
 
         </div>
@@ -122,9 +122,9 @@ class CardComponent extends React.Component {
 
           <div className='card-tab-index'>
             <p className='card-tab' onClick={this.handleClickTab} data-id='exit'>X</p>
-            <p className='card-tab' onClick={this.handleClickTab} data-id='illustration'>Pic</p>
             <p className='card-tab' onClick={this.handleClickTab} data-id='description'>Info</p>
-            <p className='card-tab' onClick={this.handleClickTab} data-id='user-info'>Yours</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='user-info'>Notes</p>
+            <p className='card-tab' onClick={this.handleClickTab} data-id='illustration'>Picture</p>
           </div>
 
         </div>
