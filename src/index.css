@@ -285,6 +285,17 @@ code {
   z-index: 2;
 }
 
+/* Emperor */
+
+.emperor-starmap {
+  animation: rotate 20s reverse infinite linear;
+  background: #0b0d19;
+  left: -55%;
+  width: 200%;
+  position: absolute;
+  top: -30%;
+}
+
 /* 10 Wheel */
 
 .wheel-container {
