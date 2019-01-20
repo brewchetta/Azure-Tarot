@@ -5,6 +5,8 @@ import './App.css';
 // Fetch Functions
 import { fetchLoginUser } from './user/FetchUser'
 // Components
+import Header from './general/Header'
+import Footer from './general/Footer'
 import Navbar from './general/Navbar'
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
@@ -47,9 +49,7 @@ class App extends Component {
         <>
 
           {/* Header */}
-          <div className='title'>
-          <h1>Tarot App</h1>
-          </div>
+          <Header />
 
           {/* Navbar */}
           {window.localStorage.jwt ? <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} setCurrentUser={this.setCurrentUser} /> : null }
@@ -76,6 +76,7 @@ class App extends Component {
           {/* Spread */}
           <Route path='/reading/:readingtype' render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
 
+          <Footer />
         </>
         </Router>
       );

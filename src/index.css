@@ -19,6 +19,70 @@ body img {
   backface-visibility: hidden;
 }
 
+header {
+  height: 75px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: -1;
+}
+
+/* Header ----------------------------------------------- Header */
+
+.header-symbols-left {
+  bottom: 5px;
+  filter: invert(1);
+  height: 75%;
+  left: 30%;
+  opacity: 0.4;
+  position: absolute;
+}
+
+.header-symbols-right {
+  backface-visibility: visible;
+  bottom: 5px;
+  filter: invert(1);
+  height: 75%;
+  opacity: 0.4;
+  position: absolute;
+  right: 30%;
+  transform: rotateY(180deg);
+}
+
+.header-corner {
+  backface-visibility: visible;
+  filter: invert(1);
+  height: 80%;
+  opacity: 0.4;
+  position: absolute;
+  top: 5%;
+}
+
+/* --------------- */
+
+/* Footer ------------------------------------- Footer */
+
+footer {
+  position: relative;
+  height: 3em;
+  z-index: -1;
+}
+
+footer p {
+  margin-left: 2em;
+}
+
+footer img {
+  backface-visibility: visible;
+  filter: invert(1);
+  height: 200%;
+  opacity: 0.4;
+  position: absolute;
+  bottom: 5%;
+}
+
+/* -------------- */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
