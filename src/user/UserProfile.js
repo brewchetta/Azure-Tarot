@@ -2,6 +2,8 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+// Assets
+import seeds from '../Assets/19_Sun_Seeds.png'
 // Components
 import UserSpreadsIndex from './UserSpreadsIndex'
 
@@ -30,6 +32,7 @@ export default class UserProfile extends React.Component {
         <p>Great! You've unlocked enough cards to start your first reading! As you unlock cards you'll be able to do different types of readings but for now you can try out the single card reading <Link to='/reading/one-card'>here!</Link></p>
 
         <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+        <img alt='' src={seeds} className='onboard-background' />
       </div>
     )
   }
@@ -44,6 +47,7 @@ export default class UserProfile extends React.Component {
           <p>You're probably eager to start doing readings but slow down! Tarot is a big subject and it won't make sense all at once.</p>
           <p>To help you understand what the different cards mean, let's head over to where they live. You can get there by clicking Cards on the navbar, or for now just clicking <Link to='/card-index'>here!</Link></p>
           <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+          <img alt='' src={seeds} className='onboard-background' />
         </div>
       )
     }

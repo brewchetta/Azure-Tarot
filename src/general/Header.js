@@ -1,6 +1,7 @@
 import React from 'react'
 import symbols from '../Assets/Symbol_All_Wing.png'
 import corner from '../Assets/Corner_Curl.png'
+import vines from '../Assets/Back_Vines.png'
 
 export default function Header(props) {
 

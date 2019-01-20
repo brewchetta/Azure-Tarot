@@ -1,6 +1,8 @@
 // React
 import React from  'react'
 import { Redirect, Link } from 'react-router-dom'
+// Assets
+import seeds from '../Assets/19_Sun_Seeds.png'
 // Fetches
 import { fetchGetAllCards } from './FetchCard'
 import { fetchUnlockCard } from './FetchCard'
@@ -70,6 +72,8 @@ export default class CardIndex extends React.Component {
 
           <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
 
+          <img alt='' src={seeds} className='onboard-background' />
+
         </div>
       )
     }
@@ -88,6 +92,8 @@ export default class CardIndex extends React.Component {
         <p>Start your first reading by clicking the New Readings tab or by clicking <Link to='reading/single'>here</Link></p>
 
         <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+
+        <img alt='' src={seeds} className='onboard-background' />
 
         </div>
       )

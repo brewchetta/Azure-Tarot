@@ -19,22 +19,29 @@ body img {
   backface-visibility: hidden;
 }
 
+/* Header ----------------------------------------------- Header */
+
 header {
   height: 75px;
-  overflow: hidden;
   position: relative;
   text-align: center;
   z-index: -1;
 }
 
-/* Header ----------------------------------------------- Header */
+header h1 {
+  border-top: 3px solid white;
+  text-decoration: underline;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-family: 'Satisfy', cursive;
+}
 
 .header-symbols-left {
   bottom: 5px;
   filter: invert(1);
   height: 75%;
-  left: 30%;
-  opacity: 0.4;
+  left: 35%;
   position: absolute;
 }
 
@@ -43,19 +50,17 @@ header {
   bottom: 5px;
   filter: invert(1);
   height: 75%;
-  opacity: 0.4;
   position: absolute;
-  right: 30%;
+  right: 35%;
   transform: rotateY(180deg);
 }
 
 .header-corner {
   backface-visibility: visible;
   filter: invert(1);
-  height: 80%;
-  opacity: 0.4;
+  height: 100%;
   position: absolute;
-  top: 5%;
+  top: 0;
 }
 
 /* --------------- */
@@ -63,8 +68,11 @@ header {
 /* Footer ------------------------------------- Footer */
 
 footer {
-  position: relative;
+  bottom: 0;
   height: 3em;
+  left: 0;
+  position: fixed;
+  width: 100%;
   z-index: -1;
 }
 
@@ -135,7 +143,6 @@ code {
   left: 5px;
   width: 200px;
   z-index: 500;
-  /* visibility: hidden; */
 }
 
 .card-component-flip-container {
@@ -549,14 +556,6 @@ code {
 
 /* ---------- */
 
-/* Header ----------------------------------- Header */
-
-.title {
-  margin: 5px;
-}
-
-/* ---------- */
-
 /* Lesson --------------------------------------------- Lesson */
 
 .lesson-buttons {
@@ -725,6 +724,15 @@ code {
 
 .onboard-popup-exit:hover {
   color: red;
+}
+
+.onboard-background {
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  transform: rotate(-15deg);
+  width: 10%;
 }
 
 /* ---------- */
