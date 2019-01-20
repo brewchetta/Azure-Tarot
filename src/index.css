@@ -353,6 +353,20 @@ code {
   width: 100%;
 }
 
+@keyframes magician-symbols {
+  0% {opacity: 0; filter: blur(20px);}
+  12.5% {opacity: 1; filter: blur(0);}
+  25% {opacity: 0; filter: blur(20px);}
+  100% {opacity: 0;}
+}
+
+.magician-symbols {
+  animation: magician-symbols 10s infinite;
+  height: 15%;
+  opacity: 0;
+  position: absolute;
+}
+
 /* 2 High Priestess */
 
 
@@ -474,12 +488,20 @@ code {
 
 /* 11 Strength */
 
+.strength-birch {
+  left: 0;
+  position: absolute;
+  top: -40%;
+  width: 100%;
+  z-index: 1;
+}
+
 .strength-cat {
   left: 20%;
   position: absolute;
   top: -3%;
   width: 50%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .strength-mirror {
@@ -504,7 +526,7 @@ code {
   position: absolute;
   top: 40%;
   width: 90%;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* 13 Death */
