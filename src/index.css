@@ -681,6 +681,33 @@ code {
 
 /* ---------- */
 
+/* Loading --------------------------------------------- Loading */
+
+.loading-container {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
+
+.loading-sun {
+  animation: rotate 5s infinite linear;
+  filter: invert(1);
+  position: relative;
+  right: -50px;
+  width: 100px;
+}
+
+.loading-moon {
+  animation: rotate 10s infinite linear reverse;
+  filter: invert(1);
+  left: -50px;
+  position: relative;
+  width: 100px;
+}
+
+/* ---------- */
+
 /* Lesson --------------------------------------------- Lesson */
 
 .lesson-buttons {

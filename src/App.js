@@ -8,6 +8,7 @@ import { fetchLoginUser } from './user/FetchUser'
 import Header from './general/Header'
 import Footer from './general/Footer'
 import Navbar from './general/Navbar'
+import LoadingSpinner from './general/LoadingSpinner'
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
 import CardCreate from './card/CardCreate'
@@ -42,7 +43,7 @@ class App extends Component {
   render() {
     const currentUser = this.state.currentUser
     if (localStorage.jwt && !currentUser) {
-      return (<p>Loading spinner goes here</p>)
+      return (<LoadingSpinner />)
     } else {
       return (
         <Router>
