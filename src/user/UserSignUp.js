@@ -70,7 +70,7 @@ export default class UserSignUp extends React.Component {
         <br/>
 
         <label name='password'>Password</label><br/>
-        <input type='text' name='password' value={this.state.password} onChange={this.handleChange}/>
+        <input type='password' name='password' value={this.state.password} onChange={this.handleChange}/>
 
         <br/>
 
@@ -94,7 +94,7 @@ export default class UserSignUp extends React.Component {
       <br/>
 
       <label name='login_password'>Password</label><br/>
-      <input type='text' name='login_password' value={this.state.login_password} onChange={this.handleChange}/>
+      <input type='password' name='login_password' value={this.state.login_password} onChange={this.handleChange}/>
 
       <br/>
 

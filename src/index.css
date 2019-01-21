@@ -148,6 +148,11 @@ code {
   z-index: 500;
 }
 
+@keyframes card-locked-remove-deck {
+  from { left: 0 }
+  to { left: -200% }
+}
+
 .card-locked {
   background-image: url('./Assets/Card_Back.png');
   background-color: #737373;
@@ -160,6 +165,7 @@ code {
   display: inline-block;
   height: 300px;
   margin: 5px;
+  position: relative;
   width: 200px;
 }
 
@@ -937,7 +943,7 @@ code {
 
 .position-container-threecard {
   display: inline-block;
-  float: left;
+  margin: auto;
   text-align: center;
   width: 25%;
 }

@@ -49,14 +49,18 @@ export default class SpreadTable extends React.Component {
 
   // Choose card, add it to the spread, subtract it from cards
   selectCard = () => {
-    const unlockedCards = this.state.unlockedCards
     const selectedCards = this.state.selectedCards
+    const readingType = this.props.match.params.readingtype
 
-    const selectedCard = unlockedCards[Math.floor(Math.random() * unlockedCards.length)]
-    this.setState({
-      unlockedCards: unlockedCards.filter(card => card.id !== selectedCard.id),
-      selectedCards: [...selectedCards, selectedCard]
-    }, this.saveSpread)
+    if ((selectedCards.length < 3 && readingType === 'three-card') || (selectedCards.length < 1 && readingType === 'single')) {
+      const unlockedCards = this.state.unlockedCards
+      const selectedCard = unlockedCards[Math.floor(Math.random() * unlockedCards.length)]
+
+      this.setState({
+        unlockedCards: unlockedCards.filter(card => card.id !== selectedCard.id),
+        selectedCards: [...selectedCards, selectedCard]
+      }, this.saveSpread)
+    }
   }
 
   // Saves spread if final card is selected
@@ -67,7 +71,7 @@ export default class SpreadTable extends React.Component {
     if ((cardsLength >= 3 && readingType === 'three-card') || (cardsLength >= 1 && readingType === 'single') ) {
       const body = {
         spread: {
-          spread_type: "threecard",
+          spread_type: readingType,
           user_id: this.props.currentUser.id,
           card_ids: this.state.selectedCards.map(card => card.id)
         }
@@ -84,7 +88,7 @@ export default class SpreadTable extends React.Component {
   renderCardPositions = () => {
     const readingType = this.props.match.params.readingtype
     let positions
-    if (readingType === 'three-card') { positions = ['Past', 'Present', 'Future'] }
+    if (readingType === 'three-card') { positions = ['Past', 'Present', 'Possibility'] }
     else if (readingType === 'single') { positions = ['Present'] }
     return this.state.selectedCards.map((card, i) => (
       <SpreadPosition key={i} card={card} position={positions[i]} indexState={this.state} setIndexState={this.setIndexState} currentUser={this.props.currentUser} />
@@ -99,7 +103,7 @@ export default class SpreadTable extends React.Component {
       return (
         <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
           <p>Hey {user.username}! Welcome to your first tarot reading on Azure!</p>
-          <p>Generally you'll only want to do one reading for a person a day. It's very simple: draw a card and then flip it over to see what you got.</p>
+          <p>Generally you'll only want to do one reading for a person a day. It's very simple: draw a card from you deck on the left and then flip it over to see what you got.</p>
           <p>Your card wont actually tell you the future or anything fancy like that. Think of it more as a frame of reference. How does the card relate to whats going on around you? What insights can it give for your situation? Does it warn you about something? Ask you to embrace something? To let it go? Its up to you to decide what the card is saying, just remember there are no wrong answers!</p>
           <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
           <img alt='' src={seeds} className='onboard-background' />

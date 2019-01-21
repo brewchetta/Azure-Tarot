@@ -6,13 +6,11 @@ export default class SpreadCardSelect extends React.Component {
     return (
       <div style={{ display: 'inline-block', float: 'left' }}>
 
-        { !this.props.fullCards ?
-          (<img alt=''
+        <img alt=''
           src='../Assets/Card_Back'
           className='card-locked'
-          onClick={this.props.selectCard}/>)
-          :null
-        }
+          onClick={this.props.selectCard}
+          style={ this.props.fullCards ? { left: '-200%', animation: 'card-locked-remove-deck 2s' } : null } />
 
 
       </div>
