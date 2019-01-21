@@ -33,6 +33,7 @@ header h1 {
   border-top: 3px solid white;
   text-decoration: underline;
   display: inline-block;
+  padding-top: 0.2em;
   padding-left: 2em;
   padding-right: 2em;
   font-family: 'Josefin Sans', sans-serif;
@@ -847,6 +848,8 @@ code {
 
 .navbar {
   border: solid black 2px;
+  border-left: none;
+  border-right: none;
   display: inline-block;
   font-family: 'Josefin Sans', sans-serif;
   height: 2em;
