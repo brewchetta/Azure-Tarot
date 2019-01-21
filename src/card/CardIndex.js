@@ -83,7 +83,7 @@ export default class CardIndex extends React.Component {
 
           <p>You might wonder why you have no cards in your deck and the reason is because you haven't learned any yet. Every card in the deck is significant in a different way and we want you to have some familiarity before you use a card.</p>
 
-          <p>Don't worry, this'll still be pretty easy! Every time you learn a new card you'll add it to your deck, and once you've got at least five cards in your deck you'll get to start doing those fancy readings.</p>
+          <p>Don't worry, this'll still be pretty easy! Every time you learn a new card you'll add it to your deck, and once you've got at least six cards in your deck you'll get to start doing those fancy readings.</p>
 
           <p>Go ahead and click a card to start learning! That one in the top left looks like a good one.</p>
 

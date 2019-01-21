@@ -20,7 +20,7 @@ export default class LessonWriteForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
 
-    if (this.state.user_description.length < 50) {
+    if (this.state.user_description.length < 25) {
       alert('Write a longer description for this card! \nC\'mon you can do it!')
     } else {
       this.props.unlockLesson(this.state.user_description)
@@ -40,7 +40,7 @@ export default class LessonWriteForm extends React.Component {
           <textarea className='lesson-form-text'
           value={this.state.user_description}
           onChange={this.handleChange}
-          maxLength='300' />
+          maxLength='200' />
 
           <br/>
 
