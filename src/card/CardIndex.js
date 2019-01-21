@@ -66,6 +66,7 @@ export default class CardIndex extends React.Component {
     fetchUnlockCard(card, user_description, user)
     .then(response => {console.log('Response: ', response); return response})
     .then(response => {
+      this.setState({ popupOpen: true })
       this.props.setCurrentUser({ ...user, cards: [...user.cards, card], card_unlocks: [...user.card_unlocks, response.card_unlock] })
     })
   }

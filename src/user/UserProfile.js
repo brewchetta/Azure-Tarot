@@ -13,23 +13,6 @@ export default class UserProfile extends React.Component {
     popupOpen: true
   }
 
-  // Shows most recent card unlock
-  // renderRandomCard = () => {
-  //   const cards = this.props.currentUser.cards
-  //   if (cards) {
-  //     return (
-  //       <div style={{ display: 'inline-box'}}>
-  //
-  //         <div style={{ width: '300px', height: '450px', position: 'relative', left: '-1em' }}>
-  //           <CardIllustration card={cards[Math.floor(Math.random() * cards.length)]} />
-  //         </div>
-  //
-  //       </div>
-  //     )
-  //   }
-  //   console.log(this.props.currentUser.cards)
-  // }
-
   // Removes all popups when executed
   exitPopup = () => {
     this.setState({ popupOpen: false })
@@ -42,7 +25,7 @@ export default class UserProfile extends React.Component {
     if (!user.spreads.length && user.cards.length > 5 )
     return (
       <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
-        <p>Great! You've unlocked enough cards to start your first reading! As you unlock cards you'll be able to do different types of readings but for now you can try out the single card reading <Link to='/reading/one-card'>here!</Link></p>
+        <p>Great! You've unlocked enough cards to start your first reading! As you unlock cards you'll be able to do different types of readings but for now you can try out the single card reading <Link to='/reading/single'>here!</Link></p>
 
         <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
         <img alt='' src={seeds} className='onboard-background' />
