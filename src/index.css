@@ -606,7 +606,7 @@ code {
 }
 
 .rainbow-shift {
-  animation: rainbow-shift 10s infinite linear;
+  animation: rainbow-shift 10s infinite linear reverse;
 }
 
 /* 13 Death */
