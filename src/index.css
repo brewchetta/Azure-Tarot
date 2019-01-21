@@ -1,5 +1,6 @@
 /* Fonts Reference */
 /* font-family: 'Satisfy', cursive; */
+/* font-family: 'Josefin Sans', sans-serif; */
 
 body {
   backface-visibility: hidden;
@@ -34,7 +35,7 @@ header h1 {
   display: inline-block;
   padding-left: 2em;
   padding-right: 2em;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .header-symbols-left {
@@ -830,10 +831,12 @@ code {
 /* Navbar --------------------------------------- Navbar */
 
 .navbar {
-  width: 100%;
-  height: 2em;
-  display: inline-block;
   border: solid black 2px;
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 2em;
+  padding-top: 0.5em;
+  width: 100%;
 }
 
 .navbar-left {
