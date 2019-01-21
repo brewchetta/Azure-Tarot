@@ -60,16 +60,16 @@ export default class UserSignUp extends React.Component {
 
     return(
       <div className='user-signup-login-container'>
-      <p>Sign Up!</p>
+      <p>Sign Up</p>
       <form name='signup'
       onSubmit={this.handleSubmitSignUp}>
 
-        <label name='username'>Name</label>
+        <label name='username'>Name</label><br/>
         <input type='text' name='username' value={this.state.username} onChange={this.handleChange}/>
 
         <br/>
 
-        <label name='password'>Password</label>
+        <label name='password'>Password</label><br/>
         <input type='text' name='password' value={this.state.password} onChange={this.handleChange}/>
 
         <br/>
@@ -78,17 +78,22 @@ export default class UserSignUp extends React.Component {
 
       </form>
 
+      <br/>
+
       {/* ----------------- */}
 
+      <div style={{ width: '30%', border: 'solid white 2px', margin: 'auto' }}></div>
 
-      <p>Log In!</p>
+      {/* ----------------- */}
+
+      <p>Log In</p>
       <form name='login' onSubmit={this.handleSubmitLogin}>
-      <label name='login_username'>Name</label>
+      <label name='login_username'>Name</label><br/>
       <input type='text' name='login_username' value={this.state.login_username} onChange={this.handleChange}/>
 
       <br/>
 
-      <label name='login_password'>Password</label>
+      <label name='login_password'>Password</label><br/>
       <input type='text' name='login_password' value={this.state.login_password} onChange={this.handleChange}/>
 
       <br/>

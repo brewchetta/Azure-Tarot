@@ -551,6 +551,28 @@ code {
   z-index: 2;
 }
 
+/* 11 Justice */
+
+.justice-sword {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes justice-background {
+  from { width: 20% }
+  to { width: 50% }
+}
+
+.justice-background {
+  animation: justice-background 3s infinite alternate linear;
+  height: 75%;
+  position: absolute;
+  top: 25%;
+}
+
 /* 12 Hanged Man */
 
 @keyframes rainbow-shift {
@@ -599,6 +621,33 @@ code {
 
 .animation-firefly {
   animation: firefly 12s infinite;
+}
+
+/* 19 Sun */
+
+@keyframes sun-sway {
+  from { transform: rotate(0); left: 0; }
+  to { transform: rotate(10deg); left: 10%; }
+}
+
+.sun-sway {
+  animation: sun-sway 4s infinite alternate;
+  position: relative;
+}
+
+@keyframes sun-seeds {
+  0% { opacity: 0; left: 15% }
+  25% { opacity: 1; left: 40%; top: -5% }
+  100% { opacity: 1; left: 115%; top: -20% }
+}
+
+.sun-seeds {
+  animation: sun-seeds 8s infinite linear;
+  left: 15%;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 5%;
+  width: 50%;
 }
 
 /* General Animations */
@@ -721,7 +770,7 @@ code {
 /* Login & Signup ------------------------------- Login & Signup */
 
 .user-signup-login-container {
-  margin: 10px;
+  text-align: center;
 }
 
 /* ---------- */
