@@ -20,7 +20,8 @@ export const Devil = props => {
       />
 
       <img alt='' src={pupil}
-      style={{ width: '60%', position: 'absolute', top: '30%', left: '17%', zIndex: '1' }}
+      style={{ width: '60%', position: 'absolute', top: '30%', left: '17%',
+      animation: 'devil-eye 10s infinite', zIndex: '1' }}
       />
 
     </div>

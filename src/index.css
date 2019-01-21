@@ -611,6 +611,7 @@ code {
 }
 
 /* 13 Death */
+
 @keyframes death-pulse {
   0% { background: #003300 }
   20% { background: #003300 }
@@ -620,6 +621,23 @@ code {
 .death-pulse {
   animation: death-pulse 4s infinite alternate;
 }
+
+/* 15 Devil */
+
+@keyframes devil-eye {
+  0% { transform: rotateY(0deg); left: 17%;}
+  10% { transform: rotateY(20deg); left: 25%;}
+  20% { transform: rotateY(20deg); left: 25%;}
+  30% { transform: rotateY(0deg); left: 17%;}
+  40% { transform: rotateY(0deg); left: 17%; top: 30%;}
+  50% { transform: rotateY(-20deg); left: 10%; top: 31%;}
+  60% { transform: rotateY(-20deg); left: 10%; top: 31%;}
+  70% { transform: rotateY(0deg); left: 17%; top: 30%;}
+  100% { transform: rotateY(0deg); left: 17%;}
+}
+
+/* top 20% - 40% */
+/* left 30% - 5% */
 
 /* 16 Tower */
 
