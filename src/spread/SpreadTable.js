@@ -104,8 +104,10 @@ export default class SpreadTable extends React.Component {
       return (
         <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
           <p>Hey {user.username}! Welcome to your first tarot reading on Azure!</p>
-          <p>Generally you'll only want to do one reading for a person a day. It's very simple: draw a card from you deck on the left and then flip it over to see what you got.</p>
+          <p>Let's give you a reading first, then you can give one to each of your friends!</p>
+          <p>Here's how you do it: draw a card from you deck on the left and then flip it over to see what you got.</p>
           <p>Your card wont actually tell you the future or anything fancy like that. Think of it more as a frame of reference. How does the card relate to whats going on around you? What insights can it give for your situation? Does it warn you about something? Ask you to embrace something? To let it go? Its up to you to decide what the card is saying, just remember there are no wrong answers!</p>
+          <p>One last thing. People should only get one reading a day. Otherwise the cards'll get confused and lose some of their magic. Just saying!</p>
           <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
           <img alt='' src={seeds} className='onboard-background' />
         </div>
@@ -116,13 +118,15 @@ export default class SpreadTable extends React.Component {
   renderToReadingsOnboard = () => {
     const user = this.props.currentUser
     const popupOpenToReadings = this.state.popupOpenToReadings
-    if (user.spreads.length === 1 && popupOpenToReadings) {
+    if (user.spreads.length === 0 && popupOpenToReadings) {
       return (
         <div className='onboard-popup' style={ popupOpenToReadings ? null : {left: '150%'} }>
-          <p>That's your card for the today! What does it tell you? What does it make you think about? How does it reframe what you've done today and what you plan to do for the rest of the day?</p>
-          <p>Now that you've made your first reading, head over to the newly unlocked tab where you can see all the readings! You can also write notes now about their accuracy or how you felt them or anything else you want to remember!</p>
+          <p>That's your card for the today! What will it tell you? Ask whether it reframes your day while you study it.</p>
+          <p>Once you've finished your first reading, head over to the Your Readings tab where you can see all the readings! You can also write notes now about their accuracy or how you felt them or anything else you want to remember!</p>
           <p>Great job making it this far, keep unlocking cards, doing readings often and learning!</p>
-        </div>  
+          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+          <img alt='' src={seeds} className='onboard-background' />
+        </div>
       )
     }
   }
