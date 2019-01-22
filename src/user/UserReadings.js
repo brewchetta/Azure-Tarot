@@ -7,7 +7,7 @@ import seeds from '../Assets/19_Sun_Seeds.png'
 // Components
 import UserSpreadsIndex from './UserSpreadsIndex'
 
-export default class UserProfile extends React.Component {
+export default class UserReadings extends React.Component {
 
   state = {
     popupOpen: true
@@ -33,7 +33,7 @@ export default class UserProfile extends React.Component {
     )
   }
 
-  renderProfileWelcome = () => {
+  renderReadingsWelcome = () => {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
     if (!user.cards.length) {
@@ -58,7 +58,7 @@ export default class UserProfile extends React.Component {
 
           {/* Onboarding Functions */}
           {this.renderSpreadIntro()}
-          {this.renderProfileWelcome()}
+          {this.renderReadingsWelcome()}
 
 
           {/* Recent Readings */}
