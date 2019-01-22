@@ -40,7 +40,6 @@ export default class CardIndex extends React.Component {
   renderAllCards = () => {
     const currentUser = this.props.currentUser
     const cardUnlockIds = currentUser.card_unlocks.map(card => card.card_id )
-    console.log(cardUnlockIds)
     return this.state.cards.map((card,i) => (
       <div className='card-index-space' key={i}>
 
@@ -48,7 +47,8 @@ export default class CardIndex extends React.Component {
         // If unlocked uses card front
         <CardComponent card={card}
         indexState={this.state} currentUser={currentUser}
-        setIndexState={this.setIndexState} />
+        setIndexState={this.setIndexState}
+        setCurrentUser={this.props.setCurrentUser} />
         // If locked uses card back
         : <CardBack card={card}
         indexState={this.state}

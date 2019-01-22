@@ -43,6 +43,16 @@ class CardComponent extends React.Component {
     }
   }
 
+  // From user description for updating currentUser once card has been updated
+  editUserCardUnlocks = (newUnlock) => {
+    const user = this.props.currentUser
+    const newUnlocks = user.card_unlocks.map(unlock => {
+      return unlock.id === newUnlock.id ? newUnlock : unlock
+    })
+
+    this.props.setCurrentUser({...user, card_unlocks: newUnlocks})
+  }
+
   // Switches to the inspect or lesson view
   handleClickInspect = (event) => {
     // console.log(this.props.indexState)
@@ -81,7 +91,7 @@ class CardComponent extends React.Component {
     return mode === 'illustration' ? (<> <CardIllustration card={card} />
       <p className='card-name-inspect'>{card.card_rank}. {card.card_name}</p> </>)
       : mode === 'description' ? (<CardDescription card={card} />)
-      : mode === 'user-info' ? (<CardDescriptionUser card={card} cardUnlock={cardUnlock} />)
+      : mode === 'user-info' ? (<CardDescriptionUser card={card} cardUnlock={cardUnlock} editUserCardUnlocks={this.editUserCardUnlocks} />)
       : null
   }
 
