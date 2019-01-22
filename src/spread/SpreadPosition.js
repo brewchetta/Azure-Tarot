@@ -10,6 +10,7 @@ class SpreadPosition extends React.Component {
   flip = () => {
     if (!this.state.flipped) {
       this.setState({ flipped: true })
+      this.props.setIndexState({ popupOpenToReadings: true })
     }
   }
 

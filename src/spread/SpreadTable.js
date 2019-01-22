@@ -18,7 +18,8 @@ export default class SpreadTable extends React.Component {
     cardToInspect: null,
     popupOpen: true,
     selectedCards: [],
-    unlockedCards: []
+    unlockedCards: [],
+    popupOpenToReadings: false
   }
 
   componentDidMount() {
@@ -112,9 +113,23 @@ export default class SpreadTable extends React.Component {
     }
   }
 
+  renderToReadingsOnboard = () => {
+    const user = this.props.currentUser
+    const popupOpenToReadings = this.state.popupOpenToReadings
+    if (user.spreads.length === 1 && popupOpenToReadings) {
+      return (
+        <div className='onboard-popup' style={ popupOpenToReadings ? null : {left: '150%'} }>
+          <p>That's your card for the today! What does it tell you? What does it make you think about? How does it reframe what you've done today and what you plan to do for the rest of the day?</p>
+          <p>Now that you've made your first reading, head over to the newly unlocked tab where you can see all the readings! You can also write notes now about their accuracy or how you felt them or anything else you want to remember!</p>
+          <p>Great job making it this far, keep unlocking cards, doing readings often and learning!</p>
+        </div>  
+      )
+    }
+  }
+
   // Removes all popups when executed
   exitPopup = () => {
-    this.setState({ popupOpen: false })
+    this.setState({ popupOpen: false, popupOpenToReadings: false })
   }
 
   render() {
@@ -135,6 +150,7 @@ export default class SpreadTable extends React.Component {
 
           {/* Onboarding if the user needs it */}
           {this.renderSpreadWelcome()}
+          {this.renderToReadingsOnboard()}
 
           {/* Select Card Button */}
           <SpreadCardSelect cards={this.state.cards}
