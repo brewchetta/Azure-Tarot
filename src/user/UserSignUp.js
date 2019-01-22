@@ -9,7 +9,8 @@ export default class UserSignUp extends React.Component {
     username: '',
     password: '',
     login_username: '',
-    login_password: ''
+    login_password: '',
+    popup: false
   }
 
   handleChange = (event) => {
@@ -23,8 +24,10 @@ export default class UserSignUp extends React.Component {
     .then(response => {
       if (!response.user) {
         console.log('Error: ', response)
-        this.setState({ errors: response.message })
-      } else if (response.user) {
+        if (response.errors) { this.setState({ errors: response.errors }) }
+        if (response.message) { this.setState({ errors: response.message }) }
+      }
+      else if (response.user) {
         this.setLocalStorage(response)
         console.log('Created user: ', response.user)
         this.props.setCurrentUser(response.user)
@@ -39,7 +42,8 @@ export default class UserSignUp extends React.Component {
     .then(response => {
       if (!response.user) {
         console.log('Error: ', response)
-        this.setState({ errors: response.message })
+        if (response.errors) { this.setState({ errors: response.errors }) }
+        if (response.message) { this.setState({ errors: response.message }) }
       }
       else if (response.user) {
         console.log(response)
@@ -54,6 +58,7 @@ export default class UserSignUp extends React.Component {
   }
 
   render() {
+    console.log(this.state.errors)
     if (this.props.currentUser) {
       return (<Redirect to={`/profile/${this.props.currentUser.id}`} />)
     }
@@ -101,7 +106,10 @@ export default class UserSignUp extends React.Component {
       <input type='submit' />
       </form>
 
-      {this.state.errors ? <p>{this.state.errors}</p> : null}
+      <div className='user-signup-login-error'
+      style={this.state.errors ? null : { top: '-30%' } } >
+        <p>{this.state.errors}</p>
+      </div>
 
       </div>
     )
