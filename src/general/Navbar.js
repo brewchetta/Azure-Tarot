@@ -14,6 +14,7 @@ const Navbar = (props) => {
           <Link to='/card-index'>Cards</Link>
           { cards.length > 5 ? <Link to='/reading/single'>Single Card Reading</Link> : null }
           { cards.length > 19 ? <Link to='/reading/three-card'>Three Card Reading</Link> : null }
+          { user.spreads.length ? <Link to={`/your-readings/${user.id}`}>Your Readings</Link> : null }
         </>
       )
     }
