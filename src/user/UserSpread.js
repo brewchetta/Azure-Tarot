@@ -33,7 +33,7 @@ class UserSpread extends React.Component {
     return this.props.spread.notes.map(note => {
       return (
         <div key={Math.random()} className='profile-note'>
-          <p>{note.content} <br/> {note.created_at.split('T')[0]}</p>
+          <p style={{ textAlign: 'right' }}>{note.content} <br/><br/> written on {parseDate(note.created_at)}</p>
         </div>
       )
     })

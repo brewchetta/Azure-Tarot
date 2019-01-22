@@ -10,6 +10,7 @@ import Footer from './general/Footer'
 import Navbar from './general/Navbar'
 import LoadingSpinner from './general/LoadingSpinner'
 import UserSignUp from './user/UserSignUp'
+import UserProfile from './user/UserProfile'
 import UserReadings from './user/UserReadings'
 import CardCreate from './card/CardCreate'
 import CardIndex from './card/CardIndex'
@@ -66,8 +67,15 @@ class App extends Component {
           {/* Hidden Card Create */}
           <Route path='/card-create' exact component={CardCreate} />
 
+          {/* Profile */}
+          <Route path='/profile/:user_id' exact
+          render={
+            props => <UserProfile {...props}
+            currentUser={currentUser} />
+          } />
+
           {/* Readings */}
-          <Route path='/your-readings/:user_id' exact render={
+          <Route path='/your-readings' exact render={
             props => <UserReadings {...props} currentUser={currentUser} />
           } />
 
