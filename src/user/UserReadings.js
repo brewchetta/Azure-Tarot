@@ -20,7 +20,6 @@ export default class UserReadings extends React.Component {
   render() {
     const currentUser = this.props.currentUser
     if (currentUser) {
-      console.log(currentUser)
       return(
         <div>
 
