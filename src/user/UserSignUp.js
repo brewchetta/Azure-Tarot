@@ -58,7 +58,6 @@ export default class UserSignUp extends React.Component {
   }
 
   render() {
-    console.log(this.state.errors)
     if (this.props.currentUser) {
       return (<Redirect to={`/profile/${this.props.currentUser.id}`} />)
     }
