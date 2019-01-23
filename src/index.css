@@ -941,10 +941,11 @@ code {
   border: black solid 2px;
   border-radius: 100%;
   cursor: pointer;
+  height: 1.5em;
   position: absolute;
-  right: -1.5em;
-  top: -1.5em;
-  width: 1.1em;
+  right: -2em;
+  top: -1em;
+  width: 1.5em;
 }
 
 .onboard-popup-exit:hover {

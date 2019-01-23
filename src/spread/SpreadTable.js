@@ -7,6 +7,7 @@ import { fetchCreateSpread } from './FetchSpreads'
 // Components
 import SpreadCardSelect from './SpreadCardSelect'
 import SpreadPosition from './SpreadPosition'
+import LoadingSpinner from '../general/LoadingSpinner'
 // Assets
 import seeds from '../Assets/19_Sun_Seeds.png'
 
@@ -68,6 +69,9 @@ export default class SpreadTable extends React.Component {
   saveSpread = () => {
     const readingType = this.props.match.params.readingtype
     const cardsLength = this.state.selectedCards.length
+    const currentUser = this.props.currentUser
+    const setCurrentUser = this.props.setCurrentUser
+    console.log(setCurrentUser)
 
     if ((cardsLength >= 3 && readingType === 'three-card') || (cardsLength >= 1 && readingType === 'single') ) {
       const body = {
@@ -80,7 +84,11 @@ export default class SpreadTable extends React.Component {
 
       console.log(body)
 
-      fetchCreateSpread(body).then(console.log)
+      fetchCreateSpread(body)
+      .then(response => {
+        console.log(response)
+        setCurrentUser({...currentUser, spreads: [...currentUser.spreads, response.spread]})
+      })
     }
   }
 
@@ -118,7 +126,7 @@ export default class SpreadTable extends React.Component {
   renderToReadingsOnboard = () => {
     const user = this.props.currentUser
     const popupOpenToReadings = this.state.popupOpenToReadings
-    if (user.spreads.length === 0 && popupOpenToReadings) {
+    if (user.spreads.length === 1 && popupOpenToReadings) {
       return (
         <div className='onboard-popup' style={ popupOpenToReadings ? null : {left: '150%'} }>
           <p>That's your card for the today! What will it tell you? Ask whether it reframes your day while you study it.</p>
@@ -197,7 +205,7 @@ export default class SpreadTable extends React.Component {
     }
 
     else {
-      return (<p>Loading spinner goes heeya</p>)
+      return (<LoadingSpinner />)
     }
   }
 
