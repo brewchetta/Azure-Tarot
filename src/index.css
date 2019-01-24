@@ -931,6 +931,10 @@ code {
   z-index: 1000;
 }
 
+.onboard-popup p {
+  cursor: default;
+}
+
 @keyframes onboard-popup-appear {
   from { left: -75% }
   to { left: 25% }

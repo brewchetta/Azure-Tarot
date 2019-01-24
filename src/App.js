@@ -76,7 +76,8 @@ class App extends Component {
           <Route path='/profile/:user_id' exact
           render={
             props => <UserProfile {...props}
-            currentUser={currentUser} />
+            currentUser={currentUser}
+            setCurrentUser={this.setCurrentUser} />
           } />
 
           {/* Readings */}

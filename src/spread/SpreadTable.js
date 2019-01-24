@@ -110,30 +110,34 @@ export default class SpreadTable extends React.Component {
     const popupOpen = this.state.popupOpen
     if (!user.spreads.length) {
       return (
-        <div className='onboard-popup' style={ popupOpen ? null : {left: '150%'} }>
+        <div className='onboard-popup'
+        style={ popupOpen ? null : {left: '150%'} }
+         onClick={this.exitPopup}>
           <p>Hey {user.username}! Welcome to your first tarot reading on Azure!</p>
           <p>Here's how you do it: draw a card from the deck on the left and then flip it over to see what you got.</p>
-          <p>Your card wont actually tell you the future or anything. Think of it as a frame of reference.</p>
-          <p>How does the card relate to whats going on around you? What insights can it give about your situation? Does it warn you about something? Ask you to embrace something? Ask you to let go a little? Decide what the card is saying and remember, there are no wrong answers!</p>
+          <p>Your card wont actually tell you the future or anything. Think of it as a frame of reference. What can the card teach you about today?</p>
           <p>One last thing. People should only get one reading a day. Otherwise the cards'll get confused and lose some of their magic. Just saying!</p>
-          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+          <p className='onboard-popup-exit'>X</p>
           <img alt='' src={seeds} className='onboard-background' />
         </div>
       )
     }
   }
 
+  // Onboarding for after first reading
   renderToReadingsOnboard = () => {
     const user = this.props.currentUser
     const popupOpenToReadings = this.state.popupOpenToReadings
     if (user.spreads.length === 1 && popupOpenToReadings) {
       return (
-        <div className='onboard-popup' style={ popupOpenToReadings ? null : {left: '150%'} }>
-          <p>That's your card for the today! What will it tell you? Ask whether it reframes your day while you study it.</p>
-          <p>Once you've finished your first reading, head over to the Your Readings tab where you can see all the readings! You can also write notes now about their accuracy or how you felt about them.</p>
+        <div className='onboard-popup'
+        style={ popupOpenToReadings ? null : {left: '150%'} }
+        onClick={this.exitPopup}>
+          <p>That's your card for the today!</p>
+          <p>Once you've finished your first reading, head over to Your Readings where you can write notes about each reading you make.</p>
           <p>_________</p>
           <p>Great job making it this far! No more handholding, just keep unlocking cards, doing readings every day, and learning everything you can!</p>
-          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+          <p className='onboard-popup-exit'>X</p>
           <img alt='' src={seeds} className='onboard-background' />
         </div>
       )

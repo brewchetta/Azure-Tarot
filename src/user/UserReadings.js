@@ -1,8 +1,6 @@
 // React
 import React from 'react'
-import { Redirect, Link } from 'react-router-dom'
-// Assets
-import seeds from '../Assets/19_Sun_Seeds.png'
+import { Redirect } from 'react-router-dom'
 // Components
 import UserSpreadsIndex from './UserSpreadsIndex'
 

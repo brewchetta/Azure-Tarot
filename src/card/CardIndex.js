@@ -77,17 +77,17 @@ export default class CardIndex extends React.Component {
 
     if (!user.cards.length) {
       return (
-        <div className='onboard-popup' style={ popupOpen ? null : {left:'150%'} }>
+        <div className='onboard-popup'
+        style={ popupOpen ? null : {left:'150%'} }
+        onClick={this.exitPopup}>
 
           <p>Look at all these cards! They're very .... facedown. That's because they're not part of your deck yet.</p>
 
-          <p>You might wonder why you have no cards in your deck and the reason is because you haven't learned any yet. Every card in the deck is significant in a different way and we want you to have some familiarity before you use a card.</p>
-
-          <p>Don't worry, this'll still be pretty easy! Every time you learn a new card you'll add it to your deck, and once you've got at least six cards in your deck you'll get to start doing those fancy readings.</p>
+          <p>To add cards to your deck just start off by clicking one. That'll take you to a lesson where you can learn more about each card.</p>
 
           <p>Go ahead and click a card to start learning! That one in the top left looks like a good one.</p>
 
-          <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+          <p className='onboard-popup-exit'>X</p>
 
           <img alt='' src={seeds} className='onboard-background' />
 
@@ -102,13 +102,15 @@ export default class CardIndex extends React.Component {
 
     if (user.cards.length > 5 && !user.spreads.length) {
       return (
-        <div className='onboard-popup' style={ popupOpen ? null : {left:'150%'} }>
+        <div className='onboard-popup'
+        style={ popupOpen ? null : {left:'150%'} }
+         onClick={this.exitPopup}>
 
         <p>You've got enough cards for a proper reading!</p>
 
         <p>Start your first reading by clicking the Single Card Reading tab or by clicking <Link to='reading/single'>here</Link></p>
 
-        <p className='onboard-popup-exit' onClick={this.exitPopup}>X</p>
+        <p className='onboard-popup-exit'>X</p>
 
         <img alt='' src={seeds} className='onboard-background' />
 

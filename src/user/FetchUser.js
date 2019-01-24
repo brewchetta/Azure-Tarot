@@ -38,3 +38,16 @@ export function fetchCreateUser(userParams) {
   })
   .then(r=>r.json())
 }
+
+export function fetchUpdateUser(userParams, id) {
+  const body = { user: userParams }
+  return fetch(API + `users/${id}`, {
+    method: 'PATCH',
+    headers: {
+      'Accept':'application/json',
+      'Content-Type':'application/json',
+      Authorization: `Bearer ${localStorage.jwt}` },
+    body: JSON.stringify(body)
+  })
+  .then(r=>r.json())
+}
