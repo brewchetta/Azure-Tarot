@@ -6,9 +6,7 @@ Azure Tarot teaches people how to do readings in tarot and what each card means.
 
 ### Cards
 
-The hand crafted cards in Azure Tarot give life to readings. We've given every card a unique animation to make it memorable and help it stand apart from its cardboard cousins.
-
-No matter where a student has gone on the website, every card can be clicked to bring up additional information like its background, keywords, an useful questions to ask during a reading.
+The hand crafted cards in Azure Tarot give life to readings. The cards stand apart from their cardboard cousins with the help of unique animations and added readability. Students won't need a manual here since every card can be clicked to bring up additional information like its background, keywords, and useful questions to ask during a reading.
 
 ![](public/Gif_Sun.gif) ![](public/Gif_Lovers.gif) ![](public/Gif_Devil.gif) 
 
@@ -18,7 +16,7 @@ Azure Tarot currently supports two different types of readings: the single card 
 
 ## Lessons
 
-Tarot is a form of communication. It wants its students to make personal connections with the cards in the deck. Because of that, the lessons in Azure Tarot ask students to reflect on the cards they find and then write their own descriptions for the cards.
+Tarot is a form of communication. Students want to make personal connections with the cards in their deck. Because of that, the lessons in Azure Tarot ask students to reflect on the cards they find and then write their own descriptions for the cards in the hopes that they'll find deeper meaning in every reading and tailor their experiences.
 
 ![](public/Gif_HPriestess.gif) ![](public/Gif_Tower.gif)
 
