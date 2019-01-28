@@ -10,7 +10,7 @@ class CardDescriptionReversal extends React.Component {
     input: this.props.cardUnlock.user_description
   }
 
-  // For chaning input
+  // For changing input
   handleChange = (event) => {
     this.setState({ input: event.target.value })
   }
@@ -18,13 +18,17 @@ class CardDescriptionReversal extends React.Component {
   // For submitting to database and updating user
   handleSubmit = (event) => {
     event.preventDefault()
+    const state = this.state
+    const user_description = this.props.cardUnlock.user_description
     this.toggleEdit()
-    console.log(this.props.cardUnlock.id, this.state)
 
-    fetchUpdateUnlockCard(this.props.cardUnlock.id, this.state.input)
-    .then(response => {
-      this.props.editUserCardUnlocks(response.card_unlock)
-    })
+    if (state.input.length > 25 && state.input !== user_description) {
+      fetchUpdateUnlockCard(this.props.cardUnlock.id, state.input)
+      .then(response => {
+        this.props.editUserCardUnlocks(response.card_unlock)
+      })
+    } else {this.setState({ input: user_description })}
+
   }
 
   // Switches edit mode on/off

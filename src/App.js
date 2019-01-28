@@ -54,7 +54,11 @@ class App extends Component {
           <Header />
 
           {/* Navbar */}
-          {window.localStorage.jwt ? <Navbar currentUser={this.state.currentUser} handleLogout={this.handleLogout} setCurrentUser={this.setCurrentUser} /> : null }
+          {window.localStorage.jwt ?
+          <Navbar currentUser={this.state.currentUser}
+            handleLogout={this.handleLogout}
+            setCurrentUser={this.setCurrentUser} />
+          : null }
 
           {/* Sign Up */}
           <Route path='/' exact
@@ -65,25 +69,34 @@ class App extends Component {
           } />
 
           {/* Hidden Card Create */}
-          <Route path='/card-create' exact component={CardCreate} />
+          <Route path='/card-create' exact
+          component={CardCreate} />
 
           {/* Profile */}
           <Route path='/profile/:user_id' exact
           render={
             props => <UserProfile {...props}
-            currentUser={currentUser} />
+            currentUser={currentUser}
+            setCurrentUser={this.setCurrentUser} />
           } />
 
           {/* Readings */}
-          <Route path='/your-readings' exact render={
+          <Route path='/your-readings' exact
+          render={
             props => <UserReadings {...props} currentUser={currentUser} />
           } />
 
           {/* Card Index */}
-          <Route path='/card-index' exact render={ props=> <CardIndex {...props} currentUser={currentUser} setCurrentUser={this.setCurrentUser} />} />
+          <Route path='/card-index' exact
+          render={ props=> <CardIndex {...props}
+          currentUser={currentUser}
+          setCurrentUser={this.setCurrentUser} />} />
 
           {/* Spread */}
-          <Route path='/reading/:readingtype' render={ props=> <SpreadTable {...props} currentUser={currentUser} />} />
+          <Route path='/reading/:readingtype' exact
+          render={ props=> <SpreadTable {...props}
+          currentUser={currentUser}
+          setCurrentUser={this.setCurrentUser} />} />
 
           <Footer />
         </>
