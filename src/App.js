@@ -1,5 +1,6 @@
+// React
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 // Stylesheet
 import './App.css';
 // Fetch Functions
@@ -47,7 +48,6 @@ class App extends Component {
       return (<LoadingSpinner />)
     } else {
       return (
-        <Router>
         <>
 
           {/* Header */}
@@ -100,7 +100,6 @@ class App extends Component {
 
           <Footer />
         </>
-        </Router>
       );
     }
   }

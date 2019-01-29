@@ -2,7 +2,9 @@
   "name": "tarot-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://brewchetta.github.io/Azure-Tarot/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -15,6 +17,8 @@
     "start": "PORT=4000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
