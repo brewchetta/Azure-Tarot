@@ -1,9 +1,9 @@
 {
   "main.css": "/Azure-Tarot/static/css/main.f5a03bce.chunk.css",
-  "main.js": "/Azure-Tarot/static/js/main.91b9bbfe.chunk.js",
-  "main.js.map": "/Azure-Tarot/static/js/main.91b9bbfe.chunk.js.map",
-  "static/js/1.f96a78d7.chunk.js": "/Azure-Tarot/static/js/1.f96a78d7.chunk.js",
-  "static/js/1.f96a78d7.chunk.js.map": "/Azure-Tarot/static/js/1.f96a78d7.chunk.js.map",
+  "main.js": "/Azure-Tarot/static/js/main.8be4c24b.chunk.js",
+  "main.js.map": "/Azure-Tarot/static/js/main.8be4c24b.chunk.js.map",
+  "static/js/1.328f65d7.chunk.js": "/Azure-Tarot/static/js/1.328f65d7.chunk.js",
+  "static/js/1.328f65d7.chunk.js.map": "/Azure-Tarot/static/js/1.328f65d7.chunk.js.map",
   "runtime~main.js": "/Azure-Tarot/static/js/runtime~main.386d4d89.js",
   "runtime~main.js.map": "/Azure-Tarot/static/js/runtime~main.386d4d89.js.map",
   "static/media/19_Sun_Seeds.png": "/Azure-Tarot/static/media/19_Sun_Seeds.35fb7f54.png",
@@ -63,6 +63,6 @@
   "static/media/index.css": "/Azure-Tarot/static/media/Card_Back.9e53c6c8.png",
   "static/css/main.f5a03bce.chunk.css.map": "/Azure-Tarot/static/css/main.f5a03bce.chunk.css.map",
   "index.html": "/Azure-Tarot/index.html",
-  "precache-manifest.e1f409aa50bce79c00a8fc23ae3cc8a2.js": "/Azure-Tarot/precache-manifest.e1f409aa50bce79c00a8fc23ae3cc8a2.js",
+  "precache-manifest.30c0c214de207668f1b9a52f89f86e2f.js": "/Azure-Tarot/precache-manifest.30c0c214de207668f1b9a52f89f86e2f.js",
   "service-worker.js": "/Azure-Tarot/service-worker.js"
 }
