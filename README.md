@@ -1,5 +1,11 @@
 ![Azure Tarot](public/Logo.png)
 
+## Website
+
+Check out the website here: https://brewchetta.github.io/Azure-Tarot/
+
+Because the back end has been hosted on Heroku please be patient while the server boots up (this can take between 5 and 20 seconds). If you're still seeing a loading screen or can't sign in, refresh and everything should clear up.
+
 ## Features
 
 ### Cards
@@ -17,12 +23,6 @@ Azure Tarot currently supports two different types of readings: the single card 
 Tarot is a form of communication. Students want to make personal connections with the cards in their deck. Because of that, the lessons in Azure Tarot ask students to reflect on the cards they find and then write their own descriptions for the cards in the hopes that they'll find deeper meaning in every reading and tailor their experiences.
 
 ![](public/Gif_HPriestess.gif) ![](public/Gif_Tower.gif)
-
-## Website
-
-Check out the website here: https://brewchetta.github.io/Azure-Tarot/
-
-Because the back end has been hosted on Heroku please be patient while the server boots up (this can take between 5 and 20 seconds). If you're still seeing a loading screen or can't sign in, refresh and everything should clear up.
 
 ## Technology Used
 
