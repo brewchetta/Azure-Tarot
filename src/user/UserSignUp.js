@@ -20,19 +20,24 @@ export default class UserSignUp extends React.Component {
   handleSubmitSignUp = (event) => {
     event.preventDefault()
 
-    fetchCreateUser(this.state)
-    .then(response => {
-      if (!response.user) {
-        console.log('Error: ', response)
-        if (response.errors) { this.setState({ errors: response.errors }) }
-        if (response.message) { this.setState({ errors: response.message }) }
-      }
-      else if (response.user) {
-        this.setLocalStorage(response)
-        console.log('Created user: ', response.user)
-        this.props.setCurrentUser(response.user)
-      }
-    })
+    if (this.state.password.length > 6 && this.state.password.length < 20) {
+      fetchCreateUser(this.state)
+      .then(response => {
+        if (!response.user) {
+          console.log('Error: ', response)
+          if (response.errors) { this.setState({ errors: response.errors }) }
+          if (response.message) { this.setState({ errors: response.message }) }
+        }
+        else if (response.user) {
+          this.setLocalStorage(response)
+          console.log('Created user: ', response.user)
+          this.props.setCurrentUser(response.user)
+        }
+      })
+    } else {
+      console.log('Error: password must be between 6 and 20 characters')
+      this.setState({ errors: 'Password must be between 6 and 20 characters' })
+    }
   }
 
   handleSubmitLogin = (event) => {
