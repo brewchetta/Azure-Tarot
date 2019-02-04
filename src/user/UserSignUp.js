@@ -25,8 +25,7 @@ export default class UserSignUp extends React.Component {
 
   // For signups
   handleSubmitSignUp = (event) => {
-    const password = this.state.password
-    const username = this.state.username
+    const {password, username} = this.state
 
     // First validates password length
     if (password.length < 6 && this.state.password.length > 20) {
@@ -82,6 +81,8 @@ export default class UserSignUp extends React.Component {
     return(
       <div className='user-signup-login-container'>
 
+        <br/>
+
         <form name='signup'
         onSubmit={this.handleSubmit}>
 
@@ -109,7 +110,7 @@ export default class UserSignUp extends React.Component {
 
         <br/>
 
-        <div style={{ width: '30%', border: 'solid white 2px', margin: 'auto' }}></div>
+        <div style={{ width: '20%', borderTop: 'solid white 4px', margin: 'auto' }}></div>
 
       {/* --------Error Messages------- */}
 

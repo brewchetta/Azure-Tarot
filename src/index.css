@@ -1041,6 +1041,7 @@ code {
   border: solid white 2px;
   border-radius: 3px;
   color: white;
+  margin: 10px;
 }
 
 .profile-note-delete {
