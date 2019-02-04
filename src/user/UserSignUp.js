@@ -110,7 +110,10 @@ export default class UserSignUp extends React.Component {
       <input type='submit' />
       </form>
 
+      {/* --------Error Messages------- */}
+
       <div className='user-signup-login-error'
+      onClick={() => this.setState({errors: ''})}
       style={this.state.errors ? null : { top: '-30%' } } >
         <p>{this.state.errors}</p>
       </div>
