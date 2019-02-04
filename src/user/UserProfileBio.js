@@ -37,12 +37,24 @@ export default class UserProfileBio extends React.Component {
 
     if (userIsCurrentUser && this.state.edit === false && !user.profile)
     return (
-        <p onClick={this.toggleEdit}>You haven't written a profile yet! Click me to add a bio!</p>
+        <>
+          <p onClick={this.toggleEdit}>You haven't written a profile yet! Click me to add a bio!</p>
+
+          <button
+          onClick={this.toggleEdit}
+          className='profile-note-form-button'>Edit Your Bio</button>
+        </>
     )
 
     if (userIsCurrentUser && this.state.edit === false && user.profile) {
       return (
-        <p onClick={this.toggleEdit}>{user.profile}</p>
+        <>
+          <p onClick={this.toggleEdit}>{user.profile}</p>
+
+          <button
+          className='profile-note-form-button'
+          onClick={this.toggleEdit}>Edit Your Bio</button>
+        </>
       )
     }
 
@@ -55,7 +67,7 @@ export default class UserProfileBio extends React.Component {
 
           <br/>
 
-          <input type='submit' value='Save' />
+          <input type='submit' value='Save' className='profile-note-form-button' />
 
         </form>
       )

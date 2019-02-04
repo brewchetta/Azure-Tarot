@@ -1036,7 +1036,7 @@ code {
   width: 80%;
 }
 
-.profile-note-form input {
+.profile-note-form-button {
   background: rgba(0,0,0,0);
   border: solid white 2px;
   border-radius: 3px;
