@@ -14,8 +14,8 @@ export function fetchLoginUser(userName) {
 
 export function fetchUserLogin(userParams) {
   const body = { user: {
-    username: userParams.login_username,
-    password: userParams.login_password
+    username: userParams.username,
+    password: userParams.password
   }}
   console.log(body)
   return fetch(API + 'login', {

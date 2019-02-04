@@ -42,7 +42,7 @@ export default class UserProfileBio extends React.Component {
 
           <button
           onClick={this.toggleEdit}
-          className='profile-note-form-button'>Edit Your Bio</button>
+          className='form-button'>Edit Your Bio</button>
         </>
     )
 
@@ -52,7 +52,7 @@ export default class UserProfileBio extends React.Component {
           <p onClick={this.toggleEdit}>{user.profile}</p>
 
           <button
-          className='profile-note-form-button'
+          className='form-button'
           onClick={this.toggleEdit}>Edit Your Bio</button>
         </>
       )
@@ -67,7 +67,7 @@ export default class UserProfileBio extends React.Component {
 
           <br/>
 
-          <input type='submit' value='Save' className='profile-note-form-button' />
+          <input type='submit' value='Save' className='form-button' />
 
         </form>
       )
