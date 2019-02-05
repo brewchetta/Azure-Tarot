@@ -2,7 +2,7 @@ import React from 'react'
 
 const HelpBackground = props => {
   return (
-    <div className='click-to-exit-background'
+    <div className='help-background-screen'
     onClick={props.toggleHelp}></div>
   )
 }

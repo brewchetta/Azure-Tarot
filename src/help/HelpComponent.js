@@ -2,18 +2,17 @@
 import React from 'react'
 // Components
 import HelpBackground from './HelpBackground'
+import HelpContainer from './HelpContainer'
 
 class HelpComponent extends React.Component {
 
   render() {
     return (
-      <>
+      <div style={{ zIndex: '1000' }}>
         <HelpBackground toggleHelp={this.props.toggleHelp} />
 
-        <div>
-          <p>This will be the actual help container itself. Would love to add a sun in it</p>
-        </div>
-      </>
+        <HelpContainer />
+      </div>
     )
   }
 

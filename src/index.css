@@ -737,6 +737,36 @@ code {
 
 /* ---------- */
 
+/* Help --------------------------------------------- Help */
+
+.help-background-screen {
+  background: rgba(0,0,0,0.4);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.help-container {
+  animation: help-container 1s;
+  border: solid white 2px;
+  height: 60%;
+  min-height: 500px;
+  min-width: 400px;
+  left: 20%;
+  position: fixed;
+  top: 10%;
+  width: 60%;
+}
+
+@keyframes help-container {
+  from {left: -100%;}
+  to {left: 20%;}
+}
+
+/* ---------- */
+
 /* Loading --------------------------------------------- Loading */
 
 .loading-container {
