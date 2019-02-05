@@ -16,12 +16,14 @@ import UserReadings from './user/UserReadings'
 import CardCreate from './card/CardCreate'
 import CardIndex from './card/CardIndex'
 import SpreadTable from './spread/SpreadTable'
+import HelpComponent from './help/HelpComponent'
 
 class App extends Component {
 
   state = {
     currentUser: null,
-    animating: false
+    animating: false,
+    helpOpen: false
   }
 
   // Checks if the JWT token has an associated user
@@ -33,6 +35,10 @@ class App extends Component {
   // Sets the current user when logging in or signing up
   setCurrentUser = (currentUser) => {
     this.setState({ currentUser })
+  }
+
+  toggleHelp = () => {
+    this.setState({ helpOpen: !this.state.helpOpen })
   }
 
   // Removes session information
@@ -57,7 +63,8 @@ class App extends Component {
           {window.localStorage.jwt ?
           <Navbar currentUser={this.state.currentUser}
             handleLogout={this.handleLogout}
-            setCurrentUser={this.setCurrentUser} />
+            setCurrentUser={this.setCurrentUser}
+            toggleHelp={this.toggleHelp} />
           : null }
 
           {/* Sign Up */}
@@ -97,6 +104,8 @@ class App extends Component {
           render={ props=> <SpreadTable {...props}
           currentUser={currentUser}
           setCurrentUser={this.setCurrentUser} />} />
+
+          { this.state.helpOpen ? <HelpComponent toggleHelp={this.toggleHelp} /> : null }
 
           <Footer />
         </>

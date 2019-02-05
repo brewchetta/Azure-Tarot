@@ -15,6 +15,7 @@ const Navbar = (props) => {
           { cards.length > 5 ? <Link to='/reading/single'>Single Card Reading</Link> : null }
           { cards.length > 19 ? <Link to='/reading/three-card'>Three Card Reading</Link> : null }
           { cards.length > 5 ? <Link to='/your-readings'>Your Readings</Link> : null }
+          <Link to='#' onClick={props.toggleHelp}>Help</Link>
         </>
       )
     }
