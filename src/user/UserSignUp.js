@@ -28,14 +28,16 @@ export default class UserSignUp extends React.Component {
     const {password, username} = this.state
 
     // First validates password length
-    if (password.length < 6 && this.state.password.length > 20) {
+    if (password.length < 6 || password.length > 20) {
       console.error('Error: Password must be between 6 and 20 characters')
       this.setState({ errors: 'Password must be between 6 and 20 characters' })
     }
-    else if (username.length > 6 && this.state.password.length < 20) {
+
+    else if (username.length < 6 || this.state.password.length > 20) {
       console.error('Error: Username must be between 6 and 20 characters')
-      this.setState({ errors: 'username must be between 6 and 20 characters' })
+      this.setState({ errors: 'Username must be between 6 and 20 characters' })
     }
+
     else {
       fetchCreateUser(this.state)
       .then(response => {
