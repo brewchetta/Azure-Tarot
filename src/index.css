@@ -750,7 +750,10 @@ code {
 
 .help-container {
   animation: help-container 1s;
-  border: solid white 2px;
+  background: #ccffff;
+  border: solid black 2px;
+  border-radius: 7px;
+  color: black;
   height: 60%;
   min-height: 500px;
   min-width: 400px;
@@ -758,6 +761,13 @@ code {
   position: fixed;
   top: 10%;
   width: 60%;
+}
+
+.help-container button {
+  background: none;
+  border: solid black 2px;
+  border-radius: 3px;
+  margin: 3px;
 }
 
 @keyframes help-container {
