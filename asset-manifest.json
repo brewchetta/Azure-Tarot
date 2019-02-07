@@ -1,9 +1,9 @@
 {
-  "main.css": "/Azure-Tarot/static/css/main.34b4243a.chunk.css",
-  "main.js": "/Azure-Tarot/static/js/main.2ca13f81.chunk.js",
-  "main.js.map": "/Azure-Tarot/static/js/main.2ca13f81.chunk.js.map",
-  "static/js/1.328f65d7.chunk.js": "/Azure-Tarot/static/js/1.328f65d7.chunk.js",
-  "static/js/1.328f65d7.chunk.js.map": "/Azure-Tarot/static/js/1.328f65d7.chunk.js.map",
+  "main.css": "/Azure-Tarot/static/css/main.f28d687b.chunk.css",
+  "main.js": "/Azure-Tarot/static/js/main.cdaf8818.chunk.js",
+  "main.js.map": "/Azure-Tarot/static/js/main.cdaf8818.chunk.js.map",
+  "static/js/1.6d29d9c1.chunk.js": "/Azure-Tarot/static/js/1.6d29d9c1.chunk.js",
+  "static/js/1.6d29d9c1.chunk.js.map": "/Azure-Tarot/static/js/1.6d29d9c1.chunk.js.map",
   "runtime~main.js": "/Azure-Tarot/static/js/runtime~main.386d4d89.js",
   "runtime~main.js.map": "/Azure-Tarot/static/js/runtime~main.386d4d89.js.map",
   "static/media/19_Sun_Seeds.png": "/Azure-Tarot/static/media/19_Sun_Seeds.35fb7f54.png",
@@ -61,8 +61,8 @@
   "static/media/21_World_Town.png": "/Azure-Tarot/static/media/21_World_Town.e06bd86b.png",
   "static/media/21_World_Clouds.png": "/Azure-Tarot/static/media/21_World_Clouds.abdb98ca.png",
   "static/media/index.css": "/Azure-Tarot/static/media/Card_Back.9e53c6c8.png",
-  "static/css/main.34b4243a.chunk.css.map": "/Azure-Tarot/static/css/main.34b4243a.chunk.css.map",
+  "static/css/main.f28d687b.chunk.css.map": "/Azure-Tarot/static/css/main.f28d687b.chunk.css.map",
   "index.html": "/Azure-Tarot/index.html",
-  "precache-manifest.0efbaaf33ef08f159ea1c509f9a3a9a6.js": "/Azure-Tarot/precache-manifest.0efbaaf33ef08f159ea1c509f9a3a9a6.js",
+  "precache-manifest.e61e40f99c87eeeb430c6695ccef11a7.js": "/Azure-Tarot/precache-manifest.e61e40f99c87eeeb430c6695ccef11a7.js",
   "service-worker.js": "/Azure-Tarot/service-worker.js"
 }

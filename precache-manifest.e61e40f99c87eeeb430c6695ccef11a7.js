@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "2ca13f817e1cdef3e0fc",
-    "url": "/Azure-Tarot/static/css/main.34b4243a.chunk.css"
+    "revision": "cdaf88185780bd0acb2d",
+    "url": "/Azure-Tarot/static/css/main.f28d687b.chunk.css"
   },
   {
-    "revision": "2ca13f817e1cdef3e0fc",
-    "url": "/Azure-Tarot/static/js/main.2ca13f81.chunk.js"
+    "revision": "cdaf88185780bd0acb2d",
+    "url": "/Azure-Tarot/static/js/main.cdaf8818.chunk.js"
   },
   {
-    "revision": "328f65d70ea8a08cc0a6",
-    "url": "/Azure-Tarot/static/js/1.328f65d7.chunk.js"
+    "revision": "6d29d9c148e7b66cc689",
+    "url": "/Azure-Tarot/static/js/1.6d29d9c1.chunk.js"
   },
   {
     "revision": "386d4d89d4e185995b30",
@@ -236,7 +236,7 @@ self.__precacheManifest = [
     "url": "/Azure-Tarot/static/media/Card_Back.9e53c6c8.png"
   },
   {
-    "revision": "04354e2d486e7e19d7f4a0048c2d38b3",
+    "revision": "3a1749f603518bc25bc006cf80693fae",
     "url": "/Azure-Tarot/index.html"
   }
 ];
