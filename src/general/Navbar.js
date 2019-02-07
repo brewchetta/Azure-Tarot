@@ -12,15 +12,15 @@ class Navbar extends React.Component {
     if (user) {
       return (
         <>
-          <Link to={user ? `/#/profile/${user.id}` : '/'} >{user ? 'Profile' : 'Home'}</Link>
+          <Link to={user ? `/profile/${user.id}` : '/'} >{user ? 'Profile' : 'Home'}</Link>
 
-          <Link to='/#/card-index'>Cards</Link>
+          <Link to='/card-index'>Cards</Link>
 
-          { cards.length > 3 ? <Link to='/#/reading/single'>Single Card Reading</Link> : null }
+          { cards.length > 3 ? <Link to='/reading/single'>Single Card Reading</Link> : null }
 
-          { cards.length > 5 ? <Link to='/#/reading/three-card'>Three Card Reading</Link> : null }
+          { cards.length > 5 ? <Link to='/reading/three-card'>Three Card Reading</Link> : null }
 
-          { cards.length > 3 ? <Link to='/#/your-readings'>Your Readings</Link> : null }
+          { cards.length > 3 ? <Link to='/your-readings'>Your Readings</Link> : null }
 
           <Link to='#' onClick={this.props.toggleHelp}>Help</Link>
         </>
