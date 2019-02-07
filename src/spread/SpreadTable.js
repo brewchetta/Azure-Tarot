@@ -1,6 +1,8 @@
 // React
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+// Redux
+import mappedConnect from '../redux/mappers'
 // Fetches
 import { fetchGetAllCards } from '../card/FetchCard'
 import { fetchCreateSpread } from './FetchSpreads'
@@ -11,7 +13,7 @@ import LoadingSpinner from '../general/LoadingSpinner'
 // Assets
 import seeds from '../Assets/19_Sun_Seeds.png'
 
-export default class SpreadTable extends React.Component {
+class SpreadTable extends React.Component {
 
   state = {
     animating: false,
@@ -108,6 +110,7 @@ export default class SpreadTable extends React.Component {
   renderSpreadWelcome = () => {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
+
     if (!user.spreads.length) {
       return (
         <div className='onboard-popup'
@@ -161,7 +164,7 @@ export default class SpreadTable extends React.Component {
     if (!localStorage.getItem('jwt')) { return (<Redirect to='/' />) }
 
     // One card reading
-    if (cardsLoaded > 4 && unlockedCards.length + selectedCards.length > 4 && readingType === 'single') {
+    if (cardsLoaded > 3 && unlockedCards.length + selectedCards.length > 3 && readingType === 'single') {
       return (
         <div>
 
@@ -184,7 +187,7 @@ export default class SpreadTable extends React.Component {
     }
 
     // Three card reading
-    if (cardsLoaded > 19 && unlockedCards.length + selectedCards.length > 19 && readingType === 'three-card') {
+    if (cardsLoaded > 5 && unlockedCards.length + selectedCards.length > 5 && readingType === 'three-card') {
       return (
         <div>
 
@@ -214,3 +217,5 @@ export default class SpreadTable extends React.Component {
   }
 
 }
+
+export default mappedConnect(SpreadTable)
