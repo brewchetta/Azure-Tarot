@@ -18,6 +18,7 @@ class UserProfile extends React.Component {
     popupOpen: true
   }
 
+  // Fetches components when mounted
   componentDidMount() {
     fetchGetUser(this.props.match.params.user_id)
     .then(response => this.setState({ user: response.user }))
@@ -68,7 +69,9 @@ class UserProfile extends React.Component {
   }
 
   render() {
+    console.log('User is: ', this.state.user)
     const currentUser = this.props.currentUser
+
     if (this.state.user) {
       const user = this.state.user
       return (

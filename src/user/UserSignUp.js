@@ -1,8 +1,12 @@
+// React
 import React from 'react'
-import { fetchCreateUser, fetchUserLogin } from './FetchUser'
 import { Redirect } from 'react-router-dom'
+// Redux
+import mappedConnect from '../redux/mappers'
+// Fetches
+import { fetchCreateUser, fetchUserLogin } from './FetchUser'
 
-export default class UserSignUp extends React.Component {
+class UserSignUp extends React.Component {
 
   state = {
     errors: '',
@@ -55,6 +59,7 @@ export default class UserSignUp extends React.Component {
     }
   }
 
+  // Logins
   handleSubmitLogin = (event) => {
     fetchUserLogin(this.state)
     .then(response => {
@@ -64,7 +69,6 @@ export default class UserSignUp extends React.Component {
         if (response.message) { this.setState({ errors: response.message }) }
       }
       else if (response.user) {
-        console.log(response)
         this.setLocalStorage(response)
         this.props.setCurrentUser(response.user)
       }
@@ -76,8 +80,10 @@ export default class UserSignUp extends React.Component {
   }
 
   render() {
-    if (this.props.currentUser) {
-      return (<Redirect to={`/profile/${this.props.currentUser.id}`} />)
+    const currentUser = this.props.currentUser
+
+    if (currentUser) {
+      return (<Redirect to={`/profile/${currentUser.id}`} />)
     }
 
     return(
@@ -126,3 +132,5 @@ export default class UserSignUp extends React.Component {
     )
   }
 }
+
+export default mappedConnect(UserSignUp)

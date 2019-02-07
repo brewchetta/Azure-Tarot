@@ -1,6 +1,6 @@
 // React
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 //Redux
 import mappedConnect from './redux/mappers'
 // import { setCurrentUser, setAnimating } from './redux/actions'
@@ -56,23 +56,23 @@ class App extends Component {
 
           {/* Sign Up */}
           <Route path='/' exact
-          component={UserSignUp} />
+          component={withRouter(UserSignUp)} />
 
           {/* Hidden Card Create */}
           <Route path='/card-create' exact
-          component={CardCreate} />
+          component={withRouter(CardCreate)} />
 
           {/* Profile */}
           <Route path='/profile/:user_id' exact
-          component={UserProfile} />
+          component={withRouter(UserProfile)} />
 
           {/* Readings */}
           <Route path='/your-readings' exact
-          component={UserReadings}/>
+          component={withRouter(UserReadings)}/>
 
           {/* Card Index */}
           <Route path='/card-index' exact
-          component={CardIndex} />
+          component={withRouter(CardIndex)} />
 
           {/* Spread */}
           <Route path='/reading/:readingtype' exact
