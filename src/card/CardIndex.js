@@ -100,7 +100,7 @@ class CardIndex extends React.Component {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
 
-    if (user.cards.length > 5 && !user.spreads.length) {
+    if (user.cards.length > 3 && !user.spreads.length) {
       return (
         <div className='onboard-popup'
         style={ popupOpen ? null : {left:'150%'} }

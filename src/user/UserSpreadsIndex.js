@@ -1,5 +1,7 @@
 // React
 import React from 'react'
+// Redux
+import mappedConnect from '../redux/mappers'
 // Fetches
 import { fetchGetSpreadsByUser } from '../spread/FetchSpreads'
 import { fetchGetAllCards } from '../card/FetchCard'
@@ -47,7 +49,6 @@ class UserSpreadsIndex extends React.Component {
         indexState={this.state}
         setIndexState={this.setIndexState}
         spread={spread}
-        currentUser={this.props.currentUser}
         updateSpread={this.updateSpread}
         finalSpread={i === (spreads.length - 1)} />
       ))
@@ -67,4 +68,4 @@ class UserSpreadsIndex extends React.Component {
   }
 }
 
-export default UserSpreadsIndex
+export default mappedConnect(UserSpreadsIndex)
