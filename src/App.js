@@ -59,23 +59,23 @@ class App extends Component {
           component={UserSignUp} />
 
           {/* Hidden Card Create */}
-          <Route path='/card-create' exact
+          <Route path='/#/card-create' exact
           component={CardCreate} />
 
           {/* Profile */}
-          <Route path='/profile/:user_id' exact
+          <Route path='/#/profile/:user_id' exact
           component={UserProfile} />
 
           {/* Readings */}
-          <Route path='/your-readings' exact
+          <Route path='/#/your-readings' exact
           component={UserReadings}/>
 
           {/* Card Index */}
-          <Route path='/card-index' exact
+          <Route path='/#/card-index' exact
           component={CardIndex} />
 
           {/* Spread */}
-          <Route path='/reading/:readingtype' exact
+          <Route path='/#/reading/:readingtype' exact
           component={SpreadTable} />
 
           { this.props.helpOpen ? <HelpComponent /> : null }

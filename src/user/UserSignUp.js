@@ -83,7 +83,7 @@ class UserSignUp extends React.Component {
     const currentUser = this.props.currentUser
 
     if (currentUser) {
-      return (<Redirect to={`/profile/${currentUser.id}`} />)
+      return (<Redirect to={`/#/profile/${currentUser.id}`} />)
     }
 
     return(
