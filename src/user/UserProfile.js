@@ -2,8 +2,7 @@
 import React from 'react'
 import { Redirect, Link } from 'react-router-dom'
 // Redux
-import { connect } from 'react-redux'
-import { mapState, mapDispatch } from '../redux/mappers'
+import mappedConnect from '../redux/mappers'
 // Components
 import LoadingSpinner from '../general/LoadingSpinner'
 import UserProfileBio from './UserProfileBio'
@@ -105,4 +104,4 @@ class UserProfile extends React.Component {
   }
 }
 
-export default connect(mapState, mapDispatch)(UserProfile)
+export default mappedConnect(UserProfile)

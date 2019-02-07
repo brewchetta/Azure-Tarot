@@ -2,8 +2,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 //Redux
-import { connect } from 'react-redux'
-import { mapState, mapDispatch } from './redux/mappers'
+import mappedConnect from './redux/mappers'
 // import { setCurrentUser, setAnimating } from './redux/actions'
 // Stylesheet
 import './App.css';
@@ -88,4 +87,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapState, mapDispatch)(App);
+export default mappedConnect(App);

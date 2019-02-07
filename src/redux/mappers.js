@@ -1,9 +1,10 @@
 import { setCurrentUser, setAnimating, toggleHelp} from './actions'
+import { connect } from 'react-redux'
 
-// The purpose of this file is to export the mapStateToProps and mapDispatchToProps
+// This file creates another higher order component with connect that automatically adds mapState and mapDispatch
 // This way files stay just a little more DRY
 
-export const mapState = ({ currentUser, animating, helpOpen }) => {
+const mapState = ({ currentUser, animating, helpOpen }) => {
   return {
     currentUser,
     animating,
@@ -11,10 +12,14 @@ export const mapState = ({ currentUser, animating, helpOpen }) => {
   }
 }
 
-export const mapDispatch = dispatch => {
+const mapDispatch = dispatch => {
   return {
     setCurrentUser: user => dispatch(setCurrentUser(user)),
     setAnimating: boolean => dispatch(setAnimating(boolean)),
     toggleHelp: boolean => dispatch(toggleHelp(boolean))
   }
+}
+
+export default function mappedConnect(component) {
+  return connect(mapState,mapDispatch)(component) 
 }

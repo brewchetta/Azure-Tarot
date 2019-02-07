@@ -1,8 +1,7 @@
 // React
 import React from 'react'
 // Redux
-import { connect } from 'react-redux'
-import { mapState, mapDispatch } from '../redux/mappers'
+import mappedConnect from '../redux/mappers'
 // Fetches
 import { fetchUpdateUser } from './FetchUser'
 
@@ -84,4 +83,4 @@ class UserProfileBio extends React.Component {
   }
 }
 
-export default connect(mapState, mapDispatch)(UserProfileBio)
+export default mappedConnect(UserProfileBio)

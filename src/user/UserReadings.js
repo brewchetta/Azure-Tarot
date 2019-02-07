@@ -1,10 +1,12 @@
 // React
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+// Redux
+import mappedConnect from '../redux/mappers'
 // Components
 import UserSpreadsIndex from './UserSpreadsIndex'
 
-export default class UserReadings extends React.Component {
+class UserReadings extends React.Component {
 
   state = {
     popupOpen: true
@@ -22,7 +24,7 @@ export default class UserReadings extends React.Component {
         <div>
 
           {/* Recent Readings */}
-          <UserSpreadsIndex currentUser={currentUser} />
+          <UserSpreadsIndex />
 
         </div>
       )
@@ -31,3 +33,5 @@ export default class UserReadings extends React.Component {
     }
   }
 }
+
+export default mappedConnect(UserReadings)

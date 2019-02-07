@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { mapState, mapDispatch } from '../redux/mappers'
+import mappedConnect from '../redux/mappers'
 
 class Navbar extends React.Component {
 
@@ -41,4 +40,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default connect(mapState, mapDispatch)(Navbar)
+export default mappedConnect(Navbar)
