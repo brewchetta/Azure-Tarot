@@ -1,7 +1,7 @@
 {
   "main.css": "/Azure-Tarot/static/css/main.f28d687b.chunk.css",
-  "main.js": "/Azure-Tarot/static/js/main.cdaf8818.chunk.js",
-  "main.js.map": "/Azure-Tarot/static/js/main.cdaf8818.chunk.js.map",
+  "main.js": "/Azure-Tarot/static/js/main.6f39ec29.chunk.js",
+  "main.js.map": "/Azure-Tarot/static/js/main.6f39ec29.chunk.js.map",
   "static/js/1.6d29d9c1.chunk.js": "/Azure-Tarot/static/js/1.6d29d9c1.chunk.js",
   "static/js/1.6d29d9c1.chunk.js.map": "/Azure-Tarot/static/js/1.6d29d9c1.chunk.js.map",
   "runtime~main.js": "/Azure-Tarot/static/js/runtime~main.386d4d89.js",
@@ -63,6 +63,6 @@
   "static/media/index.css": "/Azure-Tarot/static/media/Card_Back.9e53c6c8.png",
   "static/css/main.f28d687b.chunk.css.map": "/Azure-Tarot/static/css/main.f28d687b.chunk.css.map",
   "index.html": "/Azure-Tarot/index.html",
-  "precache-manifest.e61e40f99c87eeeb430c6695ccef11a7.js": "/Azure-Tarot/precache-manifest.e61e40f99c87eeeb430c6695ccef11a7.js",
+  "precache-manifest.4ba8ed7444d39ced3c71268609ec7f96.js": "/Azure-Tarot/precache-manifest.4ba8ed7444d39ced3c71268609ec7f96.js",
   "service-worker.js": "/Azure-Tarot/service-worker.js"
 }
