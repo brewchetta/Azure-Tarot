@@ -6,6 +6,8 @@ Check out the website here: https://brewchetta.github.io/Azure-Tarot/
 
 Because the back end has been hosted on Heroku please be patient while the server boots up (this can take between 5 and 20 seconds). If you're still seeing a loading screen or can't sign in, refresh and everything should clear up.
 
+There is also a demo video here: https://youtu.be/Y1UnFaauU1Q
+
 ## Features
 
 ### Cards
