@@ -1,5 +1,6 @@
 import { setCurrentUser, setAnimating, toggleHelp} from './actions'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 // This file creates another higher order component with connect that automatically adds mapState and mapDispatch
 // This way files stay just a little more DRY
@@ -21,5 +22,5 @@ const mapDispatch = dispatch => {
 }
 
 export default function mappedConnect(component) {
-  return connect(mapState,mapDispatch)(component) 
+  return withRouter(connect(mapState,mapDispatch)(component))
 }

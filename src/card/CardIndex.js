@@ -1,6 +1,8 @@
 // React
 import React from  'react'
 import { Redirect, Link } from 'react-router-dom'
+// Redux
+import mappedConnect from '../redux/mappers'
 // Assets
 import seeds from '../Assets/19_Sun_Seeds.png'
 // Fetches
@@ -11,7 +13,7 @@ import CardComponent from './CardComponent'
 import CardBack from './CardBack'
 import LessonComponent from '../lesson/LessonComponent'
 
-export default class CardIndex extends React.Component {
+class CardIndex extends React.Component {
 
   state = {
     cards: [],
@@ -106,7 +108,7 @@ export default class CardIndex extends React.Component {
         style={ popupOpen ? null : {left:'150%'} }
          onClick={this.exitPopup}>
 
-        <p>You've got enough cards for a proper reading!</p>
+        <p>Youve got enough cards for a proper reading!</p>
 
         <p>Start your first reading by clicking the Single Card Reading tab or by clicking <Link to='reading/single'>here</Link></p>
 
@@ -143,3 +145,5 @@ export default class CardIndex extends React.Component {
     )
   }
 }
+
+export default mappedConnect(CardIndex)
