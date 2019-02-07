@@ -19,7 +19,6 @@ class CardIndex extends React.Component {
     cards: [],
     cardToInspect: null,
     cardLesson: null,
-    animating: false,
     popupOpen: true
   }
 
@@ -42,19 +41,18 @@ class CardIndex extends React.Component {
   renderAllCards = () => {
     const currentUser = this.props.currentUser
     const cardUnlockIds = currentUser.card_unlocks.map(card => card.card_id )
+
     return this.state.cards.map((card,i) => (
       <div className='card-index-space' key={i}>
 
         { cardUnlockIds.includes(card.id) ?
         // If unlocked uses card front
         <CardComponent card={card}
-        indexState={this.state} currentUser={currentUser}
-        setIndexState={this.setIndexState}
-        setCurrentUser={this.props.setCurrentUser} />
+        indexState={this.state}
+        setIndexState={this.setIndexState} />
         // If locked uses card back
         : <CardBack card={card}
         indexState={this.state}
-        currentUser={currentUser}
         setIndexState={this.setIndexState} /> }
 
 

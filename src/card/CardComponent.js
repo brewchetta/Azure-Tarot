@@ -1,5 +1,7 @@
 // React
 import React from 'react'
+// Redux
+import mappedConnect from '../redux/mappers'
 // Assets
 import cornerFern from '../Assets/Corner_Fern.png'
 import cornerLeaf from '../Assets/Corner_Leaf.png'
@@ -8,7 +10,7 @@ import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
 import CardDescriptionUser from './CardDescriptionUser'
 
-// To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}, currentUser
+// To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}
 
 class CardComponent extends React.Component {
 
@@ -144,4 +146,4 @@ class CardComponent extends React.Component {
   }
 }
 
-export default CardComponent
+export default mappedConnect(CardComponent)

@@ -20,9 +20,7 @@ export default class LessonWriteForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
 
-    if (this.state.user_description.length < 25) {
-      alert('Write a longer description for this card! \nC\'mon you can do it!')
-    } else {
+    if (this.state.user_description.length > 0) {
       this.props.unlockLesson(this.state.user_description)
     }
   }
