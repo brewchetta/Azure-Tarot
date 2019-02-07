@@ -43,7 +43,7 @@ class UserSpread extends React.Component {
     const date = parseDate(this.props.spread.created_at)
 
     return (
-      <div style={this.props.finalSpread ? null : { borderBottom: 'solid white 3px', paddingBottom: '1em', paddingTop: '1em' }}>
+      <div style={this.props.finalSpread ? null : { borderBottom: 'solid white 3px', paddingBottom: '1em', paddingTop: '1em', marginBottom: '1em' }}>
 
         <div className='profile-spread-card-container'>
 

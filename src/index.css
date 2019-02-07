@@ -1033,9 +1033,10 @@ code {
 .profile-spread-card-container {
   text-align: center;
   display: inline-block;
-  margin-right: 10%;
+  margin-right: 5%;
   margin-left: 1%;
-  width: 650px;
+  max-width: 650px;
+  min-width: 240px;
 }
 
 .profile-notes-container {
@@ -1043,11 +1044,12 @@ code {
   border-radius: 5px;
   display: inline-block;
   height: 300px;
+  margin-left: 5%;
   margin-bottom: 40px;
-  min-width: 650px;
+  min-width: 400px;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 50%;
+  width: 40%;
 }
 
 .profile-note {
