@@ -764,6 +764,7 @@ code {
   text-align: center;
   top: 10%;
   width: 60%;
+  z-index: 2;
 }
 
 .help-container button {

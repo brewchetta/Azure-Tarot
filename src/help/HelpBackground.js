@@ -1,4 +1,5 @@
 import React from 'react'
+import mappedConnect from '../redux/mappers'
 
 const HelpBackground = props => {
   return (
@@ -7,4 +8,4 @@ const HelpBackground = props => {
   )
 }
 
-export default HelpBackground
+export default mappedConnect(HelpBackground)

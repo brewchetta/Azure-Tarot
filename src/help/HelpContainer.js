@@ -1,5 +1,7 @@
 // React
 import React from 'react'
+// Redux
+import mappedConnect from '../redux/mappers'
 // Components
 import HelpWelcome from './HelpWelcome'
 import HelpReadingTypes from './HelpReadingTypes'
@@ -82,4 +84,4 @@ class HelpContainer extends React.Component {
   }
 }
 
-export default HelpContainer
+export default mappedConnect(HelpContainer)

@@ -9,9 +9,9 @@ class HelpComponent extends React.Component {
   render() {
     return (
       <div style={{ zIndex: '1000' }}>
-        <HelpBackground toggleHelp={this.props.toggleHelp} />
+        <HelpBackground />
 
-        <HelpContainer toggleHelp={this.props.toggleHelp} />
+        <HelpContainer />
       </div>
     )
   }
