@@ -1,9 +1,12 @@
 // React
 import React from 'react'
+// Redux
+import { connect } from 'react-redux'
+import { mapState, mapDispatch } from '../redux/mappers'
 // Fetches
 import { fetchUpdateUser } from './FetchUser'
 
-export default class UserProfileBio extends React.Component {
+class UserProfileBio extends React.Component {
 
   state = {
     edit: false,
@@ -38,7 +41,7 @@ export default class UserProfileBio extends React.Component {
     if (userIsCurrentUser && this.state.edit === false && !user.profile)
     return (
         <>
-          <p onClick={this.toggleEdit}>You haven't written a profile yet! Click me to add a bio!</p>
+          <p onClick={this.toggleEdit}>You havent written a profile yet! Click me to add a bio!</p>
 
           <button
           onClick={this.toggleEdit}
@@ -80,3 +83,5 @@ export default class UserProfileBio extends React.Component {
     }
   }
 }
+
+export default connect(mapState, mapDispatch)(UserProfileBio)

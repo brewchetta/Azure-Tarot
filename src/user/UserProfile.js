@@ -1,6 +1,9 @@
 // React
 import React from 'react'
 import { Redirect, Link } from 'react-router-dom'
+// Redux
+import { connect } from 'react-redux'
+import { mapState, mapDispatch } from '../redux/mappers'
 // Components
 import LoadingSpinner from '../general/LoadingSpinner'
 import UserProfileBio from './UserProfileBio'
@@ -9,7 +12,7 @@ import seeds from '../Assets/19_Sun_Seeds.png'
 // Fetches
 import { fetchGetUser } from './FetchUser'
 
-export default class UserProfile extends React.Component {
+class UserProfile extends React.Component {
 
   state = {
     user: null,
@@ -66,6 +69,7 @@ export default class UserProfile extends React.Component {
   }
 
   render() {
+    const currentUser = this.props.currentUser
     if (this.state.user) {
       const user = this.state.user
       return (
@@ -75,18 +79,15 @@ export default class UserProfile extends React.Component {
           {this.renderSpreadIntro()}
           {this.renderProfileWelcome()}
 
-          <h3>{user.id === this.props.currentUser.id ? 'Welcome ' : null}{user.username}</h3>
+          <h3>{user.id === currentUser.id ? 'Welcome ' : null}{user.username}</h3>
 
           <p>{ user.cards.length ? `${user.cards.length} cards unlocked` : 'No cards unlocked yet!'} </p>
 
           <p>{user.spreads.length ? user.spreads.length : 'No'} readings performed</p>
 
           {user ?
-            <UserProfileBio
-            currentUser={this.props.currentUser}
-            user={this.state.user}
-            setIndexState={this.setIndexState}
-            setCurrentUser={this.props.setCurrentUser} />
+            <UserProfileBio user={this.state.user}
+            setIndexState={this.setIndexState} />
           :null}
 
         </div>
@@ -97,9 +98,11 @@ export default class UserProfile extends React.Component {
       return (
         <>
           <LoadingSpinner />
-          {!this.props.currentUser ? <Redirect to='/' /> : null}
+          {!currentUser ? <Redirect to='/' /> : null}
         </>
       )
     }
   }
 }
+
+export default connect(mapState, mapDispatch)(UserProfile)

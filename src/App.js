@@ -1,6 +1,10 @@
 // React
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
+//Redux
+import { connect } from 'react-redux'
+import { mapState, mapDispatch } from './redux/mappers'
+// import { setCurrentUser, setAnimating } from './redux/actions'
 // Stylesheet
 import './App.css';
 // Fetch Functions
@@ -20,36 +24,23 @@ import HelpComponent from './help/HelpComponent'
 
 class App extends Component {
 
-  state = {
-    currentUser: null,
-    animating: false,
-    helpOpen: false
-  }
-
   // Checks if the JWT token has an associated user
   componentDidMount() {
     const jwt = localStorage.jwt
-    fetchLoginUser(jwt).then(response => this.setState({ currentUser: response.user }))
-  }
-
-  // Sets the current user when logging in or signing up
-  setCurrentUser = (currentUser) => {
-    this.setState({ currentUser })
-  }
-
-  toggleHelp = () => {
-    this.setState({ helpOpen: !this.state.helpOpen })
+    fetchLoginUser(jwt).then(response => {
+      this.props.setCurrentUser(response.user)
+    })
   }
 
   // Removes session information
   handleLogout = () => {
-    this.setCurrentUser(null)
+    this.props.setCurrentUser(null)
     localStorage.removeItem('jwt')
   }
 
   // Main Render
   render() {
-    const currentUser = this.state.currentUser
+    const currentUser = this.props.currentUser
     if (localStorage.jwt && !currentUser) {
       return (<LoadingSpinner />)
     } else {
@@ -61,19 +52,12 @@ class App extends Component {
 
           {/* Navbar */}
           {window.localStorage.jwt ?
-          <Navbar currentUser={this.state.currentUser}
-            handleLogout={this.handleLogout}
-            setCurrentUser={this.setCurrentUser}
-            toggleHelp={this.toggleHelp} />
+          <Navbar handleLogout={this.handleLogout} />
           : null }
 
           {/* Sign Up */}
           <Route path='/' exact
-          render={
-            props => <UserSignUp {...props}
-            setCurrentUser={this.setCurrentUser}
-            currentUser={currentUser} />
-          } />
+          component={UserSignUp} />
 
           {/* Hidden Card Create */}
           <Route path='/card-create' exact
@@ -81,31 +65,21 @@ class App extends Component {
 
           {/* Profile */}
           <Route path='/profile/:user_id' exact
-          render={
-            props => <UserProfile {...props}
-            currentUser={currentUser}
-            setCurrentUser={this.setCurrentUser} />
-          } />
+          component={UserProfile} />
 
           {/* Readings */}
           <Route path='/your-readings' exact
-          render={
-            props => <UserReadings {...props} currentUser={currentUser} />
-          } />
+          component={UserReadings}/>
 
           {/* Card Index */}
           <Route path='/card-index' exact
-          render={ props=> <CardIndex {...props}
-          currentUser={currentUser}
-          setCurrentUser={this.setCurrentUser} />} />
+          component={CardIndex} />
 
           {/* Spread */}
           <Route path='/reading/:readingtype' exact
-          render={ props=> <SpreadTable {...props}
-          currentUser={currentUser}
-          setCurrentUser={this.setCurrentUser} />} />
+          component={SpreadTable} />
 
-          { this.state.helpOpen ? <HelpComponent toggleHelp={this.toggleHelp} /> : null }
+          { this.props.helpOpen ? <HelpComponent /> : null }
 
           <Footer />
         </>
@@ -114,4 +88,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapState, mapDispatch)(App);
