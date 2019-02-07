@@ -108,7 +108,7 @@ class CardIndex extends React.Component {
 
         <p>Youve got enough cards for a proper reading!</p>
 
-        <p>Start your first reading by clicking the Single Card Reading tab or by clicking <Link to='/#/reading/single'>here</Link></p>
+        <p>Start your first reading by clicking the Single Card Reading tab or by clicking <Link to='reading/single'>here</Link></p>
 
         <p className='onboard-popup-exit'>X</p>
 
