@@ -49,7 +49,7 @@ class UserSpread extends React.Component {
 
         {this.renderCards()}
 
-        <p>You made this reading on {date}</p>
+        <p>{date}</p>
 
         </div>
 

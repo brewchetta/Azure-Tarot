@@ -47,7 +47,7 @@ export default class UserSpreadNoteForm extends React.Component {
 
             <br/>
 
-            <input type="submit" />
+            <input type="submit" value='Add Note' />
 
           </form>
 
