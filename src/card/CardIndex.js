@@ -6,7 +6,6 @@ import mappedConnect from '../redux/mappers'
 // Assets
 import seeds from '../Assets/19_Sun_Seeds.png'
 // Fetches
-import { fetchGetAllCards } from './FetchCard'
 import { fetchUnlockCard } from './FetchCard'
 // Cards
 import cardsList from '../card-content'
