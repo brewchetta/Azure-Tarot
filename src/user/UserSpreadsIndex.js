@@ -4,9 +4,10 @@ import React from 'react'
 import mappedConnect from '../redux/mappers'
 // Fetches
 import { fetchGetSpreadsByUser } from '../spread/FetchSpreads'
-import { fetchGetAllCards } from '../card/FetchCard'
 // Components
 import UserSpread from './UserSpread'
+//Cards
+import cardsList from '../card-content'
 
 class UserSpreadsIndex extends React.Component {
 
@@ -23,10 +24,7 @@ class UserSpreadsIndex extends React.Component {
     .then(response => {
       this.setState({ spreads: response.spreads })
     })
-    fetchGetAllCards()
-    .then(response => {
-      this.setState({ cards: response.cards })
-    })
+    this.setState({ cards: cardsList.all })
   }
 
   updateSpread = (updatedSpread) => {
