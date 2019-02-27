@@ -10,22 +10,6 @@ export function fetchGetAllCards() {
   .then(r=>r.json())
 }
 
-export function fetchCreateCard(card) {
-  const jwt = window.localStorage.getItem('jwt')
-  if (jwt) {
-    return fetch(API + 'cards', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${jwt}`,
-        'Accept': 'application/json',
-        'Content-Type':'application/json'
-      },
-      body: JSON.stringify(card)
-    })
-    .then(r=>r.json())
-  }
-}
-
 // Card unlock fetch
 export function fetchUnlockCard(card, user_description, currentUser) {
   const jwt = window.localStorage.getItem('jwt')

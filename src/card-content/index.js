@@ -1,7 +1,7 @@
 import majorArcana from './major-arcana'
 
-const cardsList = {
+const cardsList = [
   majorArcana
-}
+]
 
 export default cardsList

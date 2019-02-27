@@ -4,12 +4,13 @@ import { Redirect } from 'react-router-dom'
 // Redux
 import mappedConnect from '../redux/mappers'
 // Fetches
-import { fetchGetAllCards } from '../card/FetchCard'
 import { fetchCreateSpread } from './FetchSpreads'
 // Components
 import SpreadCardSelect from './SpreadCardSelect'
 import SpreadPosition from './SpreadPosition'
 import LoadingSpinner from '../general/LoadingSpinner'
+// Card List
+import cardsList from '../card-content'
 // Assets
 import seeds from '../Assets/19_Sun_Seeds.png'
 
@@ -26,10 +27,7 @@ class SpreadTable extends React.Component {
   }
 
   componentDidMount() {
-    fetchGetAllCards()
-    .then(response => {
-      this.setState({ cards: response.cards }, this.setUnlockedCards)
-    })
+    this.setState({ cards: cardsList }, this.setUnlockedCards)
   }
 
   setIndexState = (object) => {
@@ -39,14 +37,13 @@ class SpreadTable extends React.Component {
   // Sets pool of cards that user can draw from
   setUnlockedCards = () => {
     const currentUser = this.props.currentUser
-    if (currentUser) {
-      const userCardIds = currentUser.cards.map(card => card.id)
-      let unlockedCards = []
-      this.state.cards.forEach(card => {
-        if (userCardIds.includes(card.id)) {
-          unlockedCards.push(card)
-        }
-      })
+    const cards = this.state.cards.flat()
+
+    if (currentUser && cards) {
+      console.log("All cards: ", cards)
+      const unlockIds = currentUser.card_unlocks.map(unlock => unlock.card_id)
+      const unlockedCards = cards.filter(card => unlockIds.includes(card.id))
+      console.log("Unlocked cards: ", unlockedCards)
       this.setState({ unlockedCards })
     }
   }
