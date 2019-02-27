@@ -18,7 +18,6 @@ class SpreadTable extends React.Component {
 
   state = {
     animating: false,
-    cards: [],
     cardToInspect: null,
     popupOpen: true,
     selectedCards: [],
@@ -27,7 +26,7 @@ class SpreadTable extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ cards: cardsList }, this.setUnlockedCards)
+    this.setUnlockedCards()
   }
 
   setIndexState = (object) => {
@@ -37,7 +36,7 @@ class SpreadTable extends React.Component {
   // Sets pool of cards that user can draw from
   setUnlockedCards = () => {
     const currentUser = this.props.currentUser
-    const cards = this.state.cards.flat()
+    const cards = cardsList.flat()
 
     if (currentUser && cards) {
       console.log("All cards: ", cards)
@@ -153,7 +152,7 @@ class SpreadTable extends React.Component {
     const selectedCards = this.state.selectedCards
     const unlockedCards = this.state.unlockedCards
     // cardsLoaded determines whether there are any cards in state
-    const cardsLoaded = this.state.cards.length
+    const cardsLoaded = cardsList.flat().length
     // readingType is determined by the url params
     const readingType = this.props.match.params.readingtype
 
@@ -170,7 +169,7 @@ class SpreadTable extends React.Component {
           {this.renderToReadingsOnboard()}
 
           {/* Select Card Button */}
-          <SpreadCardSelect cards={this.state.cards}
+          <SpreadCardSelect cards={cardsList.flat()}
           selectCard={this.selectCard}
           fullCards={selectedCards.length >= 1} />
 
@@ -189,7 +188,7 @@ class SpreadTable extends React.Component {
         <div>
 
         {/* Select Card Button */}
-        <SpreadCardSelect cards={this.state.cards}
+        <SpreadCardSelect cards={cardsList.flat()}
         selectCard={this.selectCard}
         fullCards={selectedCards.length >= 3} />
 
