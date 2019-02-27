@@ -1,15 +1,5 @@
 import { backendAPI as API } from '../APIAddress'
 
-export function fetchGetCard(cardId) {
-  return fetch(API + `cards/${parseInt(cardId)}`)
-  .then(r=>r.json())
-}
-
-export function fetchGetAllCards() {
-  return fetch(API + 'cards')
-  .then(r=>r.json())
-}
-
 // Card unlock fetch
 export function fetchUnlockCard(card, user_description, currentUser) {
   const jwt = window.localStorage.getItem('jwt')

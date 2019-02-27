@@ -35,7 +35,6 @@ class CardIndex extends React.Component {
     const currentUser = this.props.currentUser
     const cardUnlockIds = currentUser.card_unlocks.map(card => card.card_id )
     const currentCards = this.state.cards
-    console.log(currentCards)
 
     if (currentCards)
     return currentCards.map((card,i) => (
