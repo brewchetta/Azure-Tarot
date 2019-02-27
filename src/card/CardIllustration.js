@@ -13,16 +13,11 @@ const CardIllustration = (props) => {
   const card = props.card
   let ComponentName
 
-  console.log(parseCardName(card))
-
   if (card) {
-    console.log(Animations)
     ComponentName = Animations[parseCardName(card)]
-    console.log(ComponentName)
   }
 
   if (card) {
-    debugger
     return (
       <div className='card-illustration'>
       <ComponentName />

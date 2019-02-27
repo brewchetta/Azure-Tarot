@@ -91,7 +91,7 @@ class CardComponent extends React.Component {
     const cardUnlock = cardUnlocks.find(unlock => unlock.card_id === card.id)
 
     return mode === 'illustration' ? (<> <CardIllustration card={card} />
-      <p className='card-name-inspect'>{card.card_rank}. {card.card_name}</p> </>)
+      <p className='card-name-inspect'>{card.rank}. {card.name}</p> </>)
       : mode === 'description' ? (<CardDescription card={card} />)
       : mode === 'user-info' ? (<CardDescriptionUser card={card} cardUnlock={cardUnlock} editUserCardUnlocks={this.editUserCardUnlocks} />)
       : null
@@ -113,7 +113,7 @@ class CardComponent extends React.Component {
           <img alt='' src={cornerLeaf} className='card-component-corner-right' />
 
           <CardIllustration card={card} />
-          { card ? <p className='card-name'>{card.card_rank}. {card.card_name}</p> : null}
+          { card ? <p className='card-name'>{card.rank}. {card.name}</p> : null}
 
 
         </div>
