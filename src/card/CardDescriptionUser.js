@@ -43,7 +43,7 @@ class CardDescriptionReversal extends React.Component {
       return (
         <div className='card-description-reversal'>
 
-          <h4 onClick={this.toggleEdit}>{this.props.card.card_name}</h4>
+          <h4 onClick={this.toggleEdit}>{this.props.card.name}</h4>
           <p onClick={this.toggleEdit}>{this.props.cardUnlock.user_description}</p>
 
         </div>
@@ -53,7 +53,7 @@ class CardDescriptionReversal extends React.Component {
       return (
         <div className='card-description-reversal'>
 
-          <h4>{this.props.card.card_name}</h4>
+          <h4>{this.props.card.name}</h4>
 
           <form onSubmit={this.handleSubmit}>
           <textarea value={this.state.input} onChange={this.handleChange} />

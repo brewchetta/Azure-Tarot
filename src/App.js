@@ -16,7 +16,6 @@ import LoadingSpinner from './general/LoadingSpinner'
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
 import UserReadings from './user/UserReadings'
-import CardCreate from './card/CardCreate'
 import CardIndex from './card/CardIndex'
 import SpreadTable from './spread/SpreadTable'
 import HelpComponent from './help/HelpComponent'
@@ -57,10 +56,6 @@ class App extends Component {
           {/* Sign Up */}
           <Route path='/' exact
           component={UserSignUp} />
-
-          {/* Hidden Card Create */}
-          <Route path='/card-create' exact
-          component={CardCreate} />
 
           {/* Profile */}
           <Route path='/profile/:user_id' exact
