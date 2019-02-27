@@ -12,10 +12,6 @@ import cardsList from '../card-content'
 class UserSpreadsIndex extends React.Component {
 
   state = {
-    animating: false,
-    cards: [],
-    cardLesson: null,
-    cardToInspect: null,
     spreads: []
   }
 
