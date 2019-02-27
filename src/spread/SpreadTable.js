@@ -36,7 +36,7 @@ class SpreadTable extends React.Component {
   // Sets pool of cards that user can draw from
   setUnlockedCards = () => {
     const currentUser = this.props.currentUser
-    const cards = cardsList.flat()
+    const cards = cardsList.all
 
     if (currentUser && cards) {
       console.log("All cards: ", cards)
@@ -151,8 +151,6 @@ class SpreadTable extends React.Component {
   render() {
     const selectedCards = this.state.selectedCards
     const unlockedCards = this.state.unlockedCards
-    // cardsLoaded determines whether there are any cards in state
-    const cardsLoaded = cardsList.flat().length
     // readingType is determined by the url params
     const readingType = this.props.match.params.readingtype
 
@@ -160,7 +158,7 @@ class SpreadTable extends React.Component {
     if (!localStorage.getItem('jwt')) { return (<Redirect to='/' />) }
 
     // One card reading
-    if (cardsLoaded > 3 && unlockedCards.length + selectedCards.length > 3 && readingType === 'single') {
+    if (unlockedCards.length + selectedCards.length > 3 && readingType === 'single') {
       return (
         <div>
 
@@ -169,7 +167,7 @@ class SpreadTable extends React.Component {
           {this.renderToReadingsOnboard()}
 
           {/* Select Card Button */}
-          <SpreadCardSelect cards={cardsList.flat()}
+          <SpreadCardSelect cards={cardsList.all}
           selectCard={this.selectCard}
           fullCards={selectedCards.length >= 1} />
 
@@ -183,12 +181,12 @@ class SpreadTable extends React.Component {
     }
 
     // Three card reading
-    if (cardsLoaded > 5 && unlockedCards.length + selectedCards.length > 5 && readingType === 'three-card') {
+    if (unlockedCards.length + selectedCards.length > 5 && readingType === 'three-card') {
       return (
         <div>
 
         {/* Select Card Button */}
-        <SpreadCardSelect cards={cardsList.flat()}
+        <SpreadCardSelect cards={cardsList.all}
         selectCard={this.selectCard}
         fullCards={selectedCards.length >= 3} />
 
@@ -198,12 +196,6 @@ class SpreadTable extends React.Component {
           </div>
 
         </div>
-      )
-    }
-
-    else if (cardsLoaded) {
-      return (
-        <p>It seems you got to this page by accident.</p>
       )
     }
 
