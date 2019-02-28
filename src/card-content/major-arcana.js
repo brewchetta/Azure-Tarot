@@ -199,4 +199,4 @@ const majorArcana = [
 
 ]
 
-export default majorArcana
+export default majorArcana.map(card => new Object({...card, suit: "Major Arcana"}))

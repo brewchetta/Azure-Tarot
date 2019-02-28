@@ -10,7 +10,7 @@ const CardDescription = props => {
       <p>{card.suit}</p>
       <p>{card.description}</p>
       <p>{card.keywords.join(", ")}</p>
-      <p>{card.rev_description}</p>
+      <p>{card.revDescription}</p>
     </div>
   )
 }
