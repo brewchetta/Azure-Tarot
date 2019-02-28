@@ -939,7 +939,7 @@ code {
   text-align: left;
   display: inline-block;
   float: left;
-  width: 50%
+  width: 80%
 }
 
 .navbar a {
@@ -952,7 +952,7 @@ code {
   text-align: right;
   display: inline-block;
   float: left;
-  width: 49%
+  width: 19%
 }
 
 /* ---------- */
