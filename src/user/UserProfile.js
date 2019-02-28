@@ -33,7 +33,7 @@ class UserProfile extends React.Component {
   renderSpreadIntro = () => {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
-    if (!user.spreads.length && user.cards.length > 5 )
+    if (!user.spreads.length && user.card_unlocks.length > 5 )
     return (
       <div className='onboard-popup'
       style={ popupOpen ? null : {left: '150%'} }
@@ -49,7 +49,7 @@ class UserProfile extends React.Component {
   renderProfileWelcome = () => {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
-    if (!user.cards.length) {
+    if (!user.card_unlocks.length) {
       return (
         <div className='onboard-popup'
         style={ popupOpen ? null : {left: '150%'} }
@@ -83,7 +83,7 @@ class UserProfile extends React.Component {
 
           <h3>{user.id === currentUser.id ? 'Welcome ' : null}{user.username}</h3>
 
-          <p>{ user.cards.length ? `${user.cards.length} cards unlocked` : 'No cards unlocked yet!'} </p>
+          <p>{ user.card_unlocks.length ? `${user.card_unlocks.length} cards unlocked` : 'No cards unlocked yet!'} </p>
 
           <p>{user.spreads.length ? user.spreads.length : 'No'} readings performed</p>
 

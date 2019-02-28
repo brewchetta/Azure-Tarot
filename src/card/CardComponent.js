@@ -37,7 +37,7 @@ class CardComponent extends React.Component {
   lockCard = () => {
     const currentUser = this.props.currentUser
     const thisCard = this.props.card
-    const cardIds = currentUser.cards.map(card => card.id)
+    const cardIds = currentUser.card_unlocks.map(card => card.card_id)
     const unlocked = this.state.unlocked
 
     if (thisCard && cardIds.includes(thisCard.id) && unlocked === false) {

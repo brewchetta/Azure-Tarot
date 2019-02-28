@@ -62,7 +62,7 @@ class CardIndex extends React.Component {
     .then(response => {console.log('Response: ', response); return response})
     .then(response => {
       this.setState({ popupOpen: true })
-      this.props.setCurrentUser({ ...user, cards: [...user.cards, card], card_unlocks: [...user.card_unlocks, response.card_unlock] })
+      this.props.setCurrentUser({ ...user, card_unlocks: [...user.card_unlocks, response.card_unlock] })
     })
   }
 
@@ -70,7 +70,7 @@ class CardIndex extends React.Component {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
 
-    if (!user.cards.length) {
+    if (!user.card_unlocks.length) {
       return (
         <div className='onboard-popup'
         style={ popupOpen ? null : {left:'150%'} }
@@ -95,7 +95,7 @@ class CardIndex extends React.Component {
     const user = this.props.currentUser
     const popupOpen = this.state.popupOpen
 
-    if (user.cards.length > 3 && !user.spreads.length) {
+    if (user.card_unlocks.length > 3 && !user.spreads.length) {
       return (
         <div className='onboard-popup'
         style={ popupOpen ? null : {left:'150%'} }

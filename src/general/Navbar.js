@@ -7,7 +7,7 @@ class Navbar extends React.Component {
   // Will only render these links if a user exists
   renderLinksIfUserExists = () => {
     const user = this.props.currentUser
-    const cards = user.cards
+    const cards = user.card_unlocks
 
     if (user) {
       return (
