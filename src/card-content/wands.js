@@ -1,6 +1,6 @@
 const wands = [
   {
-    id: 1,
+    id: 65,
     name: `The Ace of Wands`,
     rank: 1,
     description: `Wands`,
@@ -8,7 +8,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 2,
+    id: 66,
     name: `The Two of Wands`,
     rank: 2,
     description: `Wands`,
@@ -16,7 +16,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 3,
+    id: 67,
     name: `The Three of Wands`,
     rank: 3,
     description: `Wands`,
@@ -24,7 +24,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 4,
+    id: 68,
     name: `The Four of Wands`,
     rank: 4,
     description: `Wands`,
@@ -32,7 +32,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 5,
+    id: 69,
     name: `The Five of Wands`,
     rank: 5,
     description: `Wands`,
@@ -40,7 +40,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 6,
+    id: 70,
     name: `The Six of Wands`,
     rank: 6,
     description: `Wands`,
@@ -48,7 +48,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 7,
+    id: 71,
     name: `The Seven of Wands`,
     rank: 7,
     description: `Wands`,
@@ -56,7 +56,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 8,
+    id: 72,
     name: `The Eight of Wands`,
     rank: 8,
     description: `Wands`,
@@ -64,7 +64,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 9,
+    id: 73,
     name: `The Nine of Wands`,
     rank: 9,
     description: `Wands`,
@@ -72,7 +72,7 @@ const wands = [
     keywords: [`Wands`],
   },
   {
-    id: 10,
+    id: 74,
     name: `The Ten of Wands`,
     rank: 10,
     description: `Wands`,
