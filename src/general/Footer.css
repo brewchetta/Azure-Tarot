@@ -1,0 +1,21 @@
+footer {
+  bottom: 0;
+  height: 3em;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+footer p {
+  margin-left: 2em;
+}
+
+footer img {
+  backface-visibility: visible;
+  filter: invert(1);
+  height: 200%;
+  opacity: 0.4;
+  position: absolute;
+  bottom: 5%;
+}

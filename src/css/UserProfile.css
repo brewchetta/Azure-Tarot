@@ -1,0 +1,78 @@
+/* Profile Components ------------------------------------- Profile Components */
+
+.profile-info-container {
+  box-sizing: border-box;
+  float: left;
+  margin-right: 2.2%;
+  min-width: 300px;
+  padding: 1em;
+  width: 100%;
+}
+
+.profile-spread-index {
+  float: left;
+  min-width: 650px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.profile-spread-card-container {
+  text-align: center;
+  display: inline-block;
+  margin-right: 5%;
+  margin-left: 1%;
+  max-width: 650px;
+  min-width: 240px;
+}
+
+.profile-notes-container {
+  border: white solid 2px;
+  border-radius: 5px;
+  display: inline-block;
+  height: 300px;
+  margin-left: 5%;
+  margin-bottom: 40px;
+  min-width: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 40%;
+}
+
+.profile-note {
+  background: black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+}
+
+.profile-note-create {
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  filter: invert(1);
+  margin: 5px;
+  width: 4em;
+}
+
+.profile-note-form {
+  text-align: center;
+  margin: 0.5em;
+  width: 100%;
+}
+
+.profile-note-form textarea {
+  background: rgba(125,125,125,0.3);
+  border: solid white 2px;
+  border-radius: 5px;
+  color: white;
+  width: 80%;
+}
+
+.form-button {
+  background: rgba(0,0,0,0);
+  border: solid white 2px;
+  border-radius: 3px;
+  color: white;
+  margin: 10px;
+}

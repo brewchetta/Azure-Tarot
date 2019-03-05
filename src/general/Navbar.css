@@ -1,0 +1,58 @@
+/* Navbar --------------------------------------- Navbar */
+
+.navbar {
+  border: solid black 2px;
+  border-left: none;
+  border-right: none;
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 2em;
+  padding-top: 0.5em;
+  transition: font-size 0.2s;
+  width: 100%;
+}
+
+.navbar-accordion {
+  display: none;
+}
+
+
+.navbar-accordion-expanded {
+
+}
+
+@media only screen and (max-width: 630px) and (min-width: 540px) {
+  .navbar {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-accordion {
+    display: inline-block;
+  }
+}
+
+.navbar-left {
+  text-align: left;
+  display: inline-block;
+  float: left;
+  width: 80%
+}
+
+.navbar a {
+  color: white;
+  margin-right: 1em;
+  margin-left: 5px;
+}
+
+.navbar-right {
+  text-align: right;
+  display: inline-block;
+  float: left;
+  width: 19%
+}

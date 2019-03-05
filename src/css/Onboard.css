@@ -1,0 +1,52 @@
+/* Onboarding Components ----------------------------- Onboarding Components */
+
+.onboard-popup {
+  animation: onboard-popup-appear 1s;
+  background: #ccffff;
+  border: black solid 2px;
+  border-radius: 5px;
+  color: black;
+  left: 25%;
+  top: 25%;
+  padding: 1em;
+  position: fixed;
+  text-align: center;
+  -webkit-transition: left 1s;
+  transition: left 1s;
+  width: 50%;
+  z-index: 1000;
+}
+
+.onboard-popup p {
+  cursor: default;
+}
+
+@keyframes onboard-popup-appear {
+  from { left: -75% }
+  to { left: 25% }
+}
+
+.onboard-popup-exit {
+  background: #ccffff;
+  border: black solid 2px;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 1.5em;
+  position: absolute;
+  right: -2em;
+  top: -1em;
+  width: 1.5em;
+}
+
+.onboard-popup-exit:hover {
+  color: red;
+}
+
+.onboard-background {
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  transform: rotate(-15deg);
+  width: 10%;
+}

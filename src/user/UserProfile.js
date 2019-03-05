@@ -10,6 +10,8 @@ import UserProfileBio from './UserProfileBio'
 import seeds from '../Assets/19_Sun_Seeds.png'
 // Fetches
 import { fetchGetUser } from './FetchUser'
+// CSS
+import '../css/UserProfile.css'
 
 class UserProfile extends React.Component {
 

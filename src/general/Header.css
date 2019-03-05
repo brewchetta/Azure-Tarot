@@ -1,0 +1,48 @@
+header {
+  height: 75px;
+  position: relative;
+  text-align: center;
+  z-index: -1;
+}
+
+header h1 {
+  border-top: 3px solid white;
+  text-decoration: underline;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media only screen and (max-width: 540px) {
+  header h1 {
+    font-size: 1em;
+  }
+}
+
+.header-symbols-left {
+  bottom: 5px;
+  filter: invert(1);
+  height: 75%;
+  left: 35%;
+  position: absolute;
+}
+
+.header-symbols-right {
+  backface-visibility: visible;
+  bottom: 5px;
+  filter: invert(1);
+  height: 75%;
+  position: absolute;
+  right: 35%;
+  transform: rotateY(180deg);
+}
+
+.header-corner {
+  backface-visibility: visible;
+  filter: invert(1);
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

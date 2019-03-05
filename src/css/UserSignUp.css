@@ -1,0 +1,18 @@
+/* Login & Signup ------------------------------- Login & Signup */
+
+.user-signup-login-container {
+  text-align: center;
+}
+
+.user-signup-login-error {
+  background: #ff9999;
+  border-radius: 5px;
+  height: 2em;
+  left: 25%;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  position: fixed;
+  top: 50%;
+  transition: top 1s;
+  width: 50%;
+}
