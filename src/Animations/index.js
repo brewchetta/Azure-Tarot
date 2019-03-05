@@ -1,3 +1,4 @@
+export {DefaultAnimation} from './DefaultAnimation'
 export {Fool} from './0_Fool'
 export {Magician} from './1_Magician'
 export {HighPriestess} from './2_HighPriestess'

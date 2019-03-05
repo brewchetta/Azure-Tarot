@@ -13,8 +13,10 @@ const CardIllustration = (props) => {
   const card = props.card
   let ComponentName
 
-  if (card) {
+  if (card && Animations[parseCardName(card)]) {
     ComponentName = Animations[parseCardName(card)]
+  } else if (card) {
+    ComponentName = Animations['DefaultAnimation']
   }
 
   if (card) {
