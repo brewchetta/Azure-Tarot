@@ -14,6 +14,10 @@ import CardComponent from './CardComponent'
 import CardBack from './CardBack'
 import LessonComponent from '../lesson/LessonComponent'
 // import CardIndexSelectSuit from './CardIndexSelectSuit'
+// Uncomment the above when the other cards are more filled out
+// CSS
+import '../css/CardIndex.css'
+import '../css/Card.css'
 
 class CardIndex extends React.Component {
 

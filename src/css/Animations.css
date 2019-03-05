@@ -1,0 +1,372 @@
+/* Illustration Animations ------------------------ Illustration Animations */
+
+/* 0 Fool */
+
+@keyframes fool-sway {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(15deg); }
+}
+
+.fool-sway {
+  animation: fool-sway 5s infinite alternate;
+  z-index: 1;
+}
+
+/* 1 Magician */
+
+@keyframes m-rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.magician-rotator-container {
+  border: solid red 3px;
+  border-radius: 100%;
+  height: 24%;
+  left: 40%;
+  position: absolute;
+  top: 40%;
+  width: 30%;
+}
+
+.magician-rotator {
+  border: solid red 3px;
+  border-radius: 50% 0 50% 0;
+  height: 100%;
+  left: -3px;
+  position: absolute;
+  top: -3px;
+  width: 100%;
+}
+
+@keyframes magician-symbols {
+  0% {opacity: 0; filter: blur(20px);}
+  12.5% {opacity: 1; filter: blur(0);}
+  25% {opacity: 0; filter: blur(20px);}
+  100% {opacity: 0;}
+}
+
+.magician-symbols {
+  animation: magician-symbols 10s infinite;
+  height: 15%;
+  opacity: 0;
+  position: absolute;
+}
+
+/* 2 High Priestess */
+
+
+@keyframes inkblot {
+  0% { filter: blur(0) opacity(0) }
+  80% { filter: blur(0) opacity(0) }
+  83% { filter: blur(0) opacity(0.9) }
+  100% { filter: blur(1px) opacity(1) }
+}
+
+.inkblot {
+  animation: inkblot 16s linear;
+  filter: blur(1px)
+}
+
+/* 3 Empress */
+
+@keyframes empress-hues {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(-90deg); }
+}
+
+@keyframes empress-snow {
+  from { filter: hue-rotate(0deg); top: -10%; transform: rotate(0deg); visibility: visible; }
+  to { filter: hue-rotate(-180deg); top: 110%; transform: rotate(360deg); visibility: visible; }
+}
+
+.empress-snow {
+  animation: empress-snow 10s infinite linear;
+  border-radius: 50% 0 50% 0;
+  background: green;
+  height: 2%;
+  position: absolute;
+  visibility: hidden;
+  width: 2%;
+  z-index: 2;
+}
+
+/* 4 Emperor */
+
+.emperor-starmap {
+  animation: rotate 20s reverse infinite linear;
+  background: #0b0d19;
+  left: -55%;
+  width: 200%;
+  position: absolute;
+  top: -30%;
+}
+
+/* 5 Hierophant */
+@keyframes featherfall-one {
+  0% { top: 30%; right: 20%; }
+  100% { top: 90%; right: 120%; }
+}
+
+@keyframes featherfall-two {
+  0% { top: 35%; right: 10%; }
+  100% { top: 70%; right: 120%; }
+}
+
+@keyframes featherfall-three {
+  0% { top: 40%; right: 15%; }
+  100% { top: 50%; right: 120%; }
+}
+
+@keyframes featherfall-four {
+  0% { top: 40%; right: 0%; }
+  100% { top: 30%; right: 120%; }
+}
+
+@keyframes featherfall-five {
+  0% { top: 40%; right: 0%; }
+  100% { top: 110%; right: 120%; }
+}
+
+/* Lovers */
+
+@keyframes lovers-snow {
+  from { top: -10%; visibility: visible; }
+  to { top: 110%; visibility: visible; }
+}
+
+.lovers-snow {
+  animation: lovers-snow 5s infinite linear;
+  border: solid white 2px;
+  border-top: none;
+  border-left: none;
+  border-radius: 100%;
+  height: 4%;
+  position: absolute;
+  visibility: hidden;
+  width: 5%;
+}
+
+/* 7 Chariot */
+
+@keyframes chariot-wheel {
+  0% { transform: rotate(0deg); background-color: #cccc00 }
+  16.7% { transform: rotate(120deg); background-color: #009933 }
+  33.3% { transform: rotate(240deg); background-color: #006699 }
+  50% { transform: rotate(360deg); background-color: #3333ff }
+  66.7% { transform: rotate(480deg); background-color: #cc00cc }
+  83.3% { transform: rotate(600deg); background-color: #cc0000 }
+  100% { transform: rotate(720deg); background-color: #cc9900 }
+}
+
+.chariot-wheel {
+  animation: chariot-wheel 10s infinite linear;
+  background-color: red;
+  position: absolute;
+  width: 41%;
+}
+
+/* 10 Wheel */
+
+.wheel-container {
+  background: white;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@keyframes wheel-rotate {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.wheel-inner {
+  animation: wheel-rotate 10s infinite linear;
+  left: 0;
+  position: absolute;
+  top: -5%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* 11 Strength */
+
+.strength-birch {
+  left: 0;
+  position: absolute;
+  top: -40%;
+  width: 100%;
+  z-index: 1;
+}
+
+.strength-cat {
+  left: 20%;
+  position: absolute;
+  top: -3%;
+  width: 50%;
+  z-index: 3;
+}
+
+.strength-mirror {
+  background-image: linear-gradient(#4d0f00, #ffad99);
+  height: 70%;
+  left: 0;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+@keyframes strength-lion {
+  from { filter: blur(30px); opacity: 0.2 }
+  to { filter: blur(1px); opacity: 0.7 }
+}
+
+.strength-lion {
+  animation: strength-lion 8s;
+  filter: blur(1px);
+  left: 5%;
+  opacity: 0.7;
+  position: absolute;
+  top: 40%;
+  width: 90%;
+  z-index: 2;
+}
+
+/* 11 Justice */
+
+.justice-sword {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes justice-background {
+  from { width: 20% }
+  to { width: 50% }
+}
+
+.justice-background {
+  animation: justice-background 3s infinite alternate linear;
+  height: 75%;
+  position: absolute;
+  top: 25%;
+}
+
+/* 12 Hanged Man */
+
+@keyframes rainbow-shift {
+  from { filter: hue-rotate(0deg) }
+  to { filter: hue-rotate(360deg) }
+}
+
+.rainbow-shift {
+  animation: rainbow-shift 10s infinite linear reverse;
+}
+
+/* 13 Death */
+
+@keyframes death-pulse {
+  0% { background: #003300 }
+  20% { background: #003300 }
+  100% { background: #006600 }
+}
+
+.death-pulse {
+  animation: death-pulse 4s infinite alternate;
+}
+
+/* 15 Devil */
+
+@keyframes devil-eye {
+  0% { transform: rotateY(0deg); left: 17%; top: 30%}
+  10% { transform: rotateY(23deg); left: 25%; top: 31%}
+  20% { transform: rotateY(23deg); left: 25%; top: 31%}
+  30% { transform: rotateY(0deg); left: 17%; top: 30%}
+  40% { transform: rotateY(0deg); left: 17%; top: 30%;}
+  50% { transform: rotateY(-17deg); left: 10%; top: 30.5%;}
+  60% { transform: rotateY(-17deg); left: 10%; top: 30.5%;}
+  70% { transform: rotateY(0deg); left: 17%; top: 30%;}
+  100% { transform: rotateY(0deg); left: 17%;}
+}
+
+/* 16 Tower */
+
+@keyframes thunder {
+  0% { filter: brightness(1); }
+  0.5% { filter: brightness(5); }
+  1% { filter: brightness(3); }
+  1.5% { filter: brightness(5); }
+  3% { filter: brightness(1); }
+  100% { filter: brightness(1); }
+}
+
+.thunder {
+  animation: thunder 15s infinite linear;
+}
+
+/* 18 Moon */
+
+@keyframes firefly {
+  0% { opacity: 0 }
+  25% { opacity: 1 }
+  75% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.animation-firefly {
+  animation: firefly 12s infinite;
+}
+
+/* 19 Sun */
+
+@keyframes sun-sway {
+  from { transform: rotate(0); left: 0; }
+  to { transform: rotate(10deg); left: 10%; }
+}
+
+.sun-sway {
+  animation: sun-sway 4s infinite alternate;
+  position: relative;
+}
+
+@keyframes sun-seeds {
+  0% { opacity: 0; left: 15% }
+  25% { opacity: 1; left: 40%; top: -5% }
+  100% { opacity: 1; left: 115%; top: -20% }
+}
+
+.sun-seeds {
+  animation: sun-seeds 8s infinite linear;
+  left: 15%;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 5%;
+  width: 50%;
+}
+
+/* General Animations */
+
+@keyframes rotate {
+  from { transform: rotate(0deg)}
+  to { transform: rotate(360deg)}
+}
+
+.animation-rotate-medium {
+  animation: rotate 20s infinite linear;
+}
+
+.animation-rotate-slow {
+  animation: rotate 30s infinite linear;
+}
+
+.animation-rotate-slower {
+  animation: rotate 40s infinite linear;
+}
+
+.animation-rotate-slowest {
+  animation: rotate 60s infinite linear;
+}

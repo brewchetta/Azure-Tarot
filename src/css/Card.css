@@ -1,0 +1,255 @@
+/* Card Component */
+
+.card-component {
+  background: #0086b3;
+  backface-visibility: hidden;
+  border: solid #002133 2px;
+  border-radius: 3%;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: inline-block;
+  height: 300px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+}
+
+.card-index-space {
+  display: inline-block;
+  border-radius: 3%;
+  height: 314px;
+  width: 214px;
+}
+
+.card-component-back {
+  background-image: url('../Assets/Card_Back.png');
+  background-color: #737373;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
+  border: solid #002133 2px;
+  border-radius: 3%;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+  cursor: pointer;
+  height: 300px;
+  position: absolute;
+  top: 5px;
+  transform: rotateY(180deg);
+  left: 5px;
+  width: 200px;
+  z-index: 500;
+}
+
+@keyframes card-locked-remove-deck {
+  from { left: 0 }
+  to { left: -200% }
+}
+
+.card-locked {
+  background-image: url('../Assets/Card_Back.png');
+  background-color: #737373;
+  background-position: center;
+  background-size: cover;
+  border: solid #002133 2px;
+  border-radius: 3%;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: inline-block;
+  height: 300px;
+  margin: 5px;
+  position: relative;
+  width: 200px;
+}
+
+.card-component-corner-left {
+  bottom: 0;
+  filter: invert(1);
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  transform: rotateZ(180deg);
+  width: 30%;
+}
+
+.card-component-corner-right {
+  filter: invert(1);
+  opacity: 0.4;
+  position: absolute;
+  right: 0%;
+  transform: rotate(90deg);
+  bottom: 0;
+  width: 30%;
+}
+
+.card-component-flip-container {
+  border: solid white 2px;
+  height: 314px;
+  margin: auto;
+  position: relative;
+  perspective: 500px;
+  width: 214px;
+}
+
+.card-component-flip-container-inner {
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+@keyframes card-flip-up {
+  from { transform: rotateY(180deg) }
+  to { transform: rotateY(0) }
+}
+
+.card-component-inspect {
+  animation: card-inspect-appear 0.5s;
+  height: 90vh;
+  left: 30vw;
+  max-height: 563px;
+  max-width: 420px;
+  position: fixed;
+  top: 5vh;
+  width: 72vh;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 640px) {
+  .card-component-inspect {
+    animation: none;
+    width: 250px;
+    height: 300px;
+    left: 5%;
+  }
+
+  p.card-name-inspect {
+    font-size: 1em;
+  }
+
+  .card-component-inspect p {
+    font-size: 0.8em;
+  }
+
+  div.card-component-inspect-inner {
+    width: 80%;
+  }
+}
+
+@keyframes card-inspect-appear {
+  from { left: -100vw }
+  to { left: 30vw }
+}
+
+.card-component-inspect-inner {
+  background: #0086b3;
+  border: solid #002133 2px;
+  border-radius: 3%;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+  float: left;
+  height: 100%;
+  overflow: auto;
+  width: 90%;
+}
+
+.card-description {
+  margin: 5%;
+  width: 90%;
+}
+
+.card-description-reversal {
+  cursor:default;
+  margin: 5%;
+  width: 90%;
+}
+.card-description-reversal p {
+  cursor: pointer;
+}
+
+.card-description-reversal p:hover {
+  opacity: 0.7;
+}
+
+.card-description-reversal textarea {
+  background: none;
+  border: solid white 2px;
+  border-radius: 3px;
+  color: white;
+  font-size: 1em;
+  height: 10em;
+  width: 80%;
+}
+
+.card-illustration {
+  margin: auto;
+  margin-top: 5%;
+  width: 90%;
+  height: 75%;
+  overflow: hidden;
+  border: solid #002133 2px;
+}
+
+.card-name {
+  color: white;
+  font-family: 'Satisfy', cursive;
+  position: absolute;
+  text-align: center;
+  top: 86%;
+  width: 100%;
+}
+
+.card-name-inspect {
+  color: white;
+  font-family: 'Satisfy', cursive;
+  font-size: 2em;
+  position: absolute;
+  text-align: center;
+  top: 86%;
+  transition: linear width 1s, height 1s, top 1s, left 1s;
+  width: 90%;
+}
+
+/* Card Tabs ------------------------------------------- Card Tabs */
+
+.card-tab-index {
+  z-index: -1;
+  float: left;
+  width: 9%;
+  height: 100%;
+  text-align: center;
+}
+
+.card-tab {
+  font-size: 90%;
+  font-family: 'Satisfy', cursive;
+  position: relative;
+  top: 5%;
+  background: green;
+  width: 120%;
+  cursor: pointer;
+  border: 2px #002133 solid;
+  border-left: none;
+}
+
+.card-animation {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 105%;
+  width: 105%;
+  overflow: hidden;
+  background: black;
+}
+
+.card-fit-height {
+  height: 100%;
+  position: relative;
+}
+
+.card-fit-width {
+  width: 100%;
+  position: relative;
+}

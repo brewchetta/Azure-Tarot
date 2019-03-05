@@ -1,0 +1,13 @@
+/* Spread Components ------------------------------------- Spread Components */
+
+.table-card-container {
+  text-align: center;
+  width: 100%;
+}
+
+.position-container-threecard {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  width: 25%;
+}
