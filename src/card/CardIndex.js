@@ -131,7 +131,7 @@ class CardIndex extends React.Component {
 
         {this.renderPromptReading()}
 
-        <select className='card-index-select' value={this.state.suit} onChange={this.handleSuitChange}>
+        <select className='card-index-select' value={this.state.suit} onChange={this.handleSuitChange.bind(this)}>
           <option value='majorArcana'>Major Arcana</option>
           <option value='cups'>Cups</option>
           <option value='pentacles'>Pentacles</option>
