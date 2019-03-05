@@ -33,7 +33,6 @@ class CardIndex extends React.Component {
   }
 
   handleSuitChange(event) {
-    console.log(event.target.value)
     this.setState({ suit: event.target.value, cards: cardsList[event.target.value] })
   }
 

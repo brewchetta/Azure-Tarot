@@ -81,4 +81,4 @@ const wands = [
   },
 ]
 
-export default wands.map(card => new Object({...card, suit: "Wands"}))
+export default wands.map(card => {return {...card, suit: "Wands"} })

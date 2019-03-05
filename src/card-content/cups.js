@@ -81,4 +81,4 @@ const cups = [
   },
 ]
 
-export default cups.map(card => new Object({...card, suit: "Cups"}))
+export default cups.map(card => {return {...card, suit: "Cups"} })

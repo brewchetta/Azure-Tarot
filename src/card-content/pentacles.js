@@ -81,4 +81,4 @@ const pentacles = [
   },
 ]
 
-export default pentacles.map(card => new Object({...card, suit: "Pentacles"}))
+export default pentacles.map(card => {return {...card, suit: "Pentacles"} })
