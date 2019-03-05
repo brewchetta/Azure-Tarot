@@ -132,7 +132,7 @@ class CardIndex extends React.Component {
 
         {this.renderPromptReading()}
 
-        <CardIndexSelectSuit handleSuitChange={this.handleSuitChange.bind(this)} suit={this.state.suit} />
+        {/* <CardIndexSelectSuit handleSuitChange={this.handleSuitChange.bind(this)} suit={this.state.suit} /> */}
 
         {this.renderAllCards()}
 

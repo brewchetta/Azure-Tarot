@@ -107,6 +107,15 @@ code {
   position: relative;
 }
 
+.card-index-select {
+  text-align: left;
+  width: 100%;
+}
+
+.card-index-select select {
+  margin-left: 5px;
+}
+
 /* --- */
 
 /* Card Component */
