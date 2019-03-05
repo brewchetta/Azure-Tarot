@@ -18,6 +18,7 @@ class CardIndex extends React.Component {
 
   state = {
     cards: [],
+    suit: 'Major Arcana',
     cardToInspect: null,
     cardLesson: null,
     popupOpen: true
@@ -29,6 +30,11 @@ class CardIndex extends React.Component {
 
   setIndexState = (object) => {
     this.setState(object)
+  }
+
+  handleSuitChange(event) {
+    console.log(event.target.value)
+    this.setState({ suit: event.target.value, cards: cardsList[event.target.value] })
   }
 
   renderAllCards = () => {
@@ -125,6 +131,14 @@ class CardIndex extends React.Component {
         {this.renderCardIndexIntro()}
 
         {this.renderPromptReading()}
+
+        <select className='card-index-select' value={this.state.suit} onChange={this.handleSuitChange}>
+          <option value='majorArcana'>Major Arcana</option>
+          <option value='cups'>Cups</option>
+          <option value='pentacles'>Pentacles</option>
+          <option value='swords'>Swords</option>
+          <option value='wands'>Wands</option>
+        </select>
 
         {this.renderAllCards()}
 
