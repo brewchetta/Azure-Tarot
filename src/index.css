@@ -941,7 +941,20 @@ code {
   font-family: 'Josefin Sans', sans-serif;
   height: 2em;
   padding-top: 0.5em;
+  transition: font-size 0.2s;
   width: 100%;
+}
+
+@media only screen and (max-width: 630px) and (min-width: 540px) {
+  .navbar {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .navbar {
+    display: none;
+  }
 }
 
 .navbar-left {

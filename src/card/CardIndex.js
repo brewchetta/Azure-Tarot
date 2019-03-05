@@ -13,7 +13,7 @@ import cardsList from '../card-content'
 import CardComponent from './CardComponent'
 import CardBack from './CardBack'
 import LessonComponent from '../lesson/LessonComponent'
-import CardIndexSelectSuit from './CardIndexSelectSuit'
+// import CardIndexSelectSuit from './CardIndexSelectSuit'
 
 class CardIndex extends React.Component {
 
