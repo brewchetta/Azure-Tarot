@@ -13,6 +13,7 @@ import cardsList from '../card-content'
 import CardComponent from './CardComponent'
 import CardBack from './CardBack'
 import LessonComponent from '../lesson/LessonComponent'
+import CardIndexSelectSuit from './CardIndexSelectSuit'
 
 class CardIndex extends React.Component {
 
@@ -131,13 +132,7 @@ class CardIndex extends React.Component {
 
         {this.renderPromptReading()}
 
-        <select className='card-index-select' value={this.state.suit} onChange={this.handleSuitChange.bind(this)}>
-          <option value='majorArcana'>Major Arcana</option>
-          <option value='cups'>Cups</option>
-          <option value='pentacles'>Pentacles</option>
-          <option value='swords'>Swords</option>
-          <option value='wands'>Wands</option>
-        </select>
+        <CardIndexSelectSuit handleSuitChange={this.handleSuitChange.bind(this)} suit={this.state.suit} />
 
         {this.renderAllCards()}
 
