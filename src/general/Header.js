@@ -11,7 +11,7 @@ export default function Header(props) {
       <img alt='' src={symbols} className='header-symbols-right large-screen-only' />
       <img alt='' src={corner} className='header-corner' style={{ right: '0' }} />
       <img alt='' src={corner} className='header-corner' style={{ left: '0', transform: 'rotateY(180deg)' }} />
-      <h1 className='small-screen-remove'>Azure Tarot</h1>
+      <h1>Azure Tarot</h1>
     </header>
   )
 }
