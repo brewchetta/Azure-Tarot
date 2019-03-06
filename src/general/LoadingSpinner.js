@@ -12,7 +12,8 @@ const LoadingSpinner = () => {
 
       <br/>
 
-      <h3>Loading</h3>
+      <h3 className='load-message'>Booting up dynos</h3>
+      <h3 className='load-message'>If this takes more than 30 seconds try refreshing the page</h3>
 
     </div>
   )

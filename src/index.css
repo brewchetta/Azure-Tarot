@@ -46,7 +46,7 @@ body img {
   }
 }
 
-@media only screen and (min-width: 540px) {  
+@media only screen and (min-width: 540px) {
   .small-screen-add {
     display: none;
   }
@@ -77,6 +77,16 @@ body img {
   left: -50px;
   position: relative;
   width: 100px;
+}
+
+@keyframes load-message {
+  0% { opacity: 0 }
+  90% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.load-message {
+  animation: load-message 5s;
 }
 
 /* ---------- */
