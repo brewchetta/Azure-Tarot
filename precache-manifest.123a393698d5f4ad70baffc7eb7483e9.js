@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "6f39ec29757d673282ca",
-    "url": "/Azure-Tarot/static/css/main.f28d687b.chunk.css"
+    "revision": "0203939a0d469c9744b8",
+    "url": "/Azure-Tarot/static/css/main.e5141012.chunk.css"
   },
   {
-    "revision": "6f39ec29757d673282ca",
-    "url": "/Azure-Tarot/static/js/main.6f39ec29.chunk.js"
+    "revision": "0203939a0d469c9744b8",
+    "url": "/Azure-Tarot/static/js/main.0203939a.chunk.js"
   },
   {
-    "revision": "6d29d9c148e7b66cc689",
-    "url": "/Azure-Tarot/static/js/1.6d29d9c1.chunk.js"
+    "revision": "bf2cb7cd7e353649300d",
+    "url": "/Azure-Tarot/static/js/1.bf2cb7cd.chunk.js"
   },
   {
     "revision": "386d4d89d4e185995b30",
@@ -42,6 +42,10 @@ self.__precacheManifest = [
   {
     "revision": "084efe82dd748c0321f5cc49bbce2cdb",
     "url": "/Azure-Tarot/static/media/7_Chariot_Wheel.084efe82.png"
+  },
+  {
+    "revision": "9e53c6c8e4a26c98d03220280e87f9aa",
+    "url": "/Azure-Tarot/static/media/Card_Back.9e53c6c8.png"
   },
   {
     "revision": "f346be42b511a64a50143ed86130aae2",
@@ -232,11 +236,7 @@ self.__precacheManifest = [
     "url": "/Azure-Tarot/static/media/21_World_Clouds.abdb98ca.png"
   },
   {
-    "revision": "9e53c6c8e4a26c98d03220280e87f9aa",
-    "url": "/Azure-Tarot/static/media/Card_Back.9e53c6c8.png"
-  },
-  {
-    "revision": "9f05dd01a1ddc5c92c51f03a7683f158",
+    "revision": "3dc06c3ce2a0efbbb88ed0273e42c3c9",
     "url": "/Azure-Tarot/index.html"
   }
 ];
