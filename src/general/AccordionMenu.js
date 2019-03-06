@@ -23,7 +23,7 @@ class AccordionMenu extends React.Component {
       const cards = user.card_unlocks
 
       return (
-        <div className='accordion-menu-open'>
+        <div className='accordion-menu-open' onClick={this.toggleMenuOpen}>
 
           <Link to={user ? `/profile/${user.id}` : '/'} >{user ? 'Profile' : 'Home'}</Link>
 
@@ -44,7 +44,7 @@ class AccordionMenu extends React.Component {
 
   render() {
     if (this.props.currentUser) return (
-      <div className='accordion-menu'>
+      <div className='accordion-menu small-screen-add'>
 
         <button onClick={this.toggleMenuOpen} className='accordion-menu-button'>
           <img alt=''
