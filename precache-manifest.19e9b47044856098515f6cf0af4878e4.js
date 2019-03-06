@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0203939a0d469c9744b8",
+    "revision": "f78e8ecbcdebc592dfa9",
     "url": "/Azure-Tarot/static/css/main.e5141012.chunk.css"
   },
   {
-    "revision": "0203939a0d469c9744b8",
-    "url": "/Azure-Tarot/static/js/main.0203939a.chunk.js"
+    "revision": "f78e8ecbcdebc592dfa9",
+    "url": "/Azure-Tarot/static/js/main.f78e8ecb.chunk.js"
   },
   {
     "revision": "bf2cb7cd7e353649300d",
@@ -236,7 +236,7 @@ self.__precacheManifest = [
     "url": "/Azure-Tarot/static/media/21_World_Clouds.abdb98ca.png"
   },
   {
-    "revision": "3dc06c3ce2a0efbbb88ed0273e42c3c9",
+    "revision": "2e2c4607f925213e7f22fea1261ba921",
     "url": "/Azure-Tarot/index.html"
   }
 ];
