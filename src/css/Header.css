@@ -19,6 +19,9 @@ header h1 {
   header h1 {
     font-size: 1em;
   }
+  .header-corner {
+    display: none;
+  }
 }
 
 .header-symbols-left {

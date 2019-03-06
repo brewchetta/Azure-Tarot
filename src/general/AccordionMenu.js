@@ -1,21 +1,63 @@
+// React
 import React from 'react'
+import { Link } from 'react-router-dom'
+// Redux
+import mappedConnect from '../redux/mappers'
+// CSS
+import '../css/AccordionMenu.css'
 
-const AccordionMenu = (props) => {
+class AccordionMenu extends React.Component {
 
-  const renderMenu = () => {
-    if (true) return (
-      <div className='accordion-menu-open'>
-        <p>I am the menu</p>
-      </div>
-    )
+  state = {
+    menuOpen: false
   }
 
-  return (
-    <div>
-      <button>Menu</button>
-      {renderMenu()}
-    </div>
-  )
+  toggleMenuOpen = () => {
+    this.setState({ menuOpen: !this.state.menuOpen })
+  }
+
+  renderMenu = () => {
+    const user = this.props.currentUser
+
+    if (user && this.state.menuOpen) {
+      const cards = user.card_unlocks
+
+      return (
+        <div className='accordion-menu-open'>
+
+          <Link to={user ? `/profile/${user.id}` : '/'} >{user ? 'Profile' : 'Home'}</Link>
+
+          <Link to='/card-index'>Cards</Link>
+
+          { cards.length > 3 ? <Link to='/reading/single'>Single Card Reading</Link> : null }
+
+          { cards.length > 5 ? <Link to='/reading/three-card'>Three Card Reading</Link> : null }
+
+          { cards.length > 3 ? <Link to='/your-readings'>Your Readings</Link> : null }
+
+          <Link to='#' onClick={this.props.toggleHelp}>Help</Link>
+
+        </div>
+      )
+    }
+  }
+
+  render() {
+    if (this.props.currentUser) return (
+      <div>
+
+        <button onClick={this.toggleMenuOpen} className='accordion-menu-button'>
+          <img alt=''
+          src='https://static.thenounproject.com/png/878678-200.png' />
+          <h1>Azure Tarot</h1>
+        </button>
+
+        {this.renderMenu()}
+
+      </div>
+    )
+    else return (null)
+  }
 }
 
-export default AccordionMenu
+export default mappedConnect(AccordionMenu)
