@@ -44,7 +44,7 @@ class AccordionMenu extends React.Component {
 
   render() {
     if (this.props.currentUser) return (
-      <div>
+      <div className='accordion-menu'>
 
         <button onClick={this.toggleMenuOpen} className='accordion-menu-button'>
           <img alt=''

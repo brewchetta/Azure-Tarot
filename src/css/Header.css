@@ -17,7 +17,7 @@ header h1 {
 
 @media only screen and (max-width: 540px) {
   header h1 {
-    font-size: 1em;
+    display: none;
   }
   .header-corner {
     display: none;

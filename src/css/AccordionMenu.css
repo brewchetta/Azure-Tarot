@@ -1,14 +1,24 @@
-.accordion-menu-button {
-  background-color: #008080;
-  border: none;
-  border-bottom: solid white 2px;
+.accordion-menu {
   left: 0;
-  height: 50px;
   position: fixed;
-  text-align: left;
   top: 0;
   width: 100%;
   z-index: 99;
+}
+
+.accordion-menu-button {
+  background-color: #008080;
+  border: none;
+  border-bottom: solid black 2px;
+  left: 0;
+  height: 50px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+.accordion-menu-button:active {
+  border: none;
 }
 
 .accordion-menu-button img {
@@ -23,10 +33,37 @@
   font-family: 'Josefin Sans', sans-serif;
   margin: 0;
   position: absolute;
-  right: 20%;
+  left: 60px;
   top: 10px;
 }
 
-.accordion-menu-open {
+@keyframes accordion-menu-toggle {
+  from { height: 0 }
+  to { height: 20em }
+}
 
+.accordion-menu-open {
+  animation: accordion-menu-toggle 0.5s;
+  background: #ccffff;
+  border-bottom: solid black 2px;
+  height: 20em;
+  left: 0;
+  opacity: 0.9;
+  position: absolute;
+  top: 50px;
+  width: 20em;
+}
+
+@keyframes accordion-menu-links {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.accordion-menu-open a {
+  animation: accordion-menu-links 1s;
+  color: black;
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  margin-left: 1em;
+  margin-top: 1em;
 }
