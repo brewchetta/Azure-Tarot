@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 // Redux
 import mappedConnect from '../redux/mappers'
 // CSS
-import './Navbar.css'
+import '../css/Navbar.css'
 
 class Navbar extends React.Component {
 
