@@ -46,6 +46,12 @@ body img {
   }
 }
 
+@media only screen and (min-width: 540px) {  
+  .small-screen-add {
+    display: none;
+  }
+}
+
 /* -------- */
 
 /* Loading --------------------------------------------- Loading */

@@ -12,6 +12,7 @@ import { fetchLoginUser } from './user/FetchUser'
 import Header from './general/Header'
 import Footer from './general/Footer'
 import Navbar from './general/Navbar'
+import AccordionMenu from './general/AccordionMenu'
 import LoadingSpinner from './general/LoadingSpinner'
 import UserSignUp from './user/UserSignUp'
 import UserProfile from './user/UserProfile'
@@ -47,6 +48,11 @@ class App extends Component {
 
           {/* Header */}
           <Header />
+
+          {/* Accordion Menu for Mobile */}
+          {window.localStorage.jwt ? 
+          <AccordionMenu />
+          : null }
 
           {/* Navbar */}
           {window.localStorage.jwt ?
