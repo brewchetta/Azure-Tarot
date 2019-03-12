@@ -82,7 +82,7 @@ const pentacles = [
   {
     id: 47,
     name: `The Seer of Pentacles`,
-    rank: 10,
+    rank: 11,
     description: `The Seer represents a person or aspect of yourself that can be relied on. They're responsible and detail oriented but tend to shy away from the spotlight.`,
     revDescription: `Pentacles`,
     keywords: [`supportive`, `responsible`, `studious`],
@@ -90,7 +90,7 @@ const pentacles = [
   {
     id: 48,
     name: `The Quester of Pentacles`,
-    rank: 10,
+    rank: 12,
     description: `The Quester represents a person or aspect of yourself that's utterly industrious. They don't need many friends, they rarely think about anything other than their work. While they're utterly loyal, they have a tendency to stubbornly stick with things even when they're a lost cause.`,
     revDescription: `Pentacles`,
     keywords: [`Industrious`, `Persistent`],
@@ -98,7 +98,7 @@ const pentacles = [
   {
     id: 49,
     name: `The Sibyl of Pentacles`,
-    rank: 10,
+    rank: 13,
     description: `This Sibyl represents somebody or an aspect of yourself that trusts themself utterly. They know how to nurture and how to care. Often they're utterly dedicated to the people they consider their children.`,
     revDescription: `Pentacles`,
     keywords: [`Self-Possessed`, `Patient`, `Domestic`],
@@ -106,7 +106,7 @@ const pentacles = [
   {
     id: 50,
     name: `The Sage of Pentacles`,
-    rank: 10,
+    rank: 14,
     description: `The Sage represents someone you know or an aspect of yourself who has nothing to prove. Utterly experienced and patient, the Sage might seem a little simple at first, but underneath their calm exterior lies someone with all the passion and skill to build anything they desire.`,
     revDescription: `Pentacles`,
     keywords: [`Satisfied`, `Patient`, `Practical`],

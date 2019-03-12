@@ -106,7 +106,7 @@ const cups = [
   {
     id: 36,
     name: `The Sage of Cups`,
-    rank: 13,
+    rank: 14,
     description: `The Sage of Cups lives a complex life. They embrace love and family, often they're the placid anchor holding everyone together at the eye of the storm. And yet, they're deeply insecure, able to handle the emotions of others but uncomfortable with their own.`,
     revDescription: `Cups`,
     keywords: [`Familial`, `Diplomatic`, `Insecure`],
