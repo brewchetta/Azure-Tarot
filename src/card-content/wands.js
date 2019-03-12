@@ -79,6 +79,38 @@ const wands = [
     revDescription: `Wands`,
     keywords: [`Wands`],
   },
+  {
+    id: 75,
+    name: `The Seer of Wands`,
+    rank: 11,
+    description: `Wands`,
+    revDescription: `Wands`,
+    keywords: [`Wands`],
+  },
+  {
+    id: 76,
+    name: `The Quester of Wands`,
+    rank: 12,
+    description: `Wands`,
+    revDescription: `Wands`,
+    keywords: [`Wands`],
+  },
+  {
+    id: 77,
+    name: `The Sibyl of Wands`,
+    rank: 13,
+    description: `Wands`,
+    revDescription: `Wands`,
+    keywords: [`Wands`],
+  },
+  {
+    id: 78,
+    name: `The Sage of Wands`,
+    rank: 14,
+    description: `Wands`,
+    revDescription: `Wands`,
+    keywords: [`Wands`],
+  },
 ]
 
 export default wands.map(card => {return {...card, suit: "Wands"} })
