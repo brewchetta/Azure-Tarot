@@ -81,9 +81,9 @@ const cups = [
   },
   {
     id: 33,
-    name: `The Seer of Cups`,
+    name: `The Student of Cups`,
     rank: 11,
-    description: `The Seer represents a person or an aspect of yourself whose creativity knows no bounds. This Seer overflows with fantasies that they paint all over their chosen canvas. Be careful, sometimes they aren't as grounded as they need to be and that can lead to trouble.`,
+    description: `The Student represents a person or an aspect of yourself whose creativity knows no bounds. This Student overflows with fantasies that they paint all over their chosen canvas. Be careful, sometimes they aren't as grounded as they need to be and that can lead to trouble.`,
     revDescription: `Cups`,
     keywords: [`Creative`, `Emotional`, `Peaceful`],
   },

@@ -81,9 +81,9 @@ const swords = [
   },
   {
     id: 61,
-    name: `The Seer of Swords`,
+    name: `The Student of Swords`,
     rank: 11,
-    description: `The Seer represents a person or aspect of ourselves who is keenly observant. Their attention to detail makes it easy for them to speak honestly and insightfully. Sometimes that honesty is a shield that distances them from the people around. This may be intentional or it may be accidental, but it can sometimes fray their relationships.`,
+    description: `The Student represents a person or aspect of ourselves who is keenly observant. Their attention to detail makes it easy for them to speak honestly and insightfully. Sometimes that honesty is a shield that distances them from the people around. This may be intentional or it may be accidental, but it can sometimes fray their relationships.`,
     revDescription: `Swords`,
     keywords: [`Insightful`, `Honest`],
   },

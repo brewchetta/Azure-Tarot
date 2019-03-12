@@ -81,9 +81,9 @@ const pentacles = [
   },
   {
     id: 47,
-    name: `The Seer of Pentacles`,
+    name: `The Student of Pentacles`,
     rank: 11,
-    description: `The Seer represents a person or aspect of yourself that can be relied on. They're responsible and detail oriented but tend to shy away from the spotlight.`,
+    description: `The Student represents a person or aspect of yourself that can be relied on. They're responsible and detail oriented but tend to shy away from the spotlight.`,
     revDescription: `Pentacles`,
     keywords: [`supportive`, `responsible`, `studious`],
   },
