@@ -1,6 +1,6 @@
 import React from 'react'
-import foreground from '../Assets/3_Empress_Bears.png'
-import background from '../Assets/3_Empress_Background.png'
+import foreground from '../../Assets/3_Empress_Bears.png'
+import background from '../../Assets/3_Empress_Background.png'
 
 export const Empress = props => {
 

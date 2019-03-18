@@ -1,6 +1,6 @@
 import React from 'react'
-import cat from '../Assets/13_Death_Cat.png'
-import tree from '../Assets/13_Death_Tree.png'
+import cat from '../../Assets/13_Death_Cat.png'
+import tree from '../../Assets/13_Death_Tree.png'
 
 export const Death = props => {
   return (

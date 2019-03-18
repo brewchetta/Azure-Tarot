@@ -3,7 +3,7 @@
 // A lot of something is flowing down, changing colors along rainbow lines
 
 import React from 'react'
-import waterfall from '../Assets/14_Temperance_Waterfall.png'
+import waterfall from '../../Assets/14_Temperance_Waterfall.png'
 
 export const Temperance = props => {
   return (

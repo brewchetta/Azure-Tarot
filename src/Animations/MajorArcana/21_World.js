@@ -1,8 +1,8 @@
 import React from 'react'
-import forest from '../Assets/21_World_Forest.png'
-import mountains from '../Assets/21_World_Mountains.png'
-import town from '../Assets/21_World_Town.png'
-import clouds from '../Assets/21_World_Clouds.png'
+import forest from '../../Assets/21_World_Forest.png'
+import mountains from '../../Assets/21_World_Mountains.png'
+import town from '../../Assets/21_World_Town.png'
+import clouds from '../../Assets/21_World_Clouds.png'
 
 export const World = props => {
   return (

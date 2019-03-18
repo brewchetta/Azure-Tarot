@@ -2,9 +2,9 @@
 // about 20 fireflies appear and disappear (set animation delay dynamically so they appear not all at once)
 
 import React from 'react'
-import moon from '../Assets/18_Moon_Fullmoon.png'
-import firefly from '../Assets/18_Moon_Firefly.png'
-import grass from '../Assets/18_Moon_Grass.png'
+import moon from '../../Assets/18_Moon_Fullmoon.png'
+import firefly from '../../Assets/18_Moon_Firefly.png'
+import grass from '../../Assets/18_Moon_Grass.png'
 
 export class Moon extends React.Component {
 

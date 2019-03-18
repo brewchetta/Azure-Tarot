@@ -1,6 +1,6 @@
 import React from 'react'
-import background from '../Assets/9_Hermit_Snail_Background.png'
-import foreground from '../Assets/9_Hermit_Snail_Foreground.png'
+import background from '../../Assets/9_Hermit_Snail_Background.png'
+import foreground from '../../Assets/9_Hermit_Snail_Foreground.png'
 
 export const Hermit = props => {
   return (

@@ -1,8 +1,8 @@
 // Face slowly fills up like an ink blot. Sparks or rain or something slowly move around it, giving a general idea of outline before it fills
 
 import React from 'react'
-import kitty from '../Assets/2_High_Priestess_Cat.png'
-import inkblot from '../Assets/2_High_Priestess_Inkblot.png'
+import kitty from '../../Assets/2_High_Priestess_Cat.png'
+import inkblot from '../../Assets/2_High_Priestess_Inkblot.png'
 
 export const HighPriestess = props => {
   return (

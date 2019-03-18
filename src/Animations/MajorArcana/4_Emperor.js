@@ -1,6 +1,6 @@
 import React from 'react'
-import watch from '../Assets/4_Emperor_Watch.png'
-import starmap from '../Assets/4_Emperor_Starmap.png'
+import watch from '../../Assets/4_Emperor_Watch.png'
+import starmap from '../../Assets/4_Emperor_Starmap.png'
 
 export const Emperor = props => {
   return (

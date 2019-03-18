@@ -1,6 +1,6 @@
 import React from 'react'
-import hawk from '../Assets/20_Judgement_Hawk.png'
-import sun from '../Assets/20_Judgement_Sun.png'
+import hawk from '../../Assets/20_Judgement_Hawk.png'
+import sun from '../../Assets/20_Judgement_Sun.png'
 
 export const Judgement = props => {
   return (

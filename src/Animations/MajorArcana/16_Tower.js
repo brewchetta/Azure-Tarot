@@ -1,6 +1,6 @@
 import React from 'react'
-import baobab from '../Assets/16_Tower_Baobab.png'
-import cloud from '../Assets/16_Tower_Cloud.png'
+import baobab from '../../Assets/16_Tower_Baobab.png'
+import cloud from '../../Assets/16_Tower_Cloud.png'
 
 export class Tower extends React.Component {
 

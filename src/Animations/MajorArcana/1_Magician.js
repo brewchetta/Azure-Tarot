@@ -1,10 +1,10 @@
 import React from 'react'
-import hand from '../Assets/1_Magician_Hand.png'
-import fingers from '../Assets/1_Magician_Fingers.png'
-import cup from '../Assets/Symbol_Chalice.png'
-import wand from '../Assets/Symbol_Broom.png'
-import pentacle from '../Assets/Symbol_Pentacle.png'
-import sword from '../Assets/Symbol_Sword.png'
+import hand from '../../Assets/1_Magician_Hand.png'
+import fingers from '../../Assets/1_Magician_Fingers.png'
+import cup from '../../Assets/Symbol_Chalice.png'
+import wand from '../../Assets/Symbol_Broom.png'
+import pentacle from '../../Assets/Symbol_Pentacle.png'
+import sword from '../../Assets/Symbol_Sword.png'
 
 export const Magician = props => {
   return (

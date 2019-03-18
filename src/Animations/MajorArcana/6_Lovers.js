@@ -1,6 +1,6 @@
 import React from 'react'
-import owls from '../Assets/6_Lovers_Owls.png'
-import forest from '../Assets/6_Lovers_Forest.png'
+import owls from '../../Assets/6_Lovers_Owls.png'
+import forest from '../../Assets/6_Lovers_Forest.png'
 
 export const Lovers = props => {
   return (

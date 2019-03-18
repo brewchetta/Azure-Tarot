@@ -1,9 +1,9 @@
 // Eye watching the cursor
 
 import React from 'react'
-import background from '../Assets/15_Devil_Eye_Background.png'
-import foreground from '../Assets/15_Devil_Eye_Foreground.png'
-import pupil from '../Assets/15_Devil_Pupil.png'
+import background from '../../Assets/15_Devil_Eye_Background.png'
+import foreground from '../../Assets/15_Devil_Eye_Foreground.png'
+import pupil from '../../Assets/15_Devil_Pupil.png'
 
 export const Devil = props => {
   return (

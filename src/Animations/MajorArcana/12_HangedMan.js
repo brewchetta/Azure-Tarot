@@ -1,8 +1,8 @@
 // Chrysalis slowly changes hue, taking a slow lap around the color wheel
 
 import React from 'react'
-import chrysalis from '../Assets/12_HangedMan_Chrysalis.png'
-import fern from '../Assets/12_HangedMan_Fern.png'
+import chrysalis from '../../Assets/12_HangedMan_Chrysalis.png'
+import fern from '../../Assets/12_HangedMan_Fern.png'
 
 export const HangedMan = props => {
   return (

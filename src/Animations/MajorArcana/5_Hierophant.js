@@ -1,8 +1,8 @@
 import React from 'react'
-import raven from '../Assets/5_Hierophant_Raven.png'
-import ravenhead from '../Assets/5_Hierophant_Raven_Head.png'
-import feather from '../Assets/5_Hierophant_Feather.png'
-import books from '../Assets/5_Hierophant_Books.png'
+import raven from '../../Assets/5_Hierophant_Raven.png'
+import ravenhead from '../../Assets/5_Hierophant_Raven_Head.png'
+import feather from '../../Assets/5_Hierophant_Feather.png'
+import books from '../../Assets/5_Hierophant_Books.png'
 
 export class Hierophant extends React.Component {
 

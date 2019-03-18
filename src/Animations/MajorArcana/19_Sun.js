@@ -1,6 +1,6 @@
 import React from 'react'
-import flower from '../Assets/19_Sun_Dandelion.png'
-import seeds from '../Assets/19_Sun_Seeds.png'
+import flower from '../../Assets/19_Sun_Dandelion.png'
+import seeds from '../../Assets/19_Sun_Seeds.png'
 
 export const Sun = props => {
   return (

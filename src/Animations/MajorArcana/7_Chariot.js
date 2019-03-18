@@ -1,6 +1,6 @@
 import React from 'react'
-import bike from '../Assets/7_Chariot_Bike.png'
-import wheel from '../Assets/7_Chariot_Wheel.png'
+import bike from '../../Assets/7_Chariot_Bike.png'
+import wheel from '../../Assets/7_Chariot_Wheel.png'
 
 export const Chariot = props => {
   return (

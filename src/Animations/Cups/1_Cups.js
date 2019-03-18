@@ -1,7 +1,7 @@
 import React from 'react'
 import seed from '../../Assets/0_Fool_Seed.png'
 
-export const Fool = () => {
+export const OneOfCups = () => {
 
   return (
     <div className='card-animation' style={{ background: 'white' }}>

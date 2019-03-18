@@ -1,8 +1,8 @@
 import React from 'react'
-import ink from '../Assets/10_Wheel_Ink.png'
-import knot from '../Assets/10_Wheel_Knot.png'
-import planet from '../Assets/10_Wheel_Planet.png'
-import snake from '../Assets/10_Wheel_Snake.png'
+import ink from '../../Assets/10_Wheel_Ink.png'
+import knot from '../../Assets/10_Wheel_Knot.png'
+import planet from '../../Assets/10_Wheel_Planet.png'
+import snake from '../../Assets/10_Wheel_Snake.png'
 
 export const WheelOfFortune = props => {
   return (

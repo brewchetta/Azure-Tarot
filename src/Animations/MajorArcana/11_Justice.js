@@ -1,7 +1,7 @@
 import React from 'react'
-import sword from '../Assets/11_Justice_Sword.png'
-import winter from '../Assets/11_Justice_Winter.png'
-import spring from '../Assets/11_Justice_Spring.png'
+import sword from '../../Assets/11_Justice_Sword.png'
+import winter from '../../Assets/11_Justice_Winter.png'
+import spring from '../../Assets/11_Justice_Spring.png'
 
 export const Justice = props => {
   return (

@@ -2,8 +2,8 @@
 // Lighthouse center glows luminousl (possibly use firefly from moon)
 
 import React from 'react'
-import lighthouse from '../Assets/17_Star_Lighthouse.png'
-import stars from '../Assets/17_Star_Northstars.png'
+import lighthouse from '../../Assets/17_Star_Lighthouse.png'
+import stars from '../../Assets/17_Star_Northstars.png'
 
 export const Star = props => {
 
