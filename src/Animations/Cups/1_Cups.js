@@ -1,13 +1,13 @@
 import React from 'react'
-import seed from '../../Assets/0_Fool_Seed.png'
+import cup from '../../Assets/Symbol_Chalice.png'
 
 export const AceOfCups = () => {
 
   return (
     <div className='card-animation' style={{ background: 'white' }}>
 
-      <img alt='' src={seed} className='fool-sway'
-      style={{ position: 'absolute', top: '0', left: '0', width: '100%'}}
+      <img alt='' src={cup}
+      style={{ position: 'absolute', top: '0', left: '0', height: '100%'}}
       />
 
     </div>
