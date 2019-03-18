@@ -13,7 +13,7 @@ import cardsList from '../card-content'
 import CardComponent from './CardComponent'
 import CardBack from './CardBack'
 import LessonComponent from '../lesson/LessonComponent'
-// import CardIndexSelectSuit from './CardIndexSelectSuit'
+import CardIndexSelectSuit from './CardIndexSelectSuit'
 // Uncomment the above when the other cards are more filled out
 // CSS
 import '../css/CardIndex.css'
@@ -43,6 +43,7 @@ class CardIndex extends React.Component {
 
   renderAllCards = () => {
     const currentUser = this.props.currentUser
+    console.warn(currentUser.card_unlocks)
     const cardUnlockIds = currentUser.card_unlocks.map(card => card.card_id )
     const currentCards = this.state.cards
 
@@ -136,6 +137,7 @@ class CardIndex extends React.Component {
 
         {this.renderPromptReading()}
 
+        <CardIndexSelectSuit handleSuitChange={this.handleSuitChange.bind(this)} suit={this.state.suit} />
         {/* <CardIndexSelectSuit handleSuitChange={this.handleSuitChange.bind(this)} suit={this.state.suit} /> */}
 
         {this.renderAllCards()}
