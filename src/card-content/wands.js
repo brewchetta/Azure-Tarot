@@ -1,7 +1,7 @@
 const wands = [
   {
     id: 65,
-    name: `The Ace of Wands`,
+    name: `The Ace Of Wands`,
     rank: 1,
     description: `As with the other Aces, this card represents a beginning. This beginning in particular is effusive: it's a lightning strike of inspiration, it's a call to creativity. This beginning is something you feel passionately about. Make sure you act on it.`,
     revDescription: `Wands`,
@@ -9,7 +9,7 @@ const wands = [
   },
   {
     id: 66,
-    name: `The Two of Wands`,
+    name: `The Two Of Wands`,
     rank: 2,
     description: `This card knows we're pointed in the right direction. Success may be a long way off, but we're moving towards it with even steps. Now is the time to reflect on the things that are working and the things that aren't. What can we do better?`,
     revDescription: `Wands`,
@@ -17,7 +17,7 @@ const wands = [
   },
   {
     id: 67,
-    name: `The Three of Wands`,
+    name: `The Three Of Wands`,
     rank: 3,
     description: `We choose our fate, and it can be any fate we desire. This card tells us to choose a destination and set out on the road towards it. We don't give up because it's within our grasp.`,
     revDescription: `Wands`,
@@ -25,7 +25,7 @@ const wands = [
   },
   {
     id: 68,
-    name: `The Four of Wands`,
+    name: `The Four Of Wands`,
     rank: 4,
     description: `A lot of transformations are marked with celebration. Think of birthdays, graduations, promotions. Before each of these we've laid a system of groundwork for the our future labor. But in that moment, this moment, it's time to celebrate what we've accomplished so far.`,
     revDescription: `Wands`,
@@ -33,7 +33,7 @@ const wands = [
   },
   {
     id: 69,
-    name: `The Five of Wands`,
+    name: `The Five Of Wands`,
     rank: 5,
     description: `We've found conflict. This card represents a time when there is opposition and it challenges us. We might find ourselves feeling scattered and unfocused as we bring ourselves to it but if we can pull together, we can overcome the opposition or even better, learn from it.`,
     revDescription: `Wands`,
@@ -41,7 +41,7 @@ const wands = [
   },
   {
     id: 70,
-    name: `The Six of Wands`,
+    name: `The Six Of Wands`,
     rank: 6,
     description: `We've won. A victory of some sort has arrived and it's a very public victory. People have given us new monikers, something along the lines of 'hero'. It's one thing to bask in this well deserved victory, it's another thing to let it inflate our ego beyond the point of no return.`,
     revDescription: `Wands`,
@@ -49,7 +49,7 @@ const wands = [
   },
   {
     id: 71,
-    name: `The Seven of Wands`,
+    name: `The Seven Of Wands`,
     rank: 7,
     description: `We can't find help from our friends or family, not in this conflict. Instead, it's time to rely on our courage and conviction. We must rise up and face these things alone, empowered by the strength we've held all along.`,
     revDescription: `Wands`,
@@ -57,7 +57,7 @@ const wands = [
   },
   {
     id: 72,
-    name: `The Eight of Wands`,
+    name: `The Eight Of Wands`,
     rank: 8,
     description: `Something has happened. An opportunity presents itself. Possibly many all at the same time. This is the wrong time for stillness. We need to snatch as many out of the air as we're comfortable with.`,
     revDescription: `Wands`,
@@ -65,7 +65,7 @@ const wands = [
   },
   {
     id: 73,
-    name: `The Nine of Wands`,
+    name: `The Nine Of Wands`,
     rank: 9,
     description: `We're on the last few steps towards our goal and it's at times like these that doubt can cloud our judgement. Is this the right thing? Are we making a mistake? This card urges us to surge forward. It's one thing to reflect and another to doubt needlessly. Let's finish the task, we'll feel better when it's done.`,
     revDescription: `Wands`,
@@ -73,7 +73,7 @@ const wands = [
   },
   {
     id: 74,
-    name: `The Ten of Wands`,
+    name: `The Ten Of Wands`,
     rank: 10,
     description: `Responsibilities have piled up and now they're a little too much. They keep us up at night and strain our relationships. Now is a time to find someone else to carry the torch or else put it down.`,
     revDescription: `Wands`,
@@ -81,7 +81,7 @@ const wands = [
   },
   {
     id: 75,
-    name: `The Student of Wands`,
+    name: `The Student Of Wands`,
     rank: 11,
     description: `The Student represents a person or an aspect of ourselves who has incredibly passion. They can't wait to leave the house and take part in an adventure. They don't always have a clear vision of what they want but that never dissuades them.`,
     revDescription: `Wands`,
@@ -89,7 +89,7 @@ const wands = [
   },
   {
     id: 76,
-    name: `The Quester of Wands`,
+    name: `The Quester Of Wands`,
     rank: 12,
     description: `The Quester represents a person or aspect of ourselves who has incredible charisma. The center of attention, the Quester can't help but brag and entertain, but at the end of the day their stories hold very little substance and their life is utterly unfocused.`,
     revDescription: `Wands`,
@@ -97,7 +97,7 @@ const wands = [
   },
   {
     id: 77,
-    name: `The Sibyl of Wands`,
+    name: `The Sibyl Of Wands`,
     rank: 13,
     description: `The Sibyl represents a person or aspect of ourselves who knows how to nurture. While they might seem motherly or even overprotective at times, they do everything with so much charisma that people hardly notice.`,
     revDescription: `Wands`,
@@ -105,7 +105,7 @@ const wands = [
   },
   {
     id: 78,
-    name: `The Sage of Wands`,
+    name: `The Sage Of Wands`,
     rank: 14,
     description: `The Sage represents a person or aspect of ourselves who has a fiery vision and the charisma to bring it to fruition. They're a natural born leader, strong willed and forgiving but utterly dangerous to oppose.`,
     revDescription: `Wands`,

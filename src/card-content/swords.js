@@ -1,7 +1,7 @@
 const swords = [
   {
     id: 51,
-    name: `The Ace of Swords`,
+    name: `The Ace Of Swords`,
     rank: 1,
     description: `Like all the Aces the Ace of Swords signals potential. The suit of swords often represents intellect and the Ace tells us that we can use our intellect with judgement. It may be through a flash of insight or a series of judgements, but we have the power to begin a journey using nothing but our mind.`,
     revDescription: `Swords`,
@@ -9,7 +9,7 @@ const swords = [
   },
   {
     id: 52,
-    name: `The Two of Swords`,
+    name: `The Two Of Swords`,
     rank: 2,
     description: `Some decisions feel like there's no chance for compromise. Opposing forces seem deadlocked in such a way there's no obvious path forward. This isn't a time for rash judgement. Let's take our time, weigh the different options and use our well-balanced position to find the best way forward.`,
     revDescription: `Swords`,
@@ -17,7 +17,7 @@ const swords = [
   },
   {
     id: 53,
-    name: `The Three of Swords`,
+    name: `The Three Of Swords`,
     rank: 3,
     description: `Things don't always go well for us, and when they don't it's important to remember we shouldn't make rash decisions. Tragedy might demand quick action but it's usually better to wait until we've cleared our thoughts before we make any rash judgements.`,
     revDescription: `Swords`,
@@ -25,7 +25,7 @@ const swords = [
   },
   {
     id: 54,
-    name: `The Four of Swords`,
+    name: `The Four Of Swords`,
     rank: 4,
     description: `Often the most dangerous adversary of the swords is swift judgement. This is doubly true for the Four of Swords. This card tells us that there is a lull, a time when we can gather our strength and sleep on the impending problems.`,
     revDescription: `Swords`,
@@ -33,7 +33,7 @@ const swords = [
   },
   {
     id: 55,
-    name: `The Five of Swords`,
+    name: `The Five Of Swords`,
     rank: 5,
     description: `Whether due to hubris, a lust for power or even something we believed was a truly noble vision, defeat has arrived. It's time to take a step back and think about what we could have approached differently because it's true: we hold the responsible for our failures.`,
     revDescription: `Swords`,
@@ -41,7 +41,7 @@ const swords = [
   },
   {
     id: 56,
-    name: `The Six of Swords`,
+    name: `The Six Of Swords`,
     rank: 6,
     description: `There are countless ways to revitalize after a difficult time. Some of them involve rest, but this card claims the best way to rebound is to get out there. Leave the old problems in the past for now and go find an adventure. This is one of the few sword cards that urges you to trust your instincts and set aside logic for the time being.`,
     revDescription: `Swords`,
@@ -49,7 +49,7 @@ const swords = [
   },
   {
     id: 57,
-    name: `The Seven of Swords`,
+    name: `The Seven Of Swords`,
     rank: 7,
     description: `This isn't the right time for brute force. A lot more can get accomplished with a few words than going at the problem head on. Just remember that lies can have consequences ... and that you aren't the only one capable of deceit.`,
     revDescription: `Swords`,
@@ -57,7 +57,7 @@ const swords = [
   },
   {
     id: 58,
-    name: `The Eight of Swords`,
+    name: `The Eight Of Swords`,
     rank: 8,
     description: `Things might seem hopeless. We're treading on dangerous ground and there's always a chance that any path we take will be the wrong one. This card tells us to suck it up. Stop standing still and do something. Even if we make mistakes along the path, it'll be far less damaging than waiting any longer.`,
     revDescription: `Swords`,
@@ -65,7 +65,7 @@ const swords = [
   },
   {
     id: 59,
-    name: `The Nine of Swords`,
+    name: `The Nine Of Swords`,
     rank: 9,
     description: `Our worst fears occasionally visit us. There are the rare days that our stomachs drop because it has happened, it has finally happened. The nightmare is real and it keeps us up at night. This card wants us to divide our fear from our reason, to think clearly about how to survive or at the very least ask for help from someone who can.`,
     revDescription: `Swords`,
@@ -73,7 +73,7 @@ const swords = [
   },
   {
     id: 60,
-    name: `The Ten of Swords`,
+    name: `The Ten Of Swords`,
     rank: 10,
     description: `The problem has been resolved and not for the better. It's left us in ruins. We might feel attached to the pain, we might want to wallow in our defeat, but now isn't the time. Instead, use that pain. It's a catalyst towards building a better, brighter future.`,
     revDescription: `Swords`,
@@ -81,7 +81,7 @@ const swords = [
   },
   {
     id: 61,
-    name: `The Student of Swords`,
+    name: `The Student Of Swords`,
     rank: 11,
     description: `The Student represents a person or aspect of ourselves who is keenly observant. Their attention to detail makes it easy for them to speak honestly and insightfully. Sometimes that honesty is a shield that distances them from the people around. This may be intentional or it may be accidental, but it can sometimes fray their relationships.`,
     revDescription: `Swords`,
@@ -89,7 +89,7 @@ const swords = [
   },
   {
     id: 62,
-    name: `The Quester of Swords`,
+    name: `The Quester Of Swords`,
     rank: 12,
     description: `The Quester represents a person or an aspect of ourselves who is dogged in their ideals. The Quester moves with a sense of determination uncommon in most folks and has a knack for rallying folks to their side. They're intelligent, possibly even learned, but they don't often slow down enough to think about their actions.`,
     revDescription: `Swords`,
@@ -97,7 +97,7 @@ const swords = [
   },
   {
     id: 63,
-    name: `The Sibyl of Swords`,
+    name: `The Sibyl Of Swords`,
     rank: 13,
     description: `The Sibyl represents a person or an aspect of ourselves who is incredibly insightful about they see. Often considered as counselors or therapists, even if informally, the Sibyl has a useful opinion or feedback on everything their minds touch. When they're angry, this feedback can become a critical sword they wield to dangerous and often damaging effect.`,
     revDescription: `Swords`,
@@ -105,7 +105,7 @@ const swords = [
   },
   {
     id: 64,
-    name: `The Sage of Swords`,
+    name: `The Sage Of Swords`,
     rank: 14,
     description: `The Sage represents a person or an aspect of ourselves who holds reason and logic high over the turmoil of emotion. They're capable of setting aside myth or hearsay to fairly judge every situation. This makes them reliable as a leader but also distant at times.`,
     revDescription: `Swords`,

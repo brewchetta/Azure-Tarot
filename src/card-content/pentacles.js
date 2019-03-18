@@ -1,7 +1,7 @@
 const pentacles = [
   {
     id: 37,
-    name: `The Ace of Pentacles`,
+    name: `The Ace Of Pentacles`,
     rank: 1,
     description: `The Ace represents potential in every suit and it's no different in Pentacles. It might be the first steps towards a business venture or the beginnings of a new family. Whatever we plant now will someday blossom into something glorious.`,
     revDescription: `Pentacles`,
@@ -9,7 +9,7 @@ const pentacles = [
   },
   {
     id: 38,
-    name: `The Two of Pentacles`,
+    name: `The Two Of Pentacles`,
     rank: 2,
     description: `Change can be uncomfortable, a new job, a change at work, something new at home, all of these things can topple us off balance. This card reminds us the very act of holding balance can be fun or informative, the challenge itself is why we're alive. Let's embrace the change rather than letting it knock us over.`,
     revDescription: `Pentacles`,
@@ -17,7 +17,7 @@ const pentacles = [
   },
   {
     id: 39,
-    name: `The Three of Pentacles`,
+    name: `The Three Of Pentacles`,
     rank: 3,
     description: `We love to see our hard work pay off. This card reminds us that good things will happen if we dedicate ourselves and persevere through the difficulties.`,
     revDescription: `Pentacles`,
@@ -25,7 +25,7 @@ const pentacles = [
   },
   {
     id: 40,
-    name: `The Four of Pentacles`,
+    name: `The Four Of Pentacles`,
     rank: 4,
     description: `On the surface this card promises wealth. Beneath that attractive veneer lies the truth: it's important to find stability, but dangerous to hunt for it among the material. Sometimes it's better to give away what we don't need and provide for others.`,
     revDescription: `Pentacles`,
@@ -33,7 +33,7 @@ const pentacles = [
   },
   {
     id: 41,
-    name: `The Five of Pentacles`,
+    name: `The Five Of Pentacles`,
     rank: 5,
     description: `This card represents a hard time brought on by loss. It might be the loss of a job or some other instability. These things bring anxiety and worry and for good reason: through all of all of these trials, we'll generally only have ourselves to rely on. We should quiet our doubts and prepare to do what we must.`,
     revDescription: `Pentacles`,
@@ -41,7 +41,7 @@ const pentacles = [
   },
   {
     id: 42,
-    name: `The Six of Pentacles`,
+    name: `The Six Of Pentacles`,
     rank: 6,
     description: `Someone's hard work has paid off and now it's time to enjoy the spoils! If it's your own, be charitable with them. Give credit where credit is due and share what you can. Other people will do the same for you.`,
     revDescription: `Pentacles`,
@@ -49,7 +49,7 @@ const pentacles = [
   },
   {
     id: 43,
-    name: `The Seven of Pentacles`,
+    name: `The Seven Of Pentacles`,
     rank: 7,
     description: `Let's take a step back. Look at everything that's come to pass and figure out the future. We've put in a lot of time and effort, have they worked out for us? Sometimes we don't get what we expected, are there hidden rewards for the things that we want?`,
     revDescription: `Pentacles`,
@@ -57,7 +57,7 @@ const pentacles = [
   },
   {
     id: 44,
-    name: `The Eight of Pentacles`,
+    name: `The Eight Of Pentacles`,
     rank: 8,
     description: `We all work towards some kind of mastery, and this card is the representation of that. At this point we're verging on the edge of it. It might take tremendous effort but we have everything we need to become a true craftsperson.`,
     revDescription: `Pentacles`,
@@ -65,7 +65,7 @@ const pentacles = [
   },
   {
     id: 45,
-    name: `The Nine of Pentacles`,
+    name: `The Nine Of Pentacles`,
     rank: 9,
     description: `After all those long hours it's time to enjoy the fruits of our labor. We can slow down, bask in things that used to be luxuries. This card tells us it's time to enjoy our reward.`,
     revDescription: `Pentacles`,
@@ -73,7 +73,7 @@ const pentacles = [
   },
   {
     id: 46,
-    name: `The Ten of Pentacles`,
+    name: `The Ten Of Pentacles`,
     rank: 10,
     description: `We've made the journey and now we can stop to appreciate it. More importantly, we now have the chance to mentor other folks who struggle along the same path. This card asks us to share our wisdom so that others will someday join us.`,
     revDescription: `Pentacles`,
@@ -81,7 +81,7 @@ const pentacles = [
   },
   {
     id: 47,
-    name: `The Student of Pentacles`,
+    name: `The Student Of Pentacles`,
     rank: 11,
     description: `The Student represents a person or aspect of yourself that can be relied on. They're responsible and detail oriented but tend to shy away from the spotlight.`,
     revDescription: `Pentacles`,
@@ -89,7 +89,7 @@ const pentacles = [
   },
   {
     id: 48,
-    name: `The Quester of Pentacles`,
+    name: `The Quester Of Pentacles`,
     rank: 12,
     description: `The Quester represents a person or aspect of yourself that's utterly industrious. They don't need many friends, they rarely think about anything other than their work. While they're utterly loyal, they have a tendency to stubbornly stick with things even when they're a lost cause.`,
     revDescription: `Pentacles`,
@@ -97,7 +97,7 @@ const pentacles = [
   },
   {
     id: 49,
-    name: `The Sibyl of Pentacles`,
+    name: `The Sibyl Of Pentacles`,
     rank: 13,
     description: `This Sibyl represents somebody or an aspect of yourself that trusts themself utterly. They know how to nurture and how to care. Often they're utterly dedicated to the people they consider their children.`,
     revDescription: `Pentacles`,
@@ -105,7 +105,7 @@ const pentacles = [
   },
   {
     id: 50,
-    name: `The Sage of Pentacles`,
+    name: `The Sage Of Pentacles`,
     rank: 14,
     description: `The Sage represents someone you know or an aspect of yourself who has nothing to prove. Utterly experienced and patient, the Sage might seem a little simple at first, but underneath their calm exterior lies someone with all the passion and skill to build anything they desire.`,
     revDescription: `Pentacles`,
