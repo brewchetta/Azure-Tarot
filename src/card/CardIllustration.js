@@ -16,6 +16,7 @@ const CardIllustration = (props) => {
   if (card && Animations[parseCardName(card)]) {
     ComponentName = Animations[parseCardName(card)]
   } else if (card) {
+    console.log(card.name)
     ComponentName = Animations['DefaultAnimation']
   }
 
