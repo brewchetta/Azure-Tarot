@@ -9,10 +9,6 @@ import cornerLeaf from '../Assets/Corner_Leaf.png'
 import CardIllustration from './CardIllustration'
 import CardDescription from './CardDescription'
 import CardDescriptionUser from './CardDescriptionUser'
-// CSS
-import '../css/Card.css'
-import '../css/CardIndex.css'
-import '../css/Animations.css'
 
 // To build card component you need to pass: card, indexState { animating: ? , cardToInspect: ?}
 

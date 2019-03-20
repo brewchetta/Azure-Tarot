@@ -13,8 +13,6 @@ import LoadingSpinner from '../general/LoadingSpinner'
 import cardsList from '../card-content'
 // Assets
 import seeds from '../Assets/19_Sun_Seeds.png'
-// CSS
-import '../css/Spread.css'
 
 class SpreadTable extends React.Component {
 

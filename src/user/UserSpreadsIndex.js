@@ -8,8 +8,6 @@ import { fetchGetSpreadsByUser } from '../spread/FetchSpreads'
 import UserSpread from './UserSpread'
 //Cards
 import cardsList from '../card-content'
-// CSS
-import '../css/UserProfile.css'
 
 class UserSpreadsIndex extends React.Component {
 

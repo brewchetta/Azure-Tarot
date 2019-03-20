@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 //Redux
 import mappedConnect from './redux/mappers'
-// import { setCurrentUser, setAnimating } from './redux/actions'
 // Stylesheet
 import './css';
 // Fetch Functions

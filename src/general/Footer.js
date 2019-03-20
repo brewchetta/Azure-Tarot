@@ -1,7 +1,5 @@
 import React from 'react'
 import corner from '../Assets/Corner_Curl.png'
-// CSS
-import '../css/Footer.css'
 
 export default function Footer(props) {
 

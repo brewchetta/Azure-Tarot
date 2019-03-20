@@ -1,8 +1,6 @@
 import React from 'react'
 import symbols from '../Assets/Symbol_All_Wing.png'
 import corner from '../Assets/Corner_Curl.png'
-// CSS
-import '../css/Header.css'
 
 export default function Header(props) {
   return (

@@ -4,9 +4,6 @@ import React from 'react'
 import CardIllustration from '../card/CardIllustration'
 import LessonDescription from './LessonDescription'
 import LessonWriteForm from './LessonWriteForm'
-// CSS
-import '../css/Lesson.css'
-import '../css/Animations.css'
 
 class LessonComponent extends React.Component {
 

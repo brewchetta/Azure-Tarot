@@ -5,8 +5,6 @@ import { Redirect } from 'react-router-dom'
 import mappedConnect from '../redux/mappers'
 // Fetches
 import { fetchCreateUser, fetchUserLogin } from './FetchUser'
-// CSS
-import '../css/UserSignUp.css'
 
 class UserSignUp extends React.Component {
 

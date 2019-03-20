@@ -3,8 +3,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // Redux
 import mappedConnect from '../redux/mappers'
-// CSS
-import '../css/AccordionMenu.css'
 
 class AccordionMenu extends React.Component {
 
