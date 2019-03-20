@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
-    "sass-compile": "node-sass --include-path sass index.scss index.css"
+    "sass-compile": "node-sass --include-path sass src/css/index.scss src/css/index.css"
   },
   "eslintConfig": {
     "extends": "react-app"
