@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 //Redux
 import mappedConnect from './redux/mappers'
 // Stylesheet
-import './css';
+import './css/index.css';
 // Fetch Functions
 import { fetchLoginUser } from './user/FetchUser'
 // Components
