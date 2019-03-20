@@ -361,18 +361,22 @@
   to { @include transform(rotate(360deg))}
 }
 
+@mixin rotate($time) {
+  animation: rotate $time infinite linear;
+}
+
 .animation-rotate-medium {
-  animation: rotate 20s infinite linear;
+  @include rotate(20s);
 }
 
 .animation-rotate-slow {
-  animation: rotate 30s infinite linear;
+  @include rotate(30s);
 }
 
 .animation-rotate-slower {
-  animation: rotate 40s infinite linear;
+  @include rotate(40s);
 }
 
 .animation-rotate-slowest {
-  animation: rotate 60s infinite linear;
+  @include rotate(60s);
 }
