@@ -68,8 +68,12 @@
 /* 0 Fool */
 @keyframes fool-sway {
   from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
     transform: rotate(15deg); } }
 
 .fool-sway {
@@ -79,8 +83,12 @@
 /* 1 Magician */
 @keyframes m-rotate {
   from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 .magician-rotator-container {
@@ -146,11 +154,15 @@
   from {
     filter: hue-rotate(0deg);
     top: -10%;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
     visibility: visible; }
   to {
     filter: hue-rotate(-180deg);
     top: 110%;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     visibility: visible; } }
 
@@ -237,24 +249,38 @@
 /* 7 Chariot */
 @keyframes chariot-wheel {
   0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
     background-color: #cccc00; }
   16.7% {
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
     transform: rotate(120deg);
     background-color: #009933; }
   33.3% {
+    -webkit-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
     transform: rotate(240deg);
     background-color: #006699; }
   50% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     background-color: #3333ff; }
   66.7% {
+    -webkit-transform: rotate(480deg);
+    -ms-transform: rotate(480deg);
     transform: rotate(480deg);
     background-color: #cc00cc; }
   83.3% {
+    -webkit-transform: rotate(600deg);
+    -ms-transform: rotate(600deg);
     transform: rotate(600deg);
     background-color: #cc0000; }
   100% {
+    -webkit-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
     transform: rotate(720deg);
     background-color: #cc9900; } }
 
@@ -275,8 +301,12 @@
 
 @keyframes wheel-rotate {
   from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
   from {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 .wheel-inner {
@@ -373,38 +403,56 @@
 /* 15 Devil */
 @keyframes devil-eye {
   0% {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     left: 17%;
     top: 30%; }
   10% {
+    -webkit-transform: rotateY(23deg);
+    -ms-transform: rotateY(23deg);
     transform: rotateY(23deg);
     left: 25%;
     top: 31%; }
   20% {
+    -webkit-transform: rotateY(23deg);
+    -ms-transform: rotateY(23deg);
     transform: rotateY(23deg);
     left: 25%;
     top: 31%; }
   30% {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     left: 17%;
     top: 30%; }
   40% {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     left: 17%;
     top: 30%; }
   50% {
+    -webkit-transform: rotateY(-17deg);
+    -ms-transform: rotateY(-17deg);
     transform: rotateY(-17deg);
     left: 10%;
     top: 30.5%; }
   60% {
+    -webkit-transform: rotateY(-17deg);
+    -ms-transform: rotateY(-17deg);
     transform: rotateY(-17deg);
     left: 10%;
     top: 30.5%; }
   70% {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     left: 17%;
     top: 30%; }
   100% {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     left: 17%; } }
 
@@ -443,9 +491,13 @@
 /* 19 Sun */
 @keyframes sun-sway {
   from {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
     transform: rotate(0);
     left: 0; }
   to {
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
     transform: rotate(10deg);
     left: 10%; } }
 
@@ -470,6 +522,8 @@
   animation: sun-seeds 8s infinite linear;
   left: 15%;
   position: absolute;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 5%;
   width: 50%; }
@@ -477,8 +531,12 @@
 /* General Animations */
 @keyframes rotate {
   from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 .animation-rotate-medium {
