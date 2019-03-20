@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom'
 import mappedConnect from './redux/mappers'
 // import { setCurrentUser, setAnimating } from './redux/actions'
 // Stylesheet
-import './App.css';
+import './css';
 // Fetch Functions
 import { fetchLoginUser } from './user/FetchUser'
 // Components
@@ -50,7 +50,7 @@ class App extends Component {
           <Header />
 
           {/* Accordion Menu for Mobile */}
-          {window.localStorage.jwt ? 
+          {window.localStorage.jwt ?
           <AccordionMenu />
           : null }
 

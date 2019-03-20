@@ -18,7 +18,8 @@
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass-compile": "node-sass --include-path sass index.scss index.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,6 +31,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0"
   }
 }
